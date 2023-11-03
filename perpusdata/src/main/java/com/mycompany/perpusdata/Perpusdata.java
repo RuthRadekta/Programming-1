@@ -23,10 +23,12 @@ public class Perpusdata {
         try {
             String query = "insert into anggota (id_anggota, nama, jenis_kelamin, alamat, email, created_at) values (?, ?, ?, ?, ?, ?)";
             PreparedStatement ps = koneksi.prepareStatement(query);
-            ps.setString(1, "Luffy");
-            ps.setString(2, "One Piece");
-            ps.setString(3, "Luffy");
-            ps.setString(4, "One Piece");
+            ps.setString(1, "001");
+            ps.setString(2, "Ruth Dita");
+            ps.setString(3, "Perempuan");
+            ps.setString(4, "Solo");
+            ps.setString(5, "ruthdita@gmail.com");
+            ps.setString(6, "231103");
             ps.addBatch();
             int[] jml = ps.executeBatch();
         } catch (SQLException ex) {
