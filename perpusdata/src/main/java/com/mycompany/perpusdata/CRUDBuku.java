@@ -20,34 +20,34 @@ public class CRUDBuku implements CRUD{
         try {
             Koneksi konek = new Koneksi();
             Connection koneksi = konek.buka();
-            String query = "INSERT INTO anggota (id_anggota, nama, jenis_kelamin, alamat, email, created_at) VALUES (?, ?, ?, ?, ?, CURRENT_TIMESTAMP)";
+            String query = "INSERT INTO buku (id_buku, judul, penulis, penerbit, jumlah_halaman, created_at) VALUES (?, ?, ?, ?, ?, CURRENT_TIMESTAMP)";
             PreparedStatement ps = koneksi.prepareStatement(query);
             
             Scanner scanner = new Scanner(System.in);
-            System.out.print("Masukkan id anggota: ");
-            int id_anggota = scanner.nextInt();
-            System.out.print("Masukkan nama: ");
+            System.out.print("Masukkan id buku: ");
+            int id_buku = scanner.nextInt();
+            System.out.print("Masukkan judul buku: ");
             scanner.nextLine();
-            String nama = scanner.nextLine();
-            System.out.print("Masukkan jenis kelamin: ");
-            String jenis_kelamin = scanner.nextLine();
-            System.out.print("Masukkan alamat: ");
-            String alamat = scanner.nextLine();
-            System.out.print("Masukkan email: ");
-            String email = scanner.nextLine();
+            String judul = scanner.nextLine();
+            System.out.print("Masukkan penulis ");
+            String penulis = scanner.nextLine();
+            System.out.print("Masukkan penerbit: ");
+            String penerbit = scanner.nextLine();
+            System.out.print("Masukkan jumlah_halaman: ");
+            String jumlah_halaman = scanner.nextLine();
             
-            ps.setInt(1, id_anggota);
-            ps.setString(2, nama);
-            ps.setString(3, jenis_kelamin);
-            ps.setString(4, alamat);
-            ps.setString(5, email);
+            ps.setInt(1, id_buku);
+            ps.setString(2, judul);
+            ps.setString(3, penulis);
+            ps.setString(4, penerbit);
+            ps.setString(5, jumlah_halaman);
 
             int rowsAffected = ps.executeUpdate();
 
             if (rowsAffected > 0) {
-                System.out.println("Data berhasil dimasukkan ke dalam tabel.");
+                System.out.println("Data buku berhasil dimasukkan.");
             } else {
-                System.out.println("Gagal memasukkan data ke dalam tabel.");
+                System.out.println("Gagal memasukkan data buku.");
             }
 
         } catch (SQLException ex) {
@@ -60,19 +60,19 @@ public class CRUDBuku implements CRUD{
             Koneksi konek = new Koneksi();
             Connection koneksi = konek.buka();
             
-            String query = "SELECT * FROM anggota";
+            String query = "SELECT * FROM buku";
             
             Statement statement = koneksi.createStatement();
             ResultSet resultSet = statement.executeQuery(query);
 
             while (resultSet.next()) {
-                int id_anggota = resultSet.getInt("id_anggota");
-                String nama = resultSet.getString("nama");
-                String jenis_kelamin = resultSet.getString("jenis_kelamin");
-                String alamat = resultSet.getString("alamat");
-                String email = resultSet.getString("email");
+                int id_buku = resultSet.getInt("id_buku");
+                String judul = resultSet.getString("judul");
+                String penulis = resultSet.getString("penulis");
+                String penerbit = resultSet.getString("penerbit");
+                String jumlah_halaman = resultSet.getString("jumlah_halaman");
                 
-                System.out.println("ID: " + id_anggota + "\nNama: " + nama + "\nJenis Kelamin: " + jenis_kelamin + "\nAlamat: " + alamat + "\nEmail: " + email);
+                System.out.println("ID: " + id_buku + "\nJudul Buku: " + judul + "\nPenulis: " + penulis + "\nPenerbit: " + penerbit + "\nJumlah Halaman: " + jumlah_halaman);
             }
 
             resultSet.close();
@@ -88,43 +88,43 @@ public class CRUDBuku implements CRUD{
             Connection koneksi = konek.buka();
             Scanner scanner = new Scanner(System.in);
 
-            System.out.print("Masukkan ID anggota yang akan diupdate: ");
-            int id_anggota = scanner.nextInt();
+            System.out.print("Masukkan id buku yang akan diupdate: ");
+            int id_buku = scanner.nextInt();
             scanner.nextLine();
             
-            String checkQuery = "SELECT * FROM anggota WHERE id_anggota = ?";
+            String checkQuery = "SELECT * FROM buku WHERE id_buku = ?";
             PreparedStatement checkStatement = koneksi.prepareStatement(checkQuery);
-            checkStatement.setInt(1, id_anggota);
+            checkStatement.setInt(1, id_buku);
             ResultSet resultSet = checkStatement.executeQuery();
 
             if (!resultSet.next()) {
-                System.out.println("ID anggota tidak ditemukan.");
+                System.out.println("id buku tidak ditemukan.");
                 return;
             }
 
-            System.out.print("Masukkan nama baru: ");
-            String namaBaru = scanner.nextLine();
-            System.out.print("Masukkan jenis kelamin baru: ");
-            String jenisKelaminBaru = scanner.nextLine();
-            System.out.print("Masukkan alamat baru: ");
-            String alamatBaru = scanner.nextLine();
-            System.out.print("Masukkan email baru: ");
-            String emailBaru = scanner.nextLine();
+            System.out.print("Masukkan judul buku baru: ");
+            String judulBaru = scanner.nextLine();
+            System.out.print("Masukkan penulis baru: ");
+            String penulisBaru = scanner.nextLine();
+            System.out.print("Masukkan penerbit baru: ");
+            String penerbitBaru = scanner.nextLine();
+            System.out.print("Masukkan jumlah_halaman baru: ");
+            String jumlahHalamanBaru = scanner.nextLine();
 
-            String updateQuery = "UPDATE anggota SET nama = ?, jenis_kelamin = ?, alamat = ?, email = ? WHERE id_anggota = ?";
+            String updateQuery = "UPDATE buku SET judul = ?, penulis = ?, penerbit = ?, jumlah_halaman = ? WHERE id_buku = ?";
             PreparedStatement updateStatement = koneksi.prepareStatement(updateQuery);
-            updateStatement.setString(1, namaBaru);
-            updateStatement.setString(2, jenisKelaminBaru);
-            updateStatement.setString(3, alamatBaru);
-            updateStatement.setString(4, emailBaru);
-            updateStatement.setInt(5, id_anggota);
+            updateStatement.setString(1, judulBaru);
+            updateStatement.setString(2, penulisBaru);
+            updateStatement.setString(3, penerbitBaru);
+            updateStatement.setString(4, jumlahHalamanBaru);
+            updateStatement.setInt(5, id_buku);
 
             int rowsAffected = updateStatement.executeUpdate();
 
             if (rowsAffected > 0) {
-                System.out.println("Data anggota berhasil diupdate.");
+                System.out.println("Data buku berhasil diupdate.");
             } else {
-                System.out.println("Gagal mengupdate data anggota.");
+                System.out.println("Gagal mengupdate data buku.");
             }
 
             updateStatement.close();
@@ -141,29 +141,29 @@ public class CRUDBuku implements CRUD{
             Connection koneksi = konek.buka();
             
             Scanner scanner = new Scanner(System.in);
-            System.out.print("Masukkan ID anggota yang akan dihapus: ");
-            int id_anggota = scanner.nextInt();
+            System.out.print("Masukkan id buku yang akan dihapus: ");
+            int id_buku = scanner.nextInt();
             
-            String checkQuery = "SELECT * FROM anggota WHERE id_anggota = ?";
+            String checkQuery = "SELECT * FROM buku WHERE id_buku = ?";
             PreparedStatement checkStatement = koneksi.prepareStatement(checkQuery);
-            checkStatement.setInt(1, id_anggota);
+            checkStatement.setInt(1, id_buku);
             ResultSet resultSet = checkStatement.executeQuery();
 
             if (!resultSet.next()) {
-                System.out.println("ID anggota tidak ditemukan.");
+                System.out.println("id buku tidak ditemukan.");
                 return;
             }
             
-            String deleteQuery = "DELETE FROM anggota WHERE id_anggota = ?";
+            String deleteQuery = "DELETE FROM buku WHERE id_buku = ?";
             PreparedStatement deleteStatement = koneksi.prepareStatement(deleteQuery);
-            deleteStatement.setInt(1, id_anggota);
+            deleteStatement.setInt(1, id_buku);
 
             int rowsAffected = deleteStatement.executeUpdate();
 
             if (rowsAffected > 0) {
-                System.out.println("Data anggota berhasil dihapus.");
+                System.out.println("Data buku berhasil dihapus.");
             } else {
-                System.out.println("Gagal menghapus data anggota.");
+                System.out.println("Gagal menghapus data buku.");
             }
 
             deleteStatement.close();

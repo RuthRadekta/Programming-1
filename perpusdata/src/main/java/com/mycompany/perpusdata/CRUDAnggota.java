@@ -44,9 +44,9 @@ public class CRUDAnggota implements CRUD{
             int rowsAffected = ps.executeUpdate();
 
             if (rowsAffected > 0) {
-                System.out.println("Data berhasil dimasukkan ke dalam tabel.");
+                System.out.println("Data anggota berhasil dimasukkan.");
             } else {
-                System.out.println("Gagal memasukkan data ke dalam tabel.");
+                System.out.println("Gagal memasukkan data anggota.");
             }
 
         } catch (SQLException ex) {
@@ -87,7 +87,7 @@ public class CRUDAnggota implements CRUD{
             Connection koneksi = konek.buka();
             Scanner scanner = new Scanner(System.in);
 
-            System.out.print("Masukkan ID anggota yang akan diupdate: ");
+            System.out.print("Masukkan id anggota yang akan diupdate: ");
             int id_anggota = scanner.nextInt();
             scanner.nextLine();
             
@@ -97,7 +97,7 @@ public class CRUDAnggota implements CRUD{
             ResultSet resultSet = checkStatement.executeQuery();
 
             if (!resultSet.next()) {
-                System.out.println("ID anggota tidak ditemukan.");
+                System.out.println("id anggota tidak ditemukan.");
                 return;
             }
 
@@ -140,7 +140,7 @@ public class CRUDAnggota implements CRUD{
             Connection koneksi = konek.buka();
             
             Scanner scanner = new Scanner(System.in);
-            System.out.print("Masukkan ID anggota yang akan dihapus: ");
+            System.out.print("Masukkan id anggota yang akan dihapus: ");
             int id_anggota = scanner.nextInt();
             
             String checkQuery = "SELECT * FROM anggota WHERE id_anggota = ?";
@@ -149,7 +149,7 @@ public class CRUDAnggota implements CRUD{
             ResultSet resultSet = checkStatement.executeQuery();
 
             if (!resultSet.next()) {
-                System.out.println("ID anggota tidak ditemukan.");
+                System.out.println("id anggota tidak ditemukan.");
                 return;
             }
             
