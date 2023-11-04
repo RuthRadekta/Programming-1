@@ -4,8 +4,6 @@
 
 package com.mycompany.perpusdata;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 /**
@@ -14,7 +12,7 @@ import java.sql.SQLException;
  */
 public class Perpusdata {
 
-    public static void main(String[] args) throws SQLException {
+    public static void main(String[] args) {
         System.out.println("Hello Dita!");
         try {
             Koneksi tesKoneksi = new Koneksi();
@@ -26,7 +24,8 @@ public class Perpusdata {
             tesKoneksi.tutup();
             
             CRUDAnggota tesCrud = new CRUDAnggota();
-            tesCrud.createAnggota();
+            tesCrud.create();
+            tesCrud.read();
         } catch(SQLException e) {
             e.printStackTrace();
         }

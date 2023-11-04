@@ -6,14 +6,16 @@ package com.mycompany.perpusdata;
 import java.util.Scanner;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 /**
  *
  * @author refah
  */
-public class CRUDAnggota {
-    public void createAnggota(){
+public class CRUDAnggota implements CRUDInterface{
+    public void create(){
         try {
             Koneksi konek = new Koneksi();
             Connection koneksi = konek.buka();
@@ -47,6 +49,51 @@ public class CRUDAnggota {
                 System.out.println("Gagal memasukkan data ke dalam tabel.");
             }
 
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());  
+        }
+    }
+    
+    public void read(){
+        try {
+            Koneksi konek = new Koneksi();
+            Connection koneksi = konek.buka();
+            
+            String query = "SELECT * FROM anggota";
+            
+            Statement statement = koneksi.createStatement();
+            ResultSet resultSet = statement.executeQuery(query);
+
+            while (resultSet.next()) {
+                int id_anggota = resultSet.getInt("id_anggota");
+                String nama = resultSet.getString("nama");
+                String jenis_kelamin = resultSet.getString("jenis_kelamin");
+                String alamat = resultSet.getString("alamat");
+                String email = resultSet.getString("email");
+                
+                System.out.println("ID: " + id_anggota + "\nNama: " + nama + "\nJenis Kelamin: " + jenis_kelamin + "\nAlamat: " + alamat + "\nEmail: " + email);
+            }
+
+            resultSet.close();
+            statement.close();
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());  
+        }
+    }
+
+    public void update() {
+        try {
+            Koneksi konek = new Koneksi();
+            Connection koneksi = konek.buka();
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());  
+        }
+    }
+
+    public void delete() {
+        try {
+            Koneksi konek = new Koneksi();
+            Connection koneksi = konek.buka();
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());  
         }
