@@ -14,7 +14,7 @@ import java.sql.Statement;
  *
  * @author refah
  */
-public class CRUDAnggota implements CRUDInterface{
+public class CRUDAnggota implements CRUD{
     public void create(){
         try {
             Koneksi konek = new Koneksi();
