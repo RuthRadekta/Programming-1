@@ -53,14 +53,6 @@ public class LoginClass {
         } catch (SQLException e) {
             e.printStackTrace();
             return false;
-        } finally {
-            try {
-                if (resultSet != null) resultSet.close();
-                if (preparedStatement != null) preparedStatement.close();
-                if (koneksi != null) koneksi.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
         }
     }
 }

@@ -16,10 +16,19 @@ public class Perpusdata {
 
     public static void main(String[] args) throws SQLException {
         System.out.println("Hello Dita!");
-        LoginClass tes = new LoginClass();
-        String username = null;
-        String password = null;
-        tes.input();
-        tes.login(username, password);
+        try {
+            Koneksi tesKoneksi = new Koneksi();
+            LoginClass tesLogin = new LoginClass();
+            String username = null;
+            String password = null;
+            tesLogin.input();
+            tesLogin.login(username, password);
+            tesKoneksi.tutup();
+            
+            CRUDAnggota tesCrud = new CRUDAnggota();
+            tesCrud.createAnggota();
+        } catch(SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

@@ -13,9 +13,10 @@ import java.sql.SQLException;
  * @author refah
  */
 public class CRUDAnggota {
-    Connection koneksi = null;
     public void createAnggota(){
         try {
+            Koneksi konek = new Koneksi();
+            Connection koneksi = konek.buka();
             String query = "INSERT INTO anggota (id_anggota, nama, jenis_kelamin, alamat, email, created_at) VALUES (?, ?, ?, ?, ?, CURRENT_TIMESTAMP)";
             PreparedStatement ps = koneksi.prepareStatement(query);
             
@@ -23,17 +24,20 @@ public class CRUDAnggota {
             System.out.print("Masukkan id anggota: ");
             int id_anggota = scanner.nextInt();
             System.out.print("Masukkan nama: ");
+            scanner.nextLine();
             String nama = scanner.nextLine();
             System.out.print("Masukkan jenis kelamin: ");
             String jenis_kelamin = scanner.nextLine();
             System.out.print("Masukkan alamat: ");
             String alamat = scanner.nextLine();
+            System.out.print("Masukkan email: ");
+            String email = scanner.nextLine();
             
             ps.setInt(1, id_anggota);
-            ps.setString(2, "Ruth Dita");
-            ps.setString(3, "Perempuan");
-            ps.setString(4, "Solo");
-            ps.setString(5, "ruthdita@gmail.com");
+            ps.setString(2, nama);
+            ps.setString(3, jenis_kelamin);
+            ps.setString(4, alamat);
+            ps.setString(5, email);
 
             int rowsAffected = ps.executeUpdate();
 
@@ -44,7 +48,7 @@ public class CRUDAnggota {
             }
 
         } catch (SQLException ex) {
-        System.out.println(ex.getMessage());  
+            System.out.println(ex.getMessage());  
         }
     }
 }
