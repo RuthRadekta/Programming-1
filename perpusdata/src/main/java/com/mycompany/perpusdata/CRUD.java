@@ -8,7 +8,7 @@ package com.mycompany.perpusdata;
  *
  * @author refah
  */
-public interface CRUDInterface {
+public interface CRUD {
     public void create();
     public void read();
     public void update();

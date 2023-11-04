@@ -24,8 +24,8 @@ public class Perpusdata {
             tesKoneksi.tutup();
             
             CRUDAnggota tesCrud = new CRUDAnggota();
-            tesCrud.create();
             tesCrud.read();
+            tesCrud.delete();
         } catch(SQLException e) {
             e.printStackTrace();
         }

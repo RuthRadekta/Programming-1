@@ -85,6 +85,50 @@ public class CRUDAnggota implements CRUD{
         try {
             Koneksi konek = new Koneksi();
             Connection koneksi = konek.buka();
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.print("Masukkan ID anggota yang akan diupdate: ");
+            int id_anggota = scanner.nextInt();
+            scanner.nextLine();
+            
+            String checkQuery = "SELECT * FROM anggota WHERE id_anggota = ?";
+            PreparedStatement checkStatement = koneksi.prepareStatement(checkQuery);
+            checkStatement.setInt(1, id_anggota);
+            ResultSet resultSet = checkStatement.executeQuery();
+
+            if (!resultSet.next()) {
+                System.out.println("ID anggota tidak ditemukan.");
+                return;
+            }
+
+            System.out.print("Masukkan nama baru: ");
+            String namaBaru = scanner.nextLine();
+            System.out.print("Masukkan jenis kelamin baru: ");
+            String jenisKelaminBaru = scanner.nextLine();
+            System.out.print("Masukkan alamat baru: ");
+            String alamatBaru = scanner.nextLine();
+            System.out.print("Masukkan email baru: ");
+            String emailBaru = scanner.nextLine();
+
+            String updateQuery = "UPDATE anggota SET nama = ?, jenis_kelamin = ?, alamat = ?, email = ? WHERE id_anggota = ?";
+            PreparedStatement updateStatement = koneksi.prepareStatement(updateQuery);
+            updateStatement.setString(1, namaBaru);
+            updateStatement.setString(2, jenisKelaminBaru);
+            updateStatement.setString(3, alamatBaru);
+            updateStatement.setString(4, emailBaru);
+            updateStatement.setInt(5, id_anggota);
+
+            int rowsAffected = updateStatement.executeUpdate();
+
+            if (rowsAffected > 0) {
+                System.out.println("Data anggota berhasil diupdate.");
+            } else {
+                System.out.println("Gagal mengupdate data anggota.");
+            }
+
+            updateStatement.close();
+            checkStatement.close();
+            resultSet.close();
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());  
         }
@@ -94,6 +138,36 @@ public class CRUDAnggota implements CRUD{
         try {
             Koneksi konek = new Koneksi();
             Connection koneksi = konek.buka();
+            
+            Scanner scanner = new Scanner(System.in);
+            System.out.print("Masukkan ID anggota yang akan dihapus: ");
+            int id_anggota = scanner.nextInt();
+            
+            String checkQuery = "SELECT * FROM anggota WHERE id_anggota = ?";
+            PreparedStatement checkStatement = koneksi.prepareStatement(checkQuery);
+            checkStatement.setInt(1, id_anggota);
+            ResultSet resultSet = checkStatement.executeQuery();
+
+            if (!resultSet.next()) {
+                System.out.println("ID anggota tidak ditemukan.");
+                return;
+            }
+            
+            String deleteQuery = "DELETE FROM anggota WHERE id_anggota = ?";
+            PreparedStatement deleteStatement = koneksi.prepareStatement(deleteQuery);
+            deleteStatement.setInt(1, id_anggota);
+
+            int rowsAffected = deleteStatement.executeUpdate();
+
+            if (rowsAffected > 0) {
+                System.out.println("Data anggota berhasil dihapus.");
+            } else {
+                System.out.println("Gagal menghapus data anggota.");
+            }
+
+            deleteStatement.close();
+            checkStatement.close();
+            resultSet.close();
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());  
         }
