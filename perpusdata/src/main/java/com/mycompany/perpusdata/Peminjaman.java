@@ -77,4 +77,8 @@ public class Peminjaman {
             System.out.println(ex.getMessage());
         }
     }
+    
+    public boolean catatPeminjaman(boolean value){
+        return value;
+    }
 }

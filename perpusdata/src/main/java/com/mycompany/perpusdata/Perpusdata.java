@@ -21,7 +21,6 @@ public class Perpusdata {
             String password = null;
             tesLogin.input();
             tesLogin.login(username, password);
-            tesKoneksi.tutup();
             
             /*
             CRUDAnggota tesCrudA = new CRUDAnggota();
@@ -31,10 +30,11 @@ public class Perpusdata {
             CRUDBuku tesCrudB = new CRUDBuku();
             tesCrudB.update();
             */
-            
             Peminjaman pinjam = new Peminjaman();
             pinjam.cekAnggota();
             pinjam.cekBuku();
+            
+            tesKoneksi.tutup();
         } catch(SQLException e) {
             e.printStackTrace();
         }
