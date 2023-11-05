@@ -35,6 +35,7 @@ public class loginform extends javax.swing.JFrame {
         labelLogin = new javax.swing.JLabel();
         buttonLogin = new javax.swing.JButton();
         inputPsw = new javax.swing.JPasswordField();
+        jSeparator1 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -77,26 +78,30 @@ public class loginform extends javax.swing.JFrame {
                         .addGap(229, 229, 229)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(labelUsn)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(labelPsw)
-                                .addGap(48, 48, 48)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(inputUsn)
-                                    .addComponent(inputPsw, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE)))))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(labelPsw)
+                                    .addGap(48, 48, 48)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(inputUsn)
+                                        .addComponent(inputPsw, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE))))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(300, 300, 300)
                         .addComponent(labelLogin))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(336, 336, 336)
                         .addComponent(buttonLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(226, Short.MAX_VALUE))
+                .addContainerGap(214, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(81, 81, 81)
                 .addComponent(labelLogin)
-                .addGap(43, 43, 43)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelUsn)
                     .addComponent(inputUsn, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -106,7 +111,7 @@ public class loginform extends javax.swing.JFrame {
                     .addComponent(inputPsw, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(41, 41, 41)
                 .addComponent(buttonLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(81, Short.MAX_VALUE))
+                .addContainerGap(103, Short.MAX_VALUE))
         );
 
         pack();
@@ -151,6 +156,7 @@ public class loginform extends javax.swing.JFrame {
     private javax.swing.JButton buttonLogin;
     private javax.swing.JPasswordField inputPsw;
     private javax.swing.JTextField inputUsn;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel labelLogin;
     private javax.swing.JLabel labelPsw;
     private javax.swing.JLabel labelUsn;
