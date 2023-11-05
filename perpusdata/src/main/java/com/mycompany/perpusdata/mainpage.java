@@ -4,6 +4,14 @@
  */
 package com.mycompany.perpusdata;
 
+import java.awt.Color;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+
 /**
  *
  * @author ASUS
@@ -15,6 +23,98 @@ public class mainpage extends javax.swing.JFrame {
      */
     public mainpage() {
         initComponents();
+        getContentPane().setBackground(Color.decode("0xF1F4F6"));
+        
+        // Tambahkan listener mouse ke tombol Peminjaman
+        peminjaman.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                setCursor(new Cursor(Cursor.HAND_CURSOR));
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+            }
+        });
+
+        // Tambahkan listener mouse ke tombol Buku
+        buku.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                setCursor(new Cursor(Cursor.HAND_CURSOR));
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+            }
+        });
+        
+        // Tambahkan listener mouse ke tombol Anggota
+        anggota.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                setCursor(new Cursor(Cursor.HAND_CURSOR));
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+            }
+        });
+        
+        // Tambahkan listener mouse ke tombol Pengembalian
+        pengembalian.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                setCursor(new Cursor(Cursor.HAND_CURSOR));
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+            }
+        });
+        
+        // Tambahkan listener mouse ke tombol Riwayat
+        riwayat.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                setCursor(new Cursor(Cursor.HAND_CURSOR));
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+            }
+        });
+        
+        // Tambahkan listener mouse ke tombol Status Terkini
+        statkini.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                setCursor(new Cursor(Cursor.HAND_CURSOR));
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+            }
+        });
+        
+        // Tambahkan listener mouse ke tombol Kembali
+        kembali.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                setCursor(new Cursor(Cursor.HAND_CURSOR));
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+            }
+        });
     }
 
     /**
@@ -26,20 +126,78 @@ public class mainpage extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        peminjaman = new javax.swing.JButton();
+        buku = new javax.swing.JButton();
+        anggota = new javax.swing.JButton();
+        pengembalian = new javax.swing.JButton();
+        statkini = new javax.swing.JButton();
+        riwayat = new javax.swing.JButton();
+        kembali = new javax.swing.JButton();
+        bg = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(241, 244, 246));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 450, Short.MAX_VALUE)
-        );
+        peminjaman.setBackground(new java.awt.Color(241, 244, 246));
+        peminjaman.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
+        peminjaman.setForeground(new java.awt.Color(169, 180, 200));
+        peminjaman.setText("Peminjaman");
+        peminjaman.setBorderPainted(false);
+        peminjaman.setContentAreaFilled(false);
+        getContentPane().add(peminjaman, new org.netbeans.lib.awtextra.AbsoluteConstraints(204, 220, 250, 70));
 
-        pack();
+        buku.setBackground(new java.awt.Color(241, 244, 246));
+        buku.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
+        buku.setForeground(new java.awt.Color(169, 180, 200));
+        buku.setText("Buku");
+        buku.setBorderPainted(false);
+        buku.setContentAreaFilled(false);
+        getContentPane().add(buku, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 100, 240, 80));
+
+        anggota.setBackground(new java.awt.Color(241, 244, 246));
+        anggota.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
+        anggota.setForeground(new java.awt.Color(169, 180, 200));
+        anggota.setText("Anggota");
+        anggota.setBorderPainted(false);
+        anggota.setContentAreaFilled(false);
+        getContentPane().add(anggota, new org.netbeans.lib.awtextra.AbsoluteConstraints(208, 110, 240, 60));
+
+        pengembalian.setBackground(new java.awt.Color(241, 244, 246));
+        pengembalian.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
+        pengembalian.setForeground(new java.awt.Color(169, 180, 200));
+        pengembalian.setText("Pengembalian");
+        pengembalian.setBorderPainted(false);
+        pengembalian.setContentAreaFilled(false);
+        getContentPane().add(pengembalian, new org.netbeans.lib.awtextra.AbsoluteConstraints(497, 220, 230, 70));
+
+        statkini.setBackground(new java.awt.Color(241, 244, 246));
+        statkini.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
+        statkini.setForeground(new java.awt.Color(169, 180, 200));
+        statkini.setText("Status Terkini");
+        statkini.setBorderPainted(false);
+        statkini.setContentAreaFilled(false);
+        getContentPane().add(statkini, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 320, 240, 70));
+
+        riwayat.setBackground(new java.awt.Color(241, 244, 246));
+        riwayat.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
+        riwayat.setForeground(new java.awt.Color(169, 180, 200));
+        riwayat.setText("Riwayat");
+        riwayat.setBorderPainted(false);
+        riwayat.setContentAreaFilled(false);
+        getContentPane().add(riwayat, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 320, 240, 70));
+
+        kembali.setBackground(new java.awt.Color(241, 244, 246));
+        kembali.setIcon(new javax.swing.ImageIcon("D:\\Netbeans\\prakpem1\\perpusdata\\src\\main\\java\\com\\mycompany\\perpusdata\\01asset\\kembali.png")); // NOI18N
+        kembali.setContentAreaFilled(false);
+        getContentPane().add(kembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        bg.setIcon(new javax.swing.ImageIcon("D:\\Netbeans\\prakpem1\\perpusdata\\src\\main\\java\\com\\mycompany\\perpusdata\\01asset\\tem haltama.png")); // NOI18N
+        bg.setText("jLabel1");
+        getContentPane().add(bg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 450));
+
+        setSize(new java.awt.Dimension(816, 458));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
@@ -75,8 +233,17 @@ public class mainpage extends javax.swing.JFrame {
                 new mainpage().setVisible(true);
             }
         });
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton anggota;
+    private javax.swing.JLabel bg;
+    private javax.swing.JButton buku;
+    private javax.swing.JButton kembali;
+    private javax.swing.JButton peminjaman;
+    private javax.swing.JButton pengembalian;
+    private javax.swing.JButton riwayat;
+    private javax.swing.JButton statkini;
     // End of variables declaration//GEN-END:variables
 }
