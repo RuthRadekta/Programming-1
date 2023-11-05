@@ -41,8 +41,8 @@ public class Peminjaman {
                 System.out.println("Apakah data sudah sesuai? y/n:");
                 String cek = scanner.nextLine();
             }
-        } catch {
-            
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
         }
     }
     
@@ -73,8 +73,8 @@ public class Peminjaman {
                 System.out.println("Apakah data sudah sesuai? y/n:");
                 String cek = scanner.nextLine();
             }
-        } catch {
-            
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
         }
     }
 }
