@@ -4,6 +4,8 @@
  */
 package com.mycompany.perpusdata;
 
+
+import java.awt.Color;
 /**
  *
  * @author ASUS
@@ -15,6 +17,7 @@ public class loginform extends javax.swing.JFrame {
      */
     public loginform() {
         initComponents();
+        getContentPane().setBackground(Color.decode("0xF1F4F6"));
     }
 
     /**
@@ -26,51 +29,84 @@ public class loginform extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        bg = new javax.swing.JLabel();
-        jLayeredPane1 = new javax.swing.JLayeredPane();
-        jLabel1 = new javax.swing.JLabel();
+        labelUsn = new javax.swing.JLabel();
+        labelPsw = new javax.swing.JLabel();
+        inputUsn = new javax.swing.JTextField();
+        labelLogin = new javax.swing.JLabel();
+        buttonLogin = new javax.swing.JButton();
+        inputPsw = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/perpusdata/login.png"))); // NOI18N
+        labelUsn.setFont(new java.awt.Font("Rockwell", 1, 18)); // NOI18N
+        labelUsn.setForeground(new java.awt.Color(155, 164, 180));
+        labelUsn.setText("Username");
 
-        jLabel1.setText("inputUsername");
+        labelPsw.setFont(new java.awt.Font("Rockwell", 1, 18)); // NOI18N
+        labelPsw.setForeground(new java.awt.Color(155, 164, 180));
+        labelPsw.setText("Password");
 
-        jLayeredPane1.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        inputUsn.setBackground(new java.awt.Color(227, 230, 237));
+        inputUsn.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        inputUsn.setForeground(new java.awt.Color(169, 180, 200));
+        inputUsn.setToolTipText("");
+        inputUsn.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(222, 229, 232), new java.awt.Color(222, 229, 232)), null));
 
-        javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
-        jLayeredPane1.setLayout(jLayeredPane1Layout);
-        jLayeredPane1Layout.setHorizontalGroup(
-            jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addContainerGap())
-        );
-        jLayeredPane1Layout.setVerticalGroup(
-            jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addContainerGap())
-        );
+        labelLogin.setFont(new java.awt.Font("Rockwell Extra Bold", 0, 48)); // NOI18N
+        labelLogin.setForeground(new java.awt.Color(155, 164, 180));
+        labelLogin.setText("LOGIN");
+
+        buttonLogin.setBackground(new java.awt.Color(169, 180, 200));
+        buttonLogin.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        buttonLogin.setForeground(new java.awt.Color(169, 180, 200));
+        buttonLogin.setText("login");
+        buttonLogin.setBorder(null);
+
+        inputPsw.setBackground(new java.awt.Color(227, 230, 237));
+        inputPsw.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        inputPsw.setForeground(new java.awt.Color(169, 180, 200));
+        inputPsw.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(222, 229, 232), new java.awt.Color(222, 229, 232)), null));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(bg)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(229, 229, 229)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelUsn)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(labelPsw)
+                                .addGap(48, 48, 48)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(inputUsn)
+                                    .addComponent(inputPsw, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE)))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(300, 300, 300)
+                        .addComponent(labelLogin))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(336, 336, 336)
+                        .addComponent(buttonLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(226, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(bg)
             .addGroup(layout.createSequentialGroup()
-                .addGap(211, 211, 211)
-                .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(81, 81, 81)
+                .addComponent(labelLogin)
+                .addGap(43, 43, 43)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelUsn)
+                    .addComponent(inputUsn, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelPsw)
+                    .addComponent(inputPsw, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(41, 41, 41)
+                .addComponent(buttonLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(81, Short.MAX_VALUE))
         );
 
         pack();
@@ -112,8 +148,11 @@ public class loginform extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel bg;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLayeredPane jLayeredPane1;
+    private javax.swing.JButton buttonLogin;
+    private javax.swing.JPasswordField inputPsw;
+    private javax.swing.JTextField inputUsn;
+    private javax.swing.JLabel labelLogin;
+    private javax.swing.JLabel labelPsw;
+    private javax.swing.JLabel labelUsn;
     // End of variables declaration//GEN-END:variables
 }
