@@ -69,7 +69,7 @@ public class Peminjaman {
                 String penerbit = resultSet.getString("penerbit");
                 String jumlah_halaman = resultSet.getString("jumlah_halaman");
                 
-                System.out.println("ID: " + id_buku + "\nNama: " + judul + "\nPenulis: " + penulis + "\nPenerbit: " + penerbit + "\nJumlah Halaman: " + jumlah_halaman);
+                System.out.println("ID: " + id_buku + "\nJudul: " + judul + "\nPenulis: " + penulis + "\nPenerbit: " + penerbit + "\nJumlah Halaman: " + jumlah_halaman);
                 System.out.println("Apakah data sudah sesuai? y/n:");
                 String cek = scanner.nextLine();
             }

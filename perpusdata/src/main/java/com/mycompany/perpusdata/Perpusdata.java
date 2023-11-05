@@ -22,13 +22,19 @@ public class Perpusdata {
             tesLogin.input();
             tesLogin.login(username, password);
             tesKoneksi.tutup();
+            
             /*
             CRUDAnggota tesCrudA = new CRUDAnggota();
             tesCrudA.read();
             tesCrudA.delete();
-            */
+            
             CRUDBuku tesCrudB = new CRUDBuku();
             tesCrudB.update();
+            */
+            
+            Peminjaman pinjam = new Peminjaman();
+            pinjam.cekAnggota();
+            pinjam.cekBuku();
         } catch(SQLException e) {
             e.printStackTrace();
         }
