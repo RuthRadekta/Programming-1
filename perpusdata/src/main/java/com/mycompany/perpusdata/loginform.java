@@ -6,6 +6,12 @@ package com.mycompany.perpusdata;
 
 
 import java.awt.Color;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 /**
  *
  * @author ASUS
@@ -18,6 +24,19 @@ public class loginform extends javax.swing.JFrame {
     public loginform() {
         initComponents();
         getContentPane().setBackground(Color.decode("0xF1F4F6"));
+        
+        // Tambahkan listener mouse ke tombol login
+        buttonLogin.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                setCursor(new Cursor(Cursor.HAND_CURSOR));
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+            }
+        });
     }
 
     /**
@@ -36,6 +55,8 @@ public class loginform extends javax.swing.JFrame {
         buttonLogin = new javax.swing.JButton();
         inputPsw = new javax.swing.JPasswordField();
         jSeparator1 = new javax.swing.JSeparator();
+        labelAP = new javax.swing.JLabel();
+        labelUNS = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -61,12 +82,19 @@ public class loginform extends javax.swing.JFrame {
         buttonLogin.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         buttonLogin.setForeground(new java.awt.Color(169, 180, 200));
         buttonLogin.setText("login");
-        buttonLogin.setBorder(null);
+        buttonLogin.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        buttonLogin.setBorderPainted(false);
 
         inputPsw.setBackground(new java.awt.Color(227, 230, 237));
         inputPsw.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         inputPsw.setForeground(new java.awt.Color(169, 180, 200));
         inputPsw.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(222, 229, 232), new java.awt.Color(222, 229, 232)), null));
+
+        labelAP.setForeground(new java.awt.Color(169, 180, 200));
+        labelAP.setText("Admin Perpustakaan");
+
+        labelUNS.setForeground(new java.awt.Color(169, 180, 200));
+        labelUNS.setText("Universitas Sebelas Maret");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -75,29 +103,40 @@ public class loginform extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(229, 229, 229)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(labelUsn)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(labelPsw)
-                                    .addGap(48, 48, 48)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(inputUsn)
-                                        .addComponent(inputPsw, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE))))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(229, 229, 229)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(labelUsn)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(labelPsw)
+                                            .addGap(48, 48, 48)
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                .addComponent(inputUsn)
+                                                .addComponent(inputPsw, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE))))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(300, 300, 300)
+                                .addComponent(labelLogin))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(336, 336, 336)
+                                .addComponent(buttonLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 208, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(300, 300, 300)
-                        .addComponent(labelLogin))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(336, 336, 336)
-                        .addComponent(buttonLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(214, Short.MAX_VALUE))
+                        .addContainerGap()
+                        .addComponent(labelAP)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(labelUNS)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(81, 81, 81)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelAP)
+                    .addComponent(labelUNS))
+                .addGap(65, 65, 65)
                 .addComponent(labelLogin)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -157,8 +196,10 @@ public class loginform extends javax.swing.JFrame {
     private javax.swing.JPasswordField inputPsw;
     private javax.swing.JTextField inputUsn;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JLabel labelAP;
     private javax.swing.JLabel labelLogin;
     private javax.swing.JLabel labelPsw;
+    private javax.swing.JLabel labelUNS;
     private javax.swing.JLabel labelUsn;
     // End of variables declaration//GEN-END:variables
 }
