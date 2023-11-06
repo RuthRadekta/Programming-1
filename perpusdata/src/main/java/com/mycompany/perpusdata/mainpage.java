@@ -25,7 +25,20 @@ public class mainpage extends javax.swing.JFrame {
         initComponents();
         getContentPane().setBackground(Color.decode("0xF1F4F6"));
         
-        // Tambahkan listener mouse ke tombol Peminjaman
+        //ganti kursor home
+        home.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                setCursor(new Cursor(Cursor.HAND_CURSOR));
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+            }
+        });
+        
+        //ganti kursor peminjaman
         peminjaman.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
@@ -38,7 +51,7 @@ public class mainpage extends javax.swing.JFrame {
             }
         });
 
-        // Tambahkan listener mouse ke tombol Buku
+        //ganti kursor buku
         buku.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
@@ -51,7 +64,7 @@ public class mainpage extends javax.swing.JFrame {
             }
         });
         
-        // Tambahkan listener mouse ke tombol Anggota
+        //ganti kursor anggota
         anggota.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
@@ -64,7 +77,7 @@ public class mainpage extends javax.swing.JFrame {
             }
         });
         
-        // Tambahkan listener mouse ke tombol Pengembalian
+        //ganti kurosr pengembalian
         pengembalian.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
@@ -77,7 +90,7 @@ public class mainpage extends javax.swing.JFrame {
             }
         });
         
-        // Tambahkan listener mouse ke tombol Riwayat
+        //ganti kursor riwayat
         riwayat.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
@@ -90,7 +103,7 @@ public class mainpage extends javax.swing.JFrame {
             }
         });
         
-        // Tambahkan listener mouse ke tombol Status Terkini
+        //gantikursor status terkini
         statkini.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
@@ -103,7 +116,7 @@ public class mainpage extends javax.swing.JFrame {
             }
         });
         
-        // Tambahkan listener mouse ke tombol Kembali
+        //ganti kursor kembali
         kembali.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
@@ -126,77 +139,111 @@ public class mainpage extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        peminjaman = new javax.swing.JButton();
-        buku = new javax.swing.JButton();
+        bg1 = new javax.swing.JPanel();
+        home = new javax.swing.JButton();
         anggota = new javax.swing.JButton();
+        buku = new javax.swing.JButton();
+        peminjaman = new javax.swing.JButton();
         pengembalian = new javax.swing.JButton();
         statkini = new javax.swing.JButton();
         riwayat = new javax.swing.JButton();
+        hover = new javax.swing.JPanel();
+        bg2 = new javax.swing.JPanel();
         kembali = new javax.swing.JButton();
-        bg = new javax.swing.JLabel();
+        labelSelamatDatang = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(241, 244, 246));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        peminjaman.setBackground(new java.awt.Color(241, 244, 246));
-        peminjaman.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
-        peminjaman.setForeground(new java.awt.Color(169, 180, 200));
-        peminjaman.setText("Peminjaman");
-        peminjaman.setBorderPainted(false);
-        peminjaman.setContentAreaFilled(false);
-        getContentPane().add(peminjaman, new org.netbeans.lib.awtextra.AbsoluteConstraints(204, 220, 250, 70));
+        bg1.setBackground(new java.awt.Color(255, 255, 255));
+        bg1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        buku.setBackground(new java.awt.Color(241, 244, 246));
-        buku.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
-        buku.setForeground(new java.awt.Color(169, 180, 200));
-        buku.setText("Buku");
-        buku.setBorderPainted(false);
-        buku.setContentAreaFilled(false);
-        getContentPane().add(buku, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 100, 240, 80));
+        home.setBackground(new java.awt.Color(241, 244, 246));
+        home.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        home.setForeground(new java.awt.Color(255, 255, 255));
+        home.setText("HOME");
+        home.setBorderPainted(false);
+        home.setContentAreaFilled(false);
+        bg1.add(home, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 30));
 
         anggota.setBackground(new java.awt.Color(241, 244, 246));
-        anggota.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
-        anggota.setForeground(new java.awt.Color(169, 180, 200));
-        anggota.setText("Anggota");
+        anggota.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        anggota.setForeground(new java.awt.Color(255, 255, 255));
+        anggota.setText("ANGGOTA");
         anggota.setBorderPainted(false);
         anggota.setContentAreaFilled(false);
-        getContentPane().add(anggota, new org.netbeans.lib.awtextra.AbsoluteConstraints(208, 110, 240, 60));
+        bg1.add(anggota, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 110, 20));
+
+        buku.setBackground(new java.awt.Color(241, 244, 246));
+        buku.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        buku.setForeground(new java.awt.Color(255, 255, 255));
+        buku.setText("BUKU");
+        buku.setBorderPainted(false);
+        buku.setContentAreaFilled(false);
+        bg1.add(buku, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 120, 120, 20));
+
+        peminjaman.setBackground(new java.awt.Color(241, 244, 246));
+        peminjaman.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        peminjaman.setForeground(new java.awt.Color(255, 255, 255));
+        peminjaman.setText("PEMINJAMAN");
+        peminjaman.setBorderPainted(false);
+        peminjaman.setContentAreaFilled(false);
+        bg1.add(peminjaman, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 140, 30));
 
         pengembalian.setBackground(new java.awt.Color(241, 244, 246));
-        pengembalian.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
-        pengembalian.setForeground(new java.awt.Color(169, 180, 200));
-        pengembalian.setText("Pengembalian");
+        pengembalian.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        pengembalian.setForeground(new java.awt.Color(255, 255, 255));
+        pengembalian.setText("PENGEMBALIAN");
         pengembalian.setBorderPainted(false);
         pengembalian.setContentAreaFilled(false);
-        getContentPane().add(pengembalian, new org.netbeans.lib.awtextra.AbsoluteConstraints(497, 220, 230, 70));
+        bg1.add(pengembalian, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 160, 30));
 
         statkini.setBackground(new java.awt.Color(241, 244, 246));
-        statkini.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
-        statkini.setForeground(new java.awt.Color(169, 180, 200));
-        statkini.setText("Status Terkini");
+        statkini.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        statkini.setForeground(new java.awt.Color(255, 255, 255));
+        statkini.setText("STATUS TERKINI");
         statkini.setBorderPainted(false);
         statkini.setContentAreaFilled(false);
-        getContentPane().add(statkini, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 320, 240, 70));
+        bg1.add(statkini, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 160, -1));
 
         riwayat.setBackground(new java.awt.Color(241, 244, 246));
-        riwayat.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
-        riwayat.setForeground(new java.awt.Color(169, 180, 200));
-        riwayat.setText("Riwayat");
+        riwayat.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        riwayat.setForeground(new java.awt.Color(255, 255, 255));
+        riwayat.setText("RIWAYAT");
         riwayat.setBorderPainted(false);
         riwayat.setContentAreaFilled(false);
-        getContentPane().add(riwayat, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 320, 240, 70));
+        bg1.add(riwayat, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 270, 150, -1));
 
-        kembali.setBackground(new java.awt.Color(241, 244, 246));
-        kembali.setIcon(new javax.swing.ImageIcon("D:\\Netbeans\\prakpem1\\perpusdata\\src\\main\\java\\com\\mycompany\\perpusdata\\01asset\\kembali.png")); // NOI18N
+        hover.setBackground(new java.awt.Color(190, 196, 205));
+        bg1.add(hover, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 30));
+
+        bg2.setBackground(new java.awt.Color(155, 164, 180));
+        bg2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        kembali.setFont(new java.awt.Font("Segoe UI Black", 0, 10)); // NOI18N
+        kembali.setForeground(new java.awt.Color(255, 255, 255));
+        kembali.setText("kembali");
+        kembali.setBorderPainted(false);
         kembali.setContentAreaFilled(false);
-        getContentPane().add(kembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        bg2.add(kembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 380, -1, -1));
 
-        bg.setIcon(new javax.swing.ImageIcon("D:\\Netbeans\\prakpem1\\perpusdata\\src\\main\\java\\com\\mycompany\\perpusdata\\01asset\\tem haltama.png")); // NOI18N
-        bg.setText("jLabel1");
-        getContentPane().add(bg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 450));
+        bg1.add(bg2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 410));
 
-        setSize(new java.awt.Dimension(816, 458));
+        labelSelamatDatang.setFont(new java.awt.Font("Segoe UI Black", 0, 30)); // NOI18N
+        labelSelamatDatang.setForeground(new java.awt.Color(155, 164, 180));
+        labelSelamatDatang.setText("SELAMAT DATANG KEMBALI");
+        bg1.add(labelSelamatDatang, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 140, -1, -1));
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(190, 196, 205));
+        jLabel1.setText("PILIH MENU DAN KELOLA DATA ANDA");
+        bg1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 190, -1, -1));
+
+        getContentPane().add(bg1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, -1));
+
+        setSize(new java.awt.Dimension(816, 445));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -238,9 +285,14 @@ public class mainpage extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton anggota;
-    private javax.swing.JLabel bg;
+    private javax.swing.JPanel bg1;
+    private javax.swing.JPanel bg2;
     private javax.swing.JButton buku;
+    private javax.swing.JButton home;
+    private javax.swing.JPanel hover;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JButton kembali;
+    private javax.swing.JLabel labelSelamatDatang;
     private javax.swing.JButton peminjaman;
     private javax.swing.JButton pengembalian;
     private javax.swing.JButton riwayat;
