@@ -5,6 +5,7 @@
 package com.mycompany.perpusdata;
 
 import java.sql.SQLException;
+import java.util.Scanner;
 
 /**
  *
@@ -29,9 +30,18 @@ public class Perpusdata {
             
             CRUDBuku tesCrudB = new CRUDBuku();
             tesCrudB.update();
-            */
+            
             Peminjaman pinjam = new Peminjaman();
-            pinjam.catatPeminjaman(true);
+            boolean finalValue;
+            finalValue = pinjam.cekAnggota() && pinjam.cekBuku();
+            pinjam.catatPeminjaman(finalValue);
+            */
+            
+            Pengembalian kembali = new Pengembalian();
+            Scanner scanner = new Scanner(System.in);
+            System.out.print("Masukkan id transaksi: ");
+            int id_transaksi = scanner.nextInt();
+            kembali.cekPeminjaman(id_transaksi);
             
             tesKoneksi.tutup();
         } catch(SQLException e) {
