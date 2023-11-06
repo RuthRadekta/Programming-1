@@ -73,12 +73,42 @@ public class Peminjaman {
                 System.out.println("Apakah data sudah sesuai? y/n:");
                 String cek = scanner.nextLine();
             }
+            
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
         }
     }
     
     public boolean catatPeminjaman(boolean value){
+        try {
+            Koneksi konek = new Koneksi();
+            Connection koneksi = konek.buka();
+            String query = "INSERT INTO status (id_transaksi_, id_anggota, id_buku, pinjam, kembali, denda) VALUES (?, ?, ?, CURRENT_TIMESTAMP, null, null)";
+            PreparedStatement ps = koneksi.prepareStatement(query);
+
+            Scanner scanner = new Scanner(System.in);
+            System.out.print("Masukkan id transaksi: ");
+            int id_transaksi = scanner.nextInt();
+            System.out.print("Masukkan id anggota: ");
+            int id_anggota = scanner.nextInt();
+            System.out.print("Masukkan id buku: ");
+            int id_buku = scanner.nextInt();
+            
+            ps.setInt(1, id_transaksi);
+            ps.setInt(2, id_anggota);
+            ps.setInt(3, id_buku);
+
+            int rowsAffected = ps.executeUpdate();
+
+            if (rowsAffected > 0) {
+                System.out.println("Status peminjaman berhasil dimasukkan.");
+            } else {
+                System.out.println("Gagal memasukkan status peminjaman.");
+            }
+            
+        } catch(SQLException ex) {
+            System.out.println(ex.getMessage());  
+        }
         return value;
     }
 }
