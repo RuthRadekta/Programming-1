@@ -34,9 +34,13 @@ public class Perpusdata {
             Peminjaman pinjam = new Peminjaman();
             pinjam.cekAnggota();
             pinjam.cekBuku();
+            
+            Peminjaman pinjam = new Peminjaman();
+            pinjam.prosedurPeminjaman();
             */
             
-            
+            Pengembalian kembali = new Pengembalian();
+            kembali.cekPeminjaman();
             
             tesKoneksi.tutup();
         } catch(SQLException e) {

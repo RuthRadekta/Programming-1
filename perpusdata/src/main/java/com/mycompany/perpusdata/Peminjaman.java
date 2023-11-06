@@ -57,16 +57,12 @@ public class Peminjaman {
         return value;
     }
     
-    public void catatPeminjaman(int id_anggota, int id_buku){
+    public void catatPeminjaman(int id_transaksi, int id_anggota, int id_buku){
         try {
             Koneksi konek = new Koneksi();
             Connection koneksi = konek.buka();
-            String query = "INSERT INTO status (id_transaksi_, id_anggota, id_buku, pinjam, denda) VALUES (?, ?, ?, CURRENT_TIMESTAMP, null)";
+            String query = "INSERT INTO status (id_transaksi, id_anggota, id_buku, pinjam, denda) VALUES (?, ?, ?, CURRENT_TIMESTAMP, null)";
             PreparedStatement ps = koneksi.prepareStatement(query);
-
-            Scanner scanner = new Scanner(System.in);
-            System.out.print("Masukkan id transaksi: ");
-            int id_transaksi = scanner.nextInt();
             
             ps.setInt(1, id_transaksi);
             ps.setInt(2, id_anggota);
@@ -87,12 +83,14 @@ public class Peminjaman {
     
     public void prosedurPeminjaman(){
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Masukkan id anggota yang dipinjam: ");
+        System.out.print("Masukkan id transaksi baru: ");
+        int id_transaksi = scanner.nextInt();
+        System.out.print("Masukkan id anggota yang meminjam: ");
         int id_anggota = scanner.nextInt();
         System.out.print("Masukkan id buku yang dipinjam: ");
         int id_buku = scanner.nextInt();
         if (cekAnggota(id_anggota) && cekBuku(id_buku)) {
-            catatPeminjaman(id_anggota, id_buku);
+            catatPeminjaman(id_transaksi, id_anggota, id_buku);
         } else if (!cekAnggota(id_anggota)) {
             System.out.println("id anggota tidak ditemukan.");
         } else if (!cekBuku(id_buku)) {
