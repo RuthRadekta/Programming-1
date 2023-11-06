@@ -35,13 +35,17 @@ public class Perpusdata {
             boolean finalValue;
             finalValue = pinjam.cekAnggota() && pinjam.cekBuku();
             pinjam.catatPeminjaman(finalValue);
-            */
             
             Pengembalian kembali = new Pengembalian();
             Scanner scanner = new Scanner(System.in);
             System.out.print("Masukkan id transaksi: ");
             int id_transaksi = scanner.nextInt();
-            kembali.cekPeminjaman(id_transaksi);
+            boolean finalValue = kembali.cekTransaksi(id_transaksi);
+            kembali.catatPengembalian(finalValue);
+            */
+            
+            Peminjaman pinjam = new Peminjaman();
+            pinjam.prosedurPeminjaman();
             
             tesKoneksi.tutup();
         } catch(SQLException e) {

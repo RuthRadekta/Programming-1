@@ -14,15 +14,16 @@ import java.sql.SQLException;
  * @author refah
  */
 public class Peminjaman {
-    public boolean cekAnggota(){
+    public boolean cekAnggota(int id_anggota){
         boolean value = false;
         try {
             Koneksi konek = new Koneksi();
             Connection koneksi = konek.buka();
             Scanner scanner = new Scanner(System.in);
-            
+            /*
             System.out.print("Masukkan id anggota yang meminjam: ");
             int id_anggota = scanner.nextInt();
+            */
             String checkQuery = "SELECT * FROM anggota WHERE id_anggota = ?";
             PreparedStatement checkStatement = koneksi.prepareStatement(checkQuery);
             checkStatement.setInt(1, id_anggota);
@@ -50,15 +51,16 @@ public class Peminjaman {
         return value;
     }
     
-    public boolean cekBuku(){
+    public boolean cekBuku(int id_buku){
         boolean value = false;
         try {
             Koneksi konek = new Koneksi();
             Connection koneksi = konek.buka();
             Scanner scanner = new Scanner(System.in);
-            
+            /*
             System.out.print("Masukkan id buku yang dipinjam: ");
             int id_buku = scanner.nextInt();
+            */
             String checkQuery = "SELECT * FROM buku WHERE id_buku = ?";
             PreparedStatement checkStatement = koneksi.prepareStatement(checkQuery);
             checkStatement.setInt(1, id_buku);
@@ -87,39 +89,47 @@ public class Peminjaman {
         return value;
     }
     
-    public void catatPeminjaman(boolean finalValue){
-        if (finalValue == true) {
-            try {
-                Koneksi konek = new Koneksi();
-                Connection koneksi = konek.buka();
-                String query = "INSERT INTO status (id_transaksi, id_anggota, id_buku, pinjam, kembali, denda) VALUES (?, ?, ?, CURRENT_TIMESTAMP, null, null)";
-                PreparedStatement ps = koneksi.prepareStatement(query);
+    public void catatPeminjaman(int id_anggota, int id_buku){
+        try {
+            Koneksi konek = new Koneksi();
+            Connection koneksi = konek.buka();
+            String query = "INSERT INTO status (id_transaksi, id_anggota, id_buku, pinjam, kembali, denda) VALUES (?, ?, ?, CURRENT_TIMESTAMP, null, null)";
+            PreparedStatement ps = koneksi.prepareStatement(query);
 
-                Scanner scanner = new Scanner(System.in);
-                System.out.print("Masukkan id transaksi: ");
-                int id_transaksi = scanner.nextInt();
-                System.out.print("Masukkan id anggota: ");
-                int id_anggota = scanner.nextInt();
-                System.out.print("Masukkan id buku: ");
-                int id_buku = scanner.nextInt();
+            Scanner scanner = new Scanner(System.in);
+            System.out.print("Masukkan id transaksi: ");
+            int id_transaksi = scanner.nextInt();
+            /*
+            System.out.print("Masukkan id anggota: ");
+            int id_anggota = scanner.nextInt();
+            System.out.print("Masukkan id buku: ");
+            int id_buku = scanner.nextInt();
+            */
+            ps.setInt(1, id_transaksi);
+            ps.setInt(2, id_anggota);
+            ps.setInt(3, id_buku);
 
-                ps.setInt(1, id_transaksi);
-                ps.setInt(2, id_anggota);
-                ps.setInt(3, id_buku);
+            int rowsAffected = ps.executeUpdate();
 
-                int rowsAffected = ps.executeUpdate();
-
-                if (rowsAffected > 0) {
-                    System.out.println("Status peminjaman berhasil dimasukkan.");
-                } else {
-                    System.out.println("Gagal memasukkan status peminjaman.");
-                }
-
-            } catch(SQLException ex) {
-                System.out.println(ex.getMessage());  
+            if (rowsAffected > 0) {
+                System.out.println("Status peminjaman berhasil dimasukkan.");
+            } else {
+                System.out.println("Gagal memasukkan status peminjaman.");
             }
-        } else {
-            System.out.println("Ada kesalahan");
+
+        } catch(SQLException ex) {
+            System.out.println(ex.getMessage());  
+        }
+    }
+    
+    public void prosedurPeminjaman(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Masukkan id buku yang dipinjam: ");
+        int id_buku = scanner.nextInt();
+        System.out.print("Masukkan id anggota yang dipinjam: ");
+        int id_anggota = scanner.nextInt();
+        if (cekAnggota(id_anggota) && cekBuku(id_buku)) {
+            catatPeminjaman(id_anggota, id_buku);
         }
     }
 }
