@@ -29,10 +29,13 @@ public class Perpusdata {
             
             CRUDBuku tesCrudB = new CRUDBuku();
             tesCrudB.update();
-            */
+            
             Peminjaman pinjam = new Peminjaman();
             pinjam.cekAnggota();
             pinjam.cekBuku();
+            */
+            
+            
             
             tesKoneksi.tutup();
         } catch(SQLException e) {
