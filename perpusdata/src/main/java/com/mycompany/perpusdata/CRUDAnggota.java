@@ -77,7 +77,7 @@ public class CRUDAnggota implements CRUD{
             resultSet.close();
             statement.close();
         } catch (SQLException ex) {
-            System.out.println(ex.getMessage());  
+            System.out.println(ex.getMessage());
         }
     }
 
