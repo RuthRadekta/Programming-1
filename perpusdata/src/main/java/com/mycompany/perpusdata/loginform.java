@@ -23,20 +23,7 @@ public class loginform extends javax.swing.JFrame {
      */
     public loginform() {
         initComponents();
-        getContentPane().setBackground(Color.decode("0xF1F4F6"));
-        
-        // Tambahkan listener mouse ke tombol login
-        buttonLogin.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseEntered(MouseEvent e) {
-                setCursor(new Cursor(Cursor.HAND_CURSOR));
-            }
-
-            @Override
-            public void mouseExited(MouseEvent e) {
-                setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
-            }
-        });
+        getContentPane().setBackground(Color.decode("0xFFFFFFF"));
     }
 
     /**
@@ -59,24 +46,31 @@ public class loginform extends javax.swing.JFrame {
         labelUNS = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 255, 255));
+        setPreferredSize(new java.awt.Dimension(830, 500));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         labelUsn.setFont(new java.awt.Font("Rockwell", 1, 18)); // NOI18N
         labelUsn.setForeground(new java.awt.Color(155, 164, 180));
         labelUsn.setText("Username");
+        getContentPane().add(labelUsn, new org.netbeans.lib.awtextra.AbsoluteConstraints(229, 187, -1, -1));
 
         labelPsw.setFont(new java.awt.Font("Rockwell", 1, 18)); // NOI18N
         labelPsw.setForeground(new java.awt.Color(155, 164, 180));
         labelPsw.setText("Password");
+        getContentPane().add(labelPsw, new org.netbeans.lib.awtextra.AbsoluteConstraints(229, 248, -1, -1));
 
         inputUsn.setBackground(new java.awt.Color(227, 230, 237));
         inputUsn.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         inputUsn.setForeground(new java.awt.Color(169, 180, 200));
         inputUsn.setToolTipText("");
         inputUsn.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(222, 229, 232), new java.awt.Color(222, 229, 232)), null));
+        getContentPane().add(inputUsn, new org.netbeans.lib.awtextra.AbsoluteConstraints(362, 181, 224, 35));
 
         labelLogin.setFont(new java.awt.Font("Rockwell Extra Bold", 0, 48)); // NOI18N
         labelLogin.setForeground(new java.awt.Color(155, 164, 180));
         labelLogin.setText("LOGIN");
+        getContentPane().add(labelLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 81, -1, -1));
 
         buttonLogin.setBackground(new java.awt.Color(169, 180, 200));
         buttonLogin.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
@@ -84,74 +78,23 @@ public class loginform extends javax.swing.JFrame {
         buttonLogin.setText("login");
         buttonLogin.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         buttonLogin.setBorderPainted(false);
+        buttonLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        getContentPane().add(buttonLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(336, 318, 96, 29));
 
         inputPsw.setBackground(new java.awt.Color(227, 230, 237));
         inputPsw.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         inputPsw.setForeground(new java.awt.Color(169, 180, 200));
         inputPsw.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(222, 229, 232), new java.awt.Color(222, 229, 232)), null));
+        getContentPane().add(inputPsw, new org.netbeans.lib.awtextra.AbsoluteConstraints(362, 242, 224, 35));
+        getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(229, 144, 357, 10));
 
         labelAP.setForeground(new java.awt.Color(169, 180, 200));
         labelAP.setText("Admin Perpustakaan");
+        getContentPane().add(labelAP, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, -1, -1));
 
         labelUNS.setForeground(new java.awt.Color(169, 180, 200));
         labelUNS.setText("Universitas Sebelas Maret");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(229, 229, 229)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(labelUsn)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGroup(layout.createSequentialGroup()
-                                            .addComponent(labelPsw)
-                                            .addGap(48, 48, 48)
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                .addComponent(inputUsn)
-                                                .addComponent(inputPsw, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE))))))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(300, 300, 300)
-                                .addComponent(labelLogin))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(336, 336, 336)
-                                .addComponent(buttonLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 208, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(labelAP)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(labelUNS)))
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelAP)
-                    .addComponent(labelUNS))
-                .addGap(65, 65, 65)
-                .addComponent(labelLogin)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelUsn)
-                    .addComponent(inputUsn, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelPsw)
-                    .addComponent(inputPsw, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(41, 41, 41)
-                .addComponent(buttonLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(103, Short.MAX_VALUE))
-        );
+        getContentPane().add(labelUNS, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

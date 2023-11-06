@@ -5,6 +5,7 @@
 package com.mycompany.perpusdata;
 
 import java.sql.SQLException;
+import java.util.Scanner;
 
 /**
  *
