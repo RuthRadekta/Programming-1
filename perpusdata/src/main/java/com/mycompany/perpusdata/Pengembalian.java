@@ -47,19 +47,26 @@ public class Pengembalian {
         return value;
     }
     
-    public boolean cekPeminjaman(int id_transaksi) {
+    public boolean cekPeminjaman() {
         boolean value = false;
         try {
             Koneksi konek = new Koneksi();
             Connection koneksi = konek.buka();
-            String checkQuery = "SELECT * FROM status WHERE id_transaksi = ?";
+            String checkQuery = "SELECT * FROM status WHERE kembali IS NULL";
             PreparedStatement checkStatement = koneksi.prepareStatement(checkQuery);
-            checkStatement.setInt(1, id_transaksi);
+
             ResultSet resultSet = checkStatement.executeQuery();
 
             if (!resultSet.next()) {
-                System.out.println("transaksi peminjaman tidak ditemukan.");
+                System.out.println("Tidak ada transaksi peminjaman yang belum dikembalikan.");
             } else {
+                while (resultSet.next()) {
+                     int id_transaksi = resultSet.getInt("id_transaksi");
+                     int id_anggota = resultSet.getInt("id_anggota");
+                     int id_buku = resultSet.getInt("id_buku");
+                     String pinjam = resultSet.getString("pinjam");
+                     System.out.println("id transaksi: " + id_transaksi + "\nid anggota: " + id_anggota + "\nid buku: " + id_buku + "\ntanggal pinjam: " + pinjam);
+                }
                 value = true;
             }
         } catch (SQLException ex) {

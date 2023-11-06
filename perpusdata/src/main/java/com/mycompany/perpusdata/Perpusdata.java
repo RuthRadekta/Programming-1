@@ -48,11 +48,7 @@ public class Perpusdata {
             */
             
             Pengembalian kembali = new Pengembalian();
-            Scanner scanner = new Scanner(System.in);
-            System.out.print("Masukkan id transaksi: ");
-            int id_transaksi = scanner.nextInt();
-            kembali.cekTransaksi(id_transaksi);
-            kembali.catatPengembalian(true);
+            kembali.cekPeminjaman();
             
             tesKoneksi.tutup();
         } catch(SQLException e) {
