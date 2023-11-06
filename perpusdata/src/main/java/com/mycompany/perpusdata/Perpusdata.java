@@ -31,8 +31,7 @@ public class Perpusdata {
             tesCrudB.update();
             */
             Peminjaman pinjam = new Peminjaman();
-            pinjam.cekAnggota();
-            pinjam.cekBuku();
+            pinjam.catatPeminjaman(true);
             
             tesKoneksi.tutup();
         } catch(SQLException e) {

@@ -83,7 +83,7 @@ public class Peminjaman {
         try {
             Koneksi konek = new Koneksi();
             Connection koneksi = konek.buka();
-            String query = "INSERT INTO status (id_transaksi_, id_anggota, id_buku, pinjam, kembali, denda) VALUES (?, ?, ?, CURRENT_TIMESTAMP, null, null)";
+            String query = "INSERT INTO status (id_transaksi, id_anggota, id_buku, pinjam, kembali, denda) VALUES (?, ?, ?, CURRENT_TIMESTAMP, null, null)";
             PreparedStatement ps = koneksi.prepareStatement(query);
 
             Scanner scanner = new Scanner(System.in);
