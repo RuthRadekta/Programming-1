@@ -16,20 +16,29 @@ import java.util.Scanner;
  * @author ACER
  */
 public class Pengembalian {
-    public boolean cekPeminjaman(int id_transaksi) {
+    public boolean cekTransaksi(int id_transaksi) {
         boolean value = false;
         
         try {
             Koneksi konek = new Koneksi();
             Connection koneksi = konek.buka();
+            /*catetan = SELECT * FROM status WHERE id_transaksi = ? AND kembali IS NULL;*/
             String checkQuery = "SELECT * FROM status WHERE id_transaksi = ?";
             PreparedStatement checkStatement = koneksi.prepareStatement(checkQuery);
             checkStatement.setInt(1, id_transaksi);
             ResultSet resultSet = checkStatement.executeQuery();
 
             if (!resultSet.next()) {
-                System.out.println("transaksi peminjaman tidak ditemukan.");
             } else {
+                /*
+                id_transaksi = resultSet.getInt("id_transaksi");
+                int id_anggota = resultSet.getInt("id_anggota");
+                int id_buku = resultSet.getInt("id_buku");
+                String pinjam = resultSet.getString("pinjam");
+                String kembali = resultSet.getString("kembali");
+                
+                System.out.println("id transaksi: " + id_transaksi + "\nid anggota: " + id_anggota + "\nid buku" + id_buku + "\ntanggal pinjam" + pinjam + "\ntanggal kembali" + kembali);
+                */
                 value = true;
             }
         } catch (SQLException ex) {
@@ -38,7 +47,7 @@ public class Pengembalian {
         return value;
     }
     
-    public boolean cekTransaksi(int id_transaksi) {
+    public boolean cekPeminjaman(int id_transaksi) {
         boolean value = false;
         try {
             Koneksi konek = new Koneksi();
@@ -59,32 +68,39 @@ public class Pengembalian {
         return value;
     }
     
-    public void catatPengembalian(boolean finalValue){
-        if (finalValue == true) {
-            try {
-                Koneksi konek = new Koneksi();
-                Connection koneksi = konek.buka();
-                String query = "UPDATE status SET kembali = CURRENT_TIMESTAMP WHERE id_transaksi = ?";
-                PreparedStatement ps = koneksi.prepareStatement(query);
+    public void catatPengembalian(int id_transaksi){
+        try {
+            Koneksi konek = new Koneksi();
+            Connection koneksi = konek.buka();
+            String query = "UPDATE status SET kembali = CURRENT_TIMESTAMP WHERE id_transaksi = ?";
+            PreparedStatement ps = koneksi.prepareStatement(query);
+            /*
+            Scanner scanner = new Scanner(System.in);
+            System.out.print("Masukkan id transaksi: ");
+            int id_transaksi = scanner.nextInt();
+            */
+            ps.setInt(1, id_transaksi);
 
-                Scanner scanner = new Scanner(System.in);
-                System.out.print("Masukkan id transaksi: ");
-                int id_transaksi = scanner.nextInt();
+            int rowsAffected = ps.executeUpdate();
 
-                ps.setInt(1, id_transaksi);
-
-                int rowsAffected = ps.executeUpdate();
-
-                if (rowsAffected > 0) {
-                    System.out.println("Status pengembalian berhasil dicatat.");
-                } else {
-                    System.out.println("Gagal mencatat status pengembalian.");
-                }
-            } catch(SQLException ex) {
-                System.out.println(ex.getMessage());  
+            if (rowsAffected > 0) {
+                System.out.println("Status pengembalian berhasil dicatat.");
+            } else {
+                System.out.println("Gagal mencatat status pengembalian.");
             }
-        } else {
-            System.out.println("Ada kesalahan");
+        } catch(SQLException ex) {
+            System.out.println(ex.getMessage());  
+        }
+    }
+    
+    public void prosedurPengembalian(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Masukkan id transaksi: ");
+        int id_transaksi = scanner.nextInt();
+        if (cekTransaksi(id_transaksi)) {
+            catatPengembalian(id_transaksi);
+        } else if (!cekTransaksi(id_transaksi)) {
+            System.out.println("id transaksi tidak ditemukan.");
         }
     }
 }

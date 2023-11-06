@@ -17,7 +17,6 @@ import java.util.Scanner;
 
 public class LoginClass {
     public void input() throws SQLException{
-        // Data yang diinput oleh pengguna
         Scanner scanner = new Scanner(System.in);
         System.out.print("Masukkan username: ");
         String inputUsername = scanner.nextLine();
@@ -27,7 +26,6 @@ public class LoginClass {
 
         if (login(inputUsername, inputPassword)) {
             System.out.println("Login berhasil. Selamat datang!");
-            // Di sini, Anda dapat melanjutkan ke langkah berikutnya dalam sistem
         } else {
             System.out.println("Username atau password salah.");
         }
@@ -40,7 +38,6 @@ public class LoginClass {
         ResultSet resultSet = null;
 
         try {
-            // Query untuk mencari user berdasarkan username dan password
             String query = "SELECT * FROM admin WHERE username = ? AND password = ?";
             preparedStatement = koneksi.prepareStatement(query);
             preparedStatement.setString(1, username);
@@ -48,7 +45,6 @@ public class LoginClass {
 
             resultSet = preparedStatement.executeQuery();
 
-            // Jika ada hasil, user valid
             return resultSet.next();
         } catch (SQLException e) {
             e.printStackTrace();
