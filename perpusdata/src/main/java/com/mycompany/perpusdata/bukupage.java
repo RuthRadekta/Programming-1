@@ -1,25 +1,24 @@
 package com.mycompany.perpusdata;
 
-import java.awt.Color;
-
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 
+import java.awt.Color;
+
 /**
  *
  * @author ASUS
  */
-public class anggotapage extends javax.swing.JFrame {
+public class bukupage extends javax.swing.JFrame {
 
     /**
-     * Creates new form anggotapage
+     * Creates new form bukupage
      */
-    public anggotapage() {
+    public bukupage() {
         initComponents();
-        getContentPane().setBackground(Color.decode("0xFFFFFFF"));
-    }
+        getContentPane().setBackground(Color.decode("0xFFFFFFF"));    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -42,17 +41,16 @@ public class anggotapage extends javax.swing.JFrame {
         create = new javax.swing.JButton();
         delete = new javax.swing.JButton();
         read = new javax.swing.JButton();
-        hover = new javax.swing.JPanel();
         bg2 = new javax.swing.JPanel();
         kembali = new javax.swing.JButton();
+        hover = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(255, 255, 255));
-        setPreferredSize(new java.awt.Dimension(800, 450));
+        setPreferredSize(new java.awt.Dimension(800, 460));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         home.setBackground(new java.awt.Color(241, 244, 246));
@@ -79,7 +77,7 @@ public class anggotapage extends javax.swing.JFrame {
         buku.setText("BUKU");
         buku.setBorderPainted(false);
         buku.setContentAreaFilled(false);
-        buku.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        buku.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(buku, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 120, 120, 20));
 
         peminjaman.setBackground(new java.awt.Color(241, 244, 246));
@@ -120,7 +118,7 @@ public class anggotapage extends javax.swing.JFrame {
 
         labelpilihopsi.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
         labelpilihopsi.setForeground(new java.awt.Color(190, 196, 205));
-        labelpilihopsi.setText("PILIH OPSI UNTUK DATABASE ANGGOTA");
+        labelpilihopsi.setText("PILIH OPSI UNTUK DATABASE BUKU");
         getContentPane().add(labelpilihopsi, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 80, -1, -1));
 
         update.setBackground(new java.awt.Color(155, 164, 180));
@@ -160,9 +158,6 @@ public class anggotapage extends javax.swing.JFrame {
         read.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(read, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 230, 200, 70));
 
-        hover.setBackground(new java.awt.Color(190, 196, 205));
-        getContentPane().add(hover, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 160, 40));
-
         bg2.setBackground(new java.awt.Color(155, 164, 180));
         bg2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -174,7 +169,10 @@ public class anggotapage extends javax.swing.JFrame {
         kembali.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         bg2.add(kembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 380, -1, -1));
 
-        getContentPane().add(bg2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 410));
+        hover.setBackground(new java.awt.Color(190, 196, 205));
+        bg2.add(hover, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 160, 40));
+
+        getContentPane().add(bg2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 430));
 
         jPanel1.setBackground(new java.awt.Color(155, 164, 180));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -209,20 +207,20 @@ public class anggotapage extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(anggotapage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(bukupage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(anggotapage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(bukupage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(anggotapage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(bukupage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(anggotapage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(bukupage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new anggotapage().setVisible(true);
+                new bukupage().setVisible(true);
             }
         });
     }
