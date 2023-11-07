@@ -15,6 +15,8 @@ import javax.swing.SwingUtilities;
 public class Perpusdata {
     public static void main(String[] args) {
         System.out.println("Hello Dita!");
+        loginform login = new loginform();
+        login.setVisible(true);
         /*
         try {
             Koneksi tesKoneksi = new Koneksi();
