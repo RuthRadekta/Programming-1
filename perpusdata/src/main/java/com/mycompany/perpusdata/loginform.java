@@ -25,6 +25,7 @@ public class loginform extends javax.swing.JFrame {
     public loginform() {
         initComponents();
         getContentPane().setBackground(Color.decode("0xFFFFFFF"));
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }
 
     /**

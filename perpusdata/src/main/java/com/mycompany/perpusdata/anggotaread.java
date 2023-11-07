@@ -16,6 +16,7 @@ public class anggotaread extends javax.swing.JFrame {
      */
     public anggotaread() {
         initComponents();
+        setDefaultCloseOperation(anggotaread.DISPOSE_ON_CLOSE);
     }
 
     /**

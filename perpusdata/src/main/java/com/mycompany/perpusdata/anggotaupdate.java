@@ -19,6 +19,7 @@ public class anggotaupdate extends javax.swing.JFrame {
     public anggotaupdate() {
         initComponents();
         getContentPane().setBackground(Color.decode("0xFFFFFFF"));
+        setDefaultCloseOperation(anggotaupdate.DISPOSE_ON_CLOSE);
     }
 
     /**

@@ -19,6 +19,7 @@ public class anggotapage extends javax.swing.JFrame {
     public anggotapage() {
         initComponents();
         getContentPane().setBackground(Color.decode("0xFFFFFFF"));
+        setDefaultCloseOperation(anggotapage.DISPOSE_ON_CLOSE);
     }
 
     /**

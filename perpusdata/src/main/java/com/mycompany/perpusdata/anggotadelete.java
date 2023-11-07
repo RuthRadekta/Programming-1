@@ -19,6 +19,7 @@ public class anggotadelete extends javax.swing.JFrame {
     public anggotadelete() {
         initComponents();
         getContentPane().setBackground(Color.decode("0xFFFFFFF"));
+        setDefaultCloseOperation(anggotadelete.DISPOSE_ON_CLOSE);
     }
 
     /**

@@ -20,6 +20,7 @@ public class kembalipage extends javax.swing.JFrame {
     public kembalipage() {
         initComponents();
         getContentPane().setBackground(Color.decode("0xFFFFFFF"));
+        setDefaultCloseOperation(kembalipage.DISPOSE_ON_CLOSE);
     }
 
     /**

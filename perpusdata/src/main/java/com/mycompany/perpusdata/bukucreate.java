@@ -19,6 +19,7 @@ public class bukucreate extends javax.swing.JFrame {
     public bukucreate() {
         initComponents();
         getContentPane().setBackground(Color.decode("0xFFFFFFF"));
+        setDefaultCloseOperation(bukucreate.DISPOSE_ON_CLOSE);
     }
 
     /**

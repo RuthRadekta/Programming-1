@@ -72,6 +72,11 @@ public class mainpage extends javax.swing.JFrame {
         anggota.setBorderPainted(false);
         anggota.setContentAreaFilled(false);
         anggota.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        anggota.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                anggotaActionPerformed(evt);
+            }
+        });
         bg1.add(anggota, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 110, 20));
 
         buku.setBackground(new java.awt.Color(241, 244, 246));
@@ -81,6 +86,11 @@ public class mainpage extends javax.swing.JFrame {
         buku.setBorderPainted(false);
         buku.setContentAreaFilled(false);
         buku.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        buku.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bukuActionPerformed(evt);
+            }
+        });
         bg1.add(buku, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 120, 120, 20));
 
         peminjaman.setBackground(new java.awt.Color(241, 244, 246));
@@ -90,6 +100,11 @@ public class mainpage extends javax.swing.JFrame {
         peminjaman.setBorderPainted(false);
         peminjaman.setContentAreaFilled(false);
         peminjaman.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        peminjaman.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                peminjamanActionPerformed(evt);
+            }
+        });
         bg1.add(peminjaman, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 140, 30));
 
         pengembalian.setBackground(new java.awt.Color(241, 244, 246));
@@ -99,6 +114,11 @@ public class mainpage extends javax.swing.JFrame {
         pengembalian.setBorderPainted(false);
         pengembalian.setContentAreaFilled(false);
         pengembalian.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        pengembalian.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pengembalianActionPerformed(evt);
+            }
+        });
         bg1.add(pengembalian, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 160, 30));
 
         statkini.setBackground(new java.awt.Color(241, 244, 246));
@@ -108,6 +128,11 @@ public class mainpage extends javax.swing.JFrame {
         statkini.setBorderPainted(false);
         statkini.setContentAreaFilled(false);
         statkini.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        statkini.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                statkiniActionPerformed(evt);
+            }
+        });
         bg1.add(statkini, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 160, -1));
 
         riwayat.setBackground(new java.awt.Color(241, 244, 246));
@@ -117,6 +142,11 @@ public class mainpage extends javax.swing.JFrame {
         riwayat.setBorderPainted(false);
         riwayat.setContentAreaFilled(false);
         riwayat.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        riwayat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                riwayatActionPerformed(evt);
+            }
+        });
         bg1.add(riwayat, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 270, 150, -1));
 
         hover.setBackground(new java.awt.Color(190, 196, 205));
@@ -149,6 +179,36 @@ public class mainpage extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(816, 445));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void anggotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_anggotaActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_anggotaActionPerformed
+
+    private void bukuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bukuActionPerformed
+        // TODO add your handling code here:
+        new bukupage().setVisible(true);
+    }//GEN-LAST:event_bukuActionPerformed
+
+    private void peminjamanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_peminjamanActionPerformed
+        // TODO add your handling code here:
+        new pinjampage().setVisible(true);
+    }//GEN-LAST:event_peminjamanActionPerformed
+
+    private void pengembalianActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pengembalianActionPerformed
+        // TODO add your handling code here:
+        new kembalipage().setVisible(true);
+    }//GEN-LAST:event_pengembalianActionPerformed
+
+    private void statkiniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statkiniActionPerformed
+        // TODO add your handling code here:
+        new statuspage().setVisible(true);
+    }//GEN-LAST:event_statkiniActionPerformed
+
+    private void riwayatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_riwayatActionPerformed
+        // TODO add your handling code here:
+        new riwayatpage().setVisible(true);
+    }//GEN-LAST:event_riwayatActionPerformed
 
     /**
      * @param args the command line arguments

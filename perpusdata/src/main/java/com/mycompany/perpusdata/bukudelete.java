@@ -19,6 +19,7 @@ public class bukudelete extends javax.swing.JFrame {
     public bukudelete() {
         initComponents();
         getContentPane().setBackground(Color.decode("0xFFFFFFF"));
+        setDefaultCloseOperation(bukudelete.DISPOSE_ON_CLOSE);
     }
 
     /**
