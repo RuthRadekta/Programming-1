@@ -183,24 +183,33 @@ public class anggotaupdate extends javax.swing.JFrame {
 
         inputemail.setBackground(new java.awt.Color(216, 219, 227));
         inputemail.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        inputemail.setForeground(new java.awt.Color(155, 164, 180));
+        inputemail.setBorder(null);
         hasil.getContentPane().add(inputemail, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 280, 300, 30));
 
         inputida.setBackground(new java.awt.Color(216, 219, 227));
         inputida.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        inputida.setForeground(new java.awt.Color(155, 164, 180));
+        inputida.setBorder(null);
         hasil.getContentPane().add(inputida, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 120, 300, 30));
 
         inputnama.setBackground(new java.awt.Color(216, 219, 227));
         inputnama.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        inputnama.setForeground(new java.awt.Color(155, 164, 180));
+        inputnama.setBorder(null);
         hasil.getContentPane().add(inputnama, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 160, 300, 30));
 
         inputalamat.setBackground(new java.awt.Color(216, 219, 227));
         inputalamat.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        inputalamat.setForeground(new java.awt.Color(155, 164, 180));
+        inputalamat.setBorder(null);
         hasil.getContentPane().add(inputalamat, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 240, 300, 30));
 
         pilihanjenke.setBackground(new java.awt.Color(216, 219, 227));
         pilihanjenke.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         pilihanjenke.setForeground(new java.awt.Color(155, 164, 180));
         pilihanjenke.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Laki-laki", "Perempuan" }));
+        pilihanjenke.setBorder(null);
         hasil.getContentPane().add(pilihanjenke, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 200, 300, 30));
 
         buttonupdate.setBackground(new java.awt.Color(155, 164, 180));

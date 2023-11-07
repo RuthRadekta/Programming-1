@@ -30,7 +30,7 @@ public class anggotadelete extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jDialog1 = new javax.swing.JDialog();
+        hasil = new javax.swing.JDialog();
         home1 = new javax.swing.JButton();
         anggota1 = new javax.swing.JButton();
         buku1 = new javax.swing.JButton();
@@ -61,8 +61,8 @@ public class anggotadelete extends javax.swing.JFrame {
         buttoncek = new javax.swing.JButton();
         labeldelete = new javax.swing.JLabel();
 
-        jDialog1.setPreferredSize(new java.awt.Dimension(800, 450));
-        jDialog1.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        hasil.setPreferredSize(new java.awt.Dimension(800, 450));
+        hasil.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         home1.setBackground(new java.awt.Color(241, 244, 246));
         home1.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
@@ -71,7 +71,7 @@ public class anggotadelete extends javax.swing.JFrame {
         home1.setBorderPainted(false);
         home1.setContentAreaFilled(false);
         home1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jDialog1.getContentPane().add(home1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 30));
+        hasil.getContentPane().add(home1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 30));
 
         anggota1.setBackground(new java.awt.Color(241, 244, 246));
         anggota1.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
@@ -80,7 +80,7 @@ public class anggotadelete extends javax.swing.JFrame {
         anggota1.setBorderPainted(false);
         anggota1.setContentAreaFilled(false);
         anggota1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jDialog1.getContentPane().add(anggota1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 110, 20));
+        hasil.getContentPane().add(anggota1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 110, 20));
 
         buku1.setBackground(new java.awt.Color(241, 244, 246));
         buku1.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
@@ -89,7 +89,7 @@ public class anggotadelete extends javax.swing.JFrame {
         buku1.setBorderPainted(false);
         buku1.setContentAreaFilled(false);
         buku1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jDialog1.getContentPane().add(buku1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 120, 120, 20));
+        hasil.getContentPane().add(buku1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 120, 120, 20));
 
         peminjaman1.setBackground(new java.awt.Color(241, 244, 246));
         peminjaman1.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
@@ -98,7 +98,7 @@ public class anggotadelete extends javax.swing.JFrame {
         peminjaman1.setBorderPainted(false);
         peminjaman1.setContentAreaFilled(false);
         peminjaman1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jDialog1.getContentPane().add(peminjaman1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 140, 30));
+        hasil.getContentPane().add(peminjaman1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 140, 30));
 
         pengembalian1.setBackground(new java.awt.Color(241, 244, 246));
         pengembalian1.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
@@ -107,7 +107,7 @@ public class anggotadelete extends javax.swing.JFrame {
         pengembalian1.setBorderPainted(false);
         pengembalian1.setContentAreaFilled(false);
         pengembalian1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jDialog1.getContentPane().add(pengembalian1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 160, 30));
+        hasil.getContentPane().add(pengembalian1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 160, 30));
 
         statkini1.setBackground(new java.awt.Color(241, 244, 246));
         statkini1.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
@@ -116,7 +116,7 @@ public class anggotadelete extends javax.swing.JFrame {
         statkini1.setBorderPainted(false);
         statkini1.setContentAreaFilled(false);
         statkini1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jDialog1.getContentPane().add(statkini1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 160, -1));
+        hasil.getContentPane().add(statkini1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 160, -1));
 
         riwayat1.setBackground(new java.awt.Color(241, 244, 246));
         riwayat1.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
@@ -125,10 +125,10 @@ public class anggotadelete extends javax.swing.JFrame {
         riwayat1.setBorderPainted(false);
         riwayat1.setContentAreaFilled(false);
         riwayat1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jDialog1.getContentPane().add(riwayat1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 270, 150, -1));
+        hasil.getContentPane().add(riwayat1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 270, 150, -1));
 
         hover1.setBackground(new java.awt.Color(190, 196, 205));
-        jDialog1.getContentPane().add(hover1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 160, 40));
+        hasil.getContentPane().add(hover1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 160, 40));
 
         bg3.setBackground(new java.awt.Color(155, 164, 180));
         bg3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -141,23 +141,23 @@ public class anggotadelete extends javax.swing.JFrame {
         kembali1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         bg3.add(kembali1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 380, -1, -1));
 
-        jDialog1.getContentPane().add(bg3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 410));
+        hasil.getContentPane().add(bg3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 410));
 
         labeldelete1.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
         labeldelete1.setForeground(new java.awt.Color(190, 196, 205));
         labeldelete1.setText("MENGHAPUS DATA");
-        jDialog1.getContentPane().add(labeldelete1, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 10, -1, -1));
+        hasil.getContentPane().add(labeldelete1, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 10, -1, -1));
 
         labelberhasil.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
         labelberhasil.setForeground(new java.awt.Color(155, 164, 180));
         labelberhasil.setText("DATA BERHASIL DIHAPUS");
-        jDialog1.getContentPane().add(labelberhasil, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 140, 390, -1));
-        jDialog1.getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 90, 360, 10));
+        hasil.getContentPane().add(labelberhasil, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 140, 390, -1));
+        hasil.getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 90, 360, 10));
 
         labeldelete2.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         labeldelete2.setForeground(new java.awt.Color(155, 164, 180));
         labeldelete2.setText("DELETE");
-        jDialog1.getContentPane().add(labeldelete2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 80, -1, -1));
+        hasil.getContentPane().add(labeldelete2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 80, -1, -1));
 
         lagi.setBackground(new java.awt.Color(216, 219, 227));
         lagi.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -166,7 +166,7 @@ public class anggotadelete extends javax.swing.JFrame {
         lagi.setBorder(null);
         lagi.setBorderPainted(false);
         lagi.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jDialog1.getContentPane().add(lagi, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 240, 140, 40));
+        hasil.getContentPane().add(lagi, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 240, 140, 40));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(800, 455));
@@ -324,11 +324,11 @@ public class anggotadelete extends javax.swing.JFrame {
     private javax.swing.JButton buku1;
     private javax.swing.JButton buttoncek;
     private javax.swing.JTextField cekida;
+    private javax.swing.JDialog hasil;
     private javax.swing.JButton home;
     private javax.swing.JButton home1;
     private javax.swing.JPanel hover;
     private javax.swing.JPanel hover1;
-    private javax.swing.JDialog jDialog1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JButton kembali;
     private javax.swing.JButton kembali1;
