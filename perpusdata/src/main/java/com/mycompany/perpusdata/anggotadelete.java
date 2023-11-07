@@ -201,6 +201,11 @@ public class anggotadelete extends javax.swing.JFrame {
         buku.setBorderPainted(false);
         buku.setContentAreaFilled(false);
         buku.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        buku.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bukuActionPerformed(evt);
+            }
+        });
         getContentPane().add(buku, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 120, 120, 20));
 
         peminjaman.setBackground(new java.awt.Color(241, 244, 246));
@@ -251,11 +256,6 @@ public class anggotadelete extends javax.swing.JFrame {
         kembali.setBorderPainted(false);
         kembali.setContentAreaFilled(false);
         kembali.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        kembali.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                kembaliActionPerformed(evt);
-            }
-        });
         bg2.add(kembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 380, -1, -1));
 
         getContentPane().add(bg2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 410));
@@ -270,6 +270,11 @@ public class anggotadelete extends javax.swing.JFrame {
         cekida.setForeground(new java.awt.Color(155, 164, 180));
         cekida.setBorder(null);
         cekida.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        cekida.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cekidaActionPerformed(evt);
+            }
+        });
         getContentPane().add(cekida, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 160, 160, 40));
 
         buttoncek.setBackground(new java.awt.Color(155, 164, 180));
@@ -289,47 +294,17 @@ public class anggotadelete extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void kembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kembaliActionPerformed
+    private void bukuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bukuActionPerformed
         // TODO add your handling code here:
-        dispose();
-        new anggotapage().setVisible(true);
-    }//GEN-LAST:event_kembaliActionPerformed
+    }//GEN-LAST:event_bukuActionPerformed
+
+    private void cekidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cekidaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cekidaActionPerformed
 
     private void homeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeActionPerformed
         // TODO add your handling code here:
-        dispose();
-        new mainpage().setVisible(true);
     }//GEN-LAST:event_homeActionPerformed
-
-    private void anggota1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        // TODO add your handling code here:
-        dispose();
-        new anggotapage().setVisible(true);
-    }                                        
-
-    private void buku1ActionPerformed(java.awt.event.ActionEvent evt) {                                      
-        // TODO add your handling code here:
-        dispose();
-        new bukupage().setVisible(true);
-    }                                     
-
-    private void peminjaman1ActionPerformed(java.awt.event.ActionEvent evt) {                                            
-        // TODO add your handling code here:
-        dispose();
-        new pinjampage().setVisible(true);
-    }                                           
-
-    private void pengembalian1ActionPerformed(java.awt.event.ActionEvent evt) {                                              
-        // TODO add your handling code here:
-        dispose();
-        new kembalipage().setVisible(true);
-    }                                             
-
-    private void statkini1ActionPerformed(java.awt.event.ActionEvent evt) {                                          
-        // TODO add your handling code here:
-        dispose();
-        new statuspage().setVisible(true);
-    }
     
     /**
      * @param args the command line arguments
