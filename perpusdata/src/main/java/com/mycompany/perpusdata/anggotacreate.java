@@ -74,6 +74,7 @@ public class anggotacreate extends javax.swing.JFrame {
         anggota1.setText("ANGGOTA");
         anggota1.setBorderPainted(false);
         anggota1.setContentAreaFilled(false);
+        anggota1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(anggota1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 110, 20));
 
         buku1.setBackground(new java.awt.Color(241, 244, 246));
