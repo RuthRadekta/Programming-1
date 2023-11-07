@@ -154,6 +154,11 @@ public class statuspage extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void kembaliActionPerformed(java.awt.event.ActionEvent evt) {                                        
+        // TODO add your handling code here:
+        new mainpage().setVisible(true);
+    }
+    
     /**
      * @param args the command line arguments
      */

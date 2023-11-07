@@ -211,6 +211,11 @@ public class bukupage extends javax.swing.JFrame {
         new bukuread().setVisible(true);
     }
     
+    private void kembaliActionPerformed(java.awt.event.ActionEvent evt) {                                        
+        // TODO add your handling code here:
+        new mainpage().setVisible(true);
+    }
+    
     /**
      * @param args the command line arguments
      */
