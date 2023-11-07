@@ -69,7 +69,6 @@ public class kembalipage extends javax.swing.JFrame {
         inputida = new javax.swing.JTextField();
         buttoncek = new javax.swing.JButton();
 
-        hasil.setPreferredSize(new java.awt.Dimension(800, 450));
         hasil.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         labelkembali3.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N

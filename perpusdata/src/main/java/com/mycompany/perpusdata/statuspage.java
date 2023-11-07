@@ -1,5 +1,7 @@
 package com.mycompany.perpusdata;
 
+import java.awt.Color;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -16,6 +18,7 @@ public class statuspage extends javax.swing.JFrame {
      */
     public statuspage() {
         initComponents();
+        getContentPane().setBackground(Color.decode("0xFFFFFFF"));
     }
 
     /**
@@ -27,18 +30,125 @@ public class statuspage extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        home = new javax.swing.JButton();
+        anggota = new javax.swing.JButton();
+        buku = new javax.swing.JButton();
+        peminjaman = new javax.swing.JButton();
+        pengembalian = new javax.swing.JButton();
+        statkini = new javax.swing.JButton();
+        riwayat = new javax.swing.JButton();
+        hover = new javax.swing.JPanel();
+        bg2 = new javax.swing.JPanel();
+        kembali = new javax.swing.JButton();
+        labelread = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1920, 1080));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        home.setBackground(new java.awt.Color(241, 244, 246));
+        home.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        home.setForeground(new java.awt.Color(255, 255, 255));
+        home.setText("HOME");
+        home.setBorderPainted(false);
+        home.setContentAreaFilled(false);
+        home.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        getContentPane().add(home, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 30));
+
+        anggota.setBackground(new java.awt.Color(241, 244, 246));
+        anggota.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        anggota.setForeground(new java.awt.Color(255, 255, 255));
+        anggota.setText("ANGGOTA");
+        anggota.setBorderPainted(false);
+        anggota.setContentAreaFilled(false);
+        anggota.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        getContentPane().add(anggota, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 110, 20));
+
+        buku.setBackground(new java.awt.Color(241, 244, 246));
+        buku.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        buku.setForeground(new java.awt.Color(255, 255, 255));
+        buku.setText("BUKU");
+        buku.setBorderPainted(false);
+        buku.setContentAreaFilled(false);
+        buku.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        getContentPane().add(buku, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 120, 120, 20));
+
+        peminjaman.setBackground(new java.awt.Color(241, 244, 246));
+        peminjaman.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        peminjaman.setForeground(new java.awt.Color(255, 255, 255));
+        peminjaman.setText("PEMINJAMAN");
+        peminjaman.setBorderPainted(false);
+        peminjaman.setContentAreaFilled(false);
+        peminjaman.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        getContentPane().add(peminjaman, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 140, 30));
+
+        pengembalian.setBackground(new java.awt.Color(241, 244, 246));
+        pengembalian.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        pengembalian.setForeground(new java.awt.Color(255, 255, 255));
+        pengembalian.setText("PENGEMBALIAN");
+        pengembalian.setBorderPainted(false);
+        pengembalian.setContentAreaFilled(false);
+        pengembalian.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        getContentPane().add(pengembalian, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 160, 30));
+
+        statkini.setBackground(new java.awt.Color(241, 244, 246));
+        statkini.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        statkini.setForeground(new java.awt.Color(255, 255, 255));
+        statkini.setText("STATUS TERKINI");
+        statkini.setBorderPainted(false);
+        statkini.setContentAreaFilled(false);
+        statkini.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        getContentPane().add(statkini, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 160, -1));
+
+        riwayat.setBackground(new java.awt.Color(241, 244, 246));
+        riwayat.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        riwayat.setForeground(new java.awt.Color(255, 255, 255));
+        riwayat.setText("RIWAYAT");
+        riwayat.setBorderPainted(false);
+        riwayat.setContentAreaFilled(false);
+        riwayat.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        getContentPane().add(riwayat, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 270, 150, -1));
+
+        hover.setBackground(new java.awt.Color(190, 196, 205));
+        getContentPane().add(hover, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 160, 40));
+
+        bg2.setBackground(new java.awt.Color(155, 164, 180));
+        bg2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        kembali.setFont(new java.awt.Font("Segoe UI Black", 0, 10)); // NOI18N
+        kembali.setForeground(new java.awt.Color(255, 255, 255));
+        kembali.setText("kembali");
+        kembali.setBorderPainted(false);
+        kembali.setContentAreaFilled(false);
+        kembali.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bg2.add(kembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 660, -1, -1));
+
+        getContentPane().add(bg2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 710));
+
+        labelread.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        labelread.setForeground(new java.awt.Color(190, 196, 205));
+        labelread.setText("STATUS TERKINI");
+        getContentPane().add(labelread, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 10, -1, -1));
+
+        jTable1.setAutoCreateRowSorter(true);
+        jTable1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jTable1.setForeground(new java.awt.Color(155, 164, 180));
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
+            },
+            new String [] {
+                "ID Transaksi", "ID Anggota", "ID Buku", "Pinjam", "Kembali", "Denda"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 50, 1070, 630));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -79,5 +189,18 @@ public class statuspage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton anggota;
+    private javax.swing.JPanel bg2;
+    private javax.swing.JButton buku;
+    private javax.swing.JButton home;
+    private javax.swing.JPanel hover;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JButton kembali;
+    private javax.swing.JLabel labelread;
+    private javax.swing.JButton peminjaman;
+    private javax.swing.JButton pengembalian;
+    private javax.swing.JButton riwayat;
+    private javax.swing.JButton statkini;
     // End of variables declaration//GEN-END:variables
 }
