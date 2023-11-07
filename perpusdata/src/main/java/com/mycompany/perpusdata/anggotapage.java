@@ -53,7 +53,6 @@ public class anggotapage extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
-        setPreferredSize(new java.awt.Dimension(800, 450));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         home.setBackground(new java.awt.Color(241, 244, 246));
@@ -132,6 +131,11 @@ public class anggotapage extends javax.swing.JFrame {
         update.setBorderPainted(false);
         update.setContentAreaFilled(false);
         update.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        update.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updateActionPerformed(evt);
+            }
+        });
         getContentPane().add(update, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 130, 200, 70));
 
         create.setBackground(new java.awt.Color(155, 164, 180));
@@ -141,6 +145,11 @@ public class anggotapage extends javax.swing.JFrame {
         create.setBorderPainted(false);
         create.setContentAreaFilled(false);
         create.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        create.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                createActionPerformed(evt);
+            }
+        });
         getContentPane().add(create, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 130, 200, 70));
 
         delete.setBackground(new java.awt.Color(155, 164, 180));
@@ -150,6 +159,11 @@ public class anggotapage extends javax.swing.JFrame {
         delete.setBorderPainted(false);
         delete.setContentAreaFilled(false);
         delete.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        delete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteActionPerformed(evt);
+            }
+        });
         getContentPane().add(delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 230, 200, 70));
 
         read.setBackground(new java.awt.Color(155, 164, 180));
@@ -159,6 +173,11 @@ public class anggotapage extends javax.swing.JFrame {
         read.setBorderPainted(false);
         read.setContentAreaFilled(false);
         read.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        read.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                readActionPerformed(evt);
+            }
+        });
         getContentPane().add(read, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 230, 200, 70));
 
         hover.setBackground(new java.awt.Color(190, 196, 205));
@@ -192,6 +211,26 @@ public class anggotapage extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void updateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateActionPerformed
+        // TODO add your handling code here:
+        new anggotaupdate().setVisible(true);
+    }//GEN-LAST:event_updateActionPerformed
+
+    private void createActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createActionPerformed
+        // TODO add your handling code here:
+        new anggotacreate().setVisible(true);
+    }//GEN-LAST:event_createActionPerformed
+
+    private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
+        // TODO add your handling code here:
+        new anggotadelete().setVisible(true);
+    }//GEN-LAST:event_deleteActionPerformed
+
+    private void readActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_readActionPerformed
+        // TODO add your handling code here:
+        new anggotaread().setVisible(true);
+    }//GEN-LAST:event_readActionPerformed
 
     /**
      * @param args the command line arguments

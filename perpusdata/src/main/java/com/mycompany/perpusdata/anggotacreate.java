@@ -19,7 +19,7 @@ public class anggotacreate extends javax.swing.JFrame {
     public anggotacreate() {
         initComponents();
         getContentPane().setBackground(Color.decode("0xFFFFFFF"));
-        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(anggotacreate.DISPOSE_ON_CLOSE);
     }
 
     /**

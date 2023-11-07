@@ -18,7 +18,8 @@ public class bukupage extends javax.swing.JFrame {
      */
     public bukupage() {
         initComponents();
-        getContentPane().setBackground(Color.decode("0xFFFFFFF"));    }
+        getContentPane().setBackground(Color.decode("0xFFFFFFF"));    
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -189,6 +190,26 @@ public class bukupage extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void updateActionPerformed(java.awt.event.ActionEvent evt) {                                       
+        // TODO add your handling code here:
+        new bukuupdate().setVisible(true);
+    }                                      
+
+    private void createActionPerformed(java.awt.event.ActionEvent evt) {                                       
+        // TODO add your handling code here:
+        new bukucreate().setVisible(true);
+    }                                      
+
+    private void deleteActionPerformed(java.awt.event.ActionEvent evt) {                                       
+        // TODO add your handling code here:
+        new bukudelete().setVisible(true);
+    }                                      
+
+    private void readActionPerformed(java.awt.event.ActionEvent evt) {                                     
+        // TODO add your handling code here:
+        new bukuread().setVisible(true);
+    }
+    
     /**
      * @param args the command line arguments
      */
