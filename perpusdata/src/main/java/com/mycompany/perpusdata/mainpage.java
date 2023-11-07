@@ -160,6 +160,7 @@ public class mainpage extends javax.swing.JFrame {
         kembali.setText("kembali");
         kembali.setBorderPainted(false);
         kembali.setContentAreaFilled(false);
+        kembali.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         bg2.add(kembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 380, -1, -1));
 
         bg1.add(bg2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 410));
