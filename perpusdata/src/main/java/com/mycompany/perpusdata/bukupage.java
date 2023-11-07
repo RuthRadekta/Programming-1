@@ -219,7 +219,7 @@ public class bukupage extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new bukupage().setVisible(true);
+                new bukupage().setVisible(false);
             }
         });
     }

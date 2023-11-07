@@ -308,7 +308,7 @@ public class bukudelete extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new bukudelete().setVisible(true);
+                new bukudelete().setVisible(false);
             }
         });
     }

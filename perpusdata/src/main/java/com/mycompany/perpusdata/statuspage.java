@@ -73,7 +73,7 @@ public class statuspage extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new statuspage().setVisible(true);
+                new statuspage().setVisible(false);
             }
         });
     }

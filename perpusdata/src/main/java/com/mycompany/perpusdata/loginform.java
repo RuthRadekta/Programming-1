@@ -114,6 +114,7 @@ public class loginform extends javax.swing.JFrame {
             tesLogin.login(username, password);
             if (tesLogin.login(username, password)){
                 dispose();
+                new mainpage().setVisible(true);
             } else {
                 //tampilkan bahwa username atau password salah
             }

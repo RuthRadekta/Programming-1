@@ -222,7 +222,7 @@ public class anggotapage extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new anggotapage().setVisible(true);
+                new anggotapage().setVisible(false);
             }
         });
     }

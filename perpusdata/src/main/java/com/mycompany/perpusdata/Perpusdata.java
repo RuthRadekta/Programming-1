@@ -6,17 +6,20 @@ package com.mycompany.perpusdata;
 
 import java.sql.SQLException;
 import java.util.Scanner;
+import javax.swing.SwingUtilities;
 
 /**
  *
  * @author ASUS
  */
 public class Perpusdata {
-
     public static void main(String[] args) {
         System.out.println("Hello Dita!");
+        /*
         try {
             Koneksi tesKoneksi = new Koneksi();
+            
+            
             LoginClass tesLogin = new LoginClass();
             String username = null;
             String password = null;
@@ -25,7 +28,6 @@ public class Perpusdata {
             HitungDenda denda = new HitungDenda();
             denda.hitungDenda();
             
-            /*
             CRUDAnggota tesCrudA = new CRUDAnggota();
             tesCrudA.read();
             tesCrudA.delete();
@@ -38,11 +40,12 @@ public class Perpusdata {
             
             Pengembalian kembali = new Pengembalian();
             kembali.cekPeminjaman();
-            */
+            
             
             tesKoneksi.tutup();
         } catch(SQLException e) {
             e.printStackTrace();
         }
+        */
     }
 }
