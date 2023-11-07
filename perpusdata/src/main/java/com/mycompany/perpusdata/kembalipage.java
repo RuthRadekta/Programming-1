@@ -1,5 +1,6 @@
 package com.mycompany.perpusdata;
 
+
 import java.awt.Color;
 
 /*
@@ -11,12 +12,12 @@ import java.awt.Color;
  *
  * @author ASUS
  */
-public class pinjampage extends javax.swing.JFrame {
+public class kembalipage extends javax.swing.JFrame {
 
     /**
-     * Creates new form pinjampage
+     * Creates new form kembalipage
      */
-    public pinjampage() {
+    public kembalipage() {
         initComponents();
         getContentPane().setBackground(Color.decode("0xFFFFFFF"));
     }
@@ -31,7 +32,7 @@ public class pinjampage extends javax.swing.JFrame {
     private void initComponents() {
 
         hasil = new javax.swing.JDialog();
-        labelpinjam3 = new javax.swing.JLabel();
+        labelkembali3 = new javax.swing.JLabel();
         home2 = new javax.swing.JButton();
         anggota2 = new javax.swing.JButton();
         buku2 = new javax.swing.JButton();
@@ -39,19 +40,19 @@ public class pinjampage extends javax.swing.JFrame {
         pengembalian2 = new javax.swing.JButton();
         statkini2 = new javax.swing.JButton();
         riwayat2 = new javax.swing.JButton();
+        hover2 = new javax.swing.JPanel();
         bg4 = new javax.swing.JPanel();
         kembali2 = new javax.swing.JButton();
-        hover2 = new javax.swing.JPanel();
         labelberhasil = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
-        labelpinjam4 = new javax.swing.JLabel();
+        labelkembali4 = new javax.swing.JLabel();
         labelberhasil1 = new javax.swing.JLabel();
         lagi = new javax.swing.JButton();
-        labeltenggat = new javax.swing.JLabel();
-        tenggat = new javax.swing.JLabel();
-        labelpinjam1 = new javax.swing.JLabel();
+        labeldenda = new javax.swing.JLabel();
+        denda = new javax.swing.JLabel();
+        labelkembali1 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        labelpinjam2 = new javax.swing.JLabel();
+        labelkembali2 = new javax.swing.JLabel();
         home1 = new javax.swing.JButton();
         anggota1 = new javax.swing.JButton();
         buku1 = new javax.swing.JButton();
@@ -59,9 +60,9 @@ public class pinjampage extends javax.swing.JFrame {
         pengembalian1 = new javax.swing.JButton();
         statkini1 = new javax.swing.JButton();
         riwayat1 = new javax.swing.JButton();
+        hover1 = new javax.swing.JPanel();
         bg3 = new javax.swing.JPanel();
         kembali1 = new javax.swing.JButton();
-        hover1 = new javax.swing.JPanel();
         labelidb = new javax.swing.JLabel();
         labelidba = new javax.swing.JLabel();
         inputidb = new javax.swing.JTextField();
@@ -71,10 +72,10 @@ public class pinjampage extends javax.swing.JFrame {
         hasil.setPreferredSize(new java.awt.Dimension(800, 450));
         hasil.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        labelpinjam3.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
-        labelpinjam3.setForeground(new java.awt.Color(190, 196, 205));
-        labelpinjam3.setText("PEMINJAMAN BUKU");
-        hasil.getContentPane().add(labelpinjam3, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 10, -1, -1));
+        labelkembali3.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        labelkembali3.setForeground(new java.awt.Color(190, 196, 205));
+        labelkembali3.setText("PENGEMBALIAN BUKU");
+        hasil.getContentPane().add(labelkembali3, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 10, -1, -1));
 
         home2.setBackground(new java.awt.Color(241, 244, 246));
         home2.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
@@ -139,6 +140,10 @@ public class pinjampage extends javax.swing.JFrame {
         riwayat2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         hasil.getContentPane().add(riwayat2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 270, 150, -1));
 
+        hover2.setBackground(new java.awt.Color(190, 196, 205));
+        hover2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        hasil.getContentPane().add(hover2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 160, 30));
+
         bg4.setBackground(new java.awt.Color(155, 164, 180));
         bg4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -150,22 +155,18 @@ public class pinjampage extends javax.swing.JFrame {
         kembali2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         bg4.add(kembali2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 380, -1, -1));
 
-        hover2.setBackground(new java.awt.Color(190, 196, 205));
-        hover2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        bg4.add(hover2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 160, 30));
-
         hasil.getContentPane().add(bg4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 430));
 
         labelberhasil.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         labelberhasil.setForeground(new java.awt.Color(155, 164, 180));
-        labelberhasil.setText("DIPINJAM");
-        hasil.getContentPane().add(labelberhasil, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 170, 180, -1));
-        hasil.getContentPane().add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 90, 360, 10));
+        labelberhasil.setText("DIKEMBALIKAN");
+        hasil.getContentPane().add(labelberhasil, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 170, 280, -1));
+        hasil.getContentPane().add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 90, 350, 10));
 
-        labelpinjam4.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
-        labelpinjam4.setForeground(new java.awt.Color(155, 164, 180));
-        labelpinjam4.setText("PINJAM");
-        hasil.getContentPane().add(labelpinjam4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 80, -1, -1));
+        labelkembali4.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        labelkembali4.setForeground(new java.awt.Color(155, 164, 180));
+        labelkembali4.setText("KEMBALI");
+        hasil.getContentPane().add(labelkembali4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 80, -1, -1));
 
         labelberhasil1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         labelberhasil1.setForeground(new java.awt.Color(155, 164, 180));
@@ -175,37 +176,37 @@ public class pinjampage extends javax.swing.JFrame {
         lagi.setBackground(new java.awt.Color(155, 164, 180));
         lagi.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         lagi.setForeground(new java.awt.Color(255, 255, 255));
-        lagi.setText("Pinjam Buku Lain");
+        lagi.setText("Kembalikan Buku Lain");
         lagi.setBorder(null);
         lagi.setBorderPainted(false);
         lagi.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        hasil.getContentPane().add(lagi, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 300, 140, 40));
+        hasil.getContentPane().add(lagi, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 300, 160, 40));
 
-        labeltenggat.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        labeltenggat.setForeground(new java.awt.Color(155, 164, 180));
-        labeltenggat.setText("Tenggat Pengembalian :");
-        hasil.getContentPane().add(labeltenggat, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 240, -1, -1));
+        labeldenda.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        labeldenda.setForeground(new java.awt.Color(155, 164, 180));
+        labeldenda.setText("Total Denda :");
+        hasil.getContentPane().add(labeldenda, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 240, -1, -1));
 
-        tenggat.setBackground(new java.awt.Color(216, 219, 227));
-        tenggat.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        tenggat.setForeground(new java.awt.Color(155, 164, 180));
-        tenggat.setText("tanggal/bulan/tahun");
-        hasil.getContentPane().add(tenggat, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 240, -1, 20));
+        denda.setBackground(new java.awt.Color(216, 219, 227));
+        denda.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        denda.setForeground(new java.awt.Color(155, 164, 180));
+        denda.setText("Rp.X,XXX,-");
+        hasil.getContentPane().add(denda, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 240, -1, 20));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(800, 450));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        labelpinjam1.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
-        labelpinjam1.setForeground(new java.awt.Color(190, 196, 205));
-        labelpinjam1.setText("PEMINJAMAN BUKU");
-        getContentPane().add(labelpinjam1, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 10, -1, -1));
-        getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 110, 360, 10));
+        labelkembali1.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        labelkembali1.setForeground(new java.awt.Color(190, 196, 205));
+        labelkembali1.setText("PENGEMBALIAN BUKU");
+        getContentPane().add(labelkembali1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 10, -1, -1));
+        getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 110, 350, 10));
 
-        labelpinjam2.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
-        labelpinjam2.setForeground(new java.awt.Color(155, 164, 180));
-        labelpinjam2.setText("PINJAM");
-        getContentPane().add(labelpinjam2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 100, -1, -1));
+        labelkembali2.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        labelkembali2.setForeground(new java.awt.Color(155, 164, 180));
+        labelkembali2.setText("KEMBALI");
+        getContentPane().add(labelkembali2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 100, -1, -1));
 
         home1.setBackground(new java.awt.Color(241, 244, 246));
         home1.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
@@ -270,6 +271,10 @@ public class pinjampage extends javax.swing.JFrame {
         riwayat1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(riwayat1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 270, 150, -1));
 
+        hover1.setBackground(new java.awt.Color(190, 196, 205));
+        hover1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(hover1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 160, 30));
+
         bg3.setBackground(new java.awt.Color(155, 164, 180));
         bg3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -280,10 +285,6 @@ public class pinjampage extends javax.swing.JFrame {
         kembali1.setContentAreaFilled(false);
         kembali1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         bg3.add(kembali1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 380, -1, -1));
-
-        hover1.setBackground(new java.awt.Color(190, 196, 205));
-        hover1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        bg3.add(hover1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 160, 30));
 
         getContentPane().add(bg3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 430));
 
@@ -338,20 +339,20 @@ public class pinjampage extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(pinjampage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(kembalipage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(pinjampage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(kembalipage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(pinjampage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(kembalipage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(pinjampage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(kembalipage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new pinjampage().setVisible(true);
+                new kembalipage().setVisible(true);
             }
         });
     }
@@ -364,6 +365,7 @@ public class pinjampage extends javax.swing.JFrame {
     private javax.swing.JButton buku1;
     private javax.swing.JButton buku2;
     private javax.swing.JButton buttoncek;
+    private javax.swing.JLabel denda;
     private javax.swing.JDialog hasil;
     private javax.swing.JButton home1;
     private javax.swing.JButton home2;
@@ -377,13 +379,13 @@ public class pinjampage extends javax.swing.JFrame {
     private javax.swing.JButton kembali2;
     private javax.swing.JLabel labelberhasil;
     private javax.swing.JLabel labelberhasil1;
+    private javax.swing.JLabel labeldenda;
     private javax.swing.JLabel labelidb;
     private javax.swing.JLabel labelidba;
-    private javax.swing.JLabel labelpinjam1;
-    private javax.swing.JLabel labelpinjam2;
-    private javax.swing.JLabel labelpinjam3;
-    private javax.swing.JLabel labelpinjam4;
-    private javax.swing.JLabel labeltenggat;
+    private javax.swing.JLabel labelkembali1;
+    private javax.swing.JLabel labelkembali2;
+    private javax.swing.JLabel labelkembali3;
+    private javax.swing.JLabel labelkembali4;
     private javax.swing.JButton lagi;
     private javax.swing.JButton peminjaman1;
     private javax.swing.JButton peminjaman2;
@@ -393,6 +395,5 @@ public class pinjampage extends javax.swing.JFrame {
     private javax.swing.JButton riwayat2;
     private javax.swing.JButton statkini1;
     private javax.swing.JButton statkini2;
-    private javax.swing.JLabel tenggat;
     // End of variables declaration//GEN-END:variables
 }
