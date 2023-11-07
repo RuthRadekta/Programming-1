@@ -161,6 +161,7 @@ public class riwayatpage extends javax.swing.JFrame {
 
     private void kembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kembaliActionPerformed
         // TODO add your handling code here:
+        dispose();
         new mainpage().setVisible(true);
     }//GEN-LAST:event_kembaliActionPerformed
     

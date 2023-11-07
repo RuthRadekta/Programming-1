@@ -168,6 +168,11 @@ public class bukupage extends javax.swing.JFrame {
         kembali.setBorderPainted(false);
         kembali.setContentAreaFilled(false);
         kembali.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        kembali.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kembaliActionPerformed(evt);
+            }
+        });
         bg2.add(kembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 380, -1, -1));
 
         hover.setBackground(new java.awt.Color(190, 196, 205));
@@ -191,6 +196,12 @@ public class bukupage extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void kembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kembaliActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        new mainpage().setVisible(true);
+    }//GEN-LAST:event_kembaliActionPerformed
+
     private void updateActionPerformed(java.awt.event.ActionEvent evt) {                                       
         // TODO add your handling code here:
         new bukuupdate().setVisible(true);
@@ -209,11 +220,6 @@ public class bukupage extends javax.swing.JFrame {
     private void readActionPerformed(java.awt.event.ActionEvent evt) {                                     
         // TODO add your handling code here:
         new bukuread().setVisible(true);
-    }
-    
-    private void kembaliActionPerformed(java.awt.event.ActionEvent evt) {                                        
-        // TODO add your handling code here:
-        new mainpage().setVisible(true);
     }
     
     /**

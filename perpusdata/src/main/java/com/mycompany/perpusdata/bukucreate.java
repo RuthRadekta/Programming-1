@@ -131,6 +131,11 @@ public class bukucreate extends javax.swing.JFrame {
         kembali1.setBorderPainted(false);
         kembali1.setContentAreaFilled(false);
         kembali1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        kembali1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kembali1ActionPerformed(evt);
+            }
+        });
         bg3.add(kembali1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 380, -1, -1));
 
         hover1.setBackground(new java.awt.Color(190, 196, 205));
@@ -215,6 +220,11 @@ public class bukucreate extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void kembali1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kembali1ActionPerformed
+        // TODO add your handling code here:
+        new bukupage().setVisible(true);
+    }//GEN-LAST:event_kembali1ActionPerformed
 
     /**
      * @param args the command line arguments

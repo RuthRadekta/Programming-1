@@ -219,26 +219,31 @@ public class anggotapage extends javax.swing.JFrame {
 
     private void updateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateActionPerformed
         // TODO add your handling code here:
+        dispose();
         new anggotaupdate().setVisible(true);
     }//GEN-LAST:event_updateActionPerformed
 
     private void createActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createActionPerformed
         // TODO add your handling code here:
+        dispose();
         new anggotacreate().setVisible(true);
     }//GEN-LAST:event_createActionPerformed
 
     private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
         // TODO add your handling code here:
+        dispose();
         new anggotadelete().setVisible(true);
     }//GEN-LAST:event_deleteActionPerformed
 
     private void readActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_readActionPerformed
         // TODO add your handling code here:
+        dispose();
         new anggotaread().setVisible(true);
     }//GEN-LAST:event_readActionPerformed
 
     private void kembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kembaliActionPerformed
         // TODO add your handling code here:
+        dispose();
         new mainpage().setVisible(true);
     }//GEN-LAST:event_kembaliActionPerformed
 

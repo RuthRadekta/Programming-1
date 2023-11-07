@@ -43,7 +43,6 @@ public class anggotaread extends javax.swing.JFrame {
         jTable1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1920, 1080));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         home.setBackground(new java.awt.Color(241, 244, 246));
@@ -121,6 +120,11 @@ public class anggotaread extends javax.swing.JFrame {
         kembali.setBorderPainted(false);
         kembali.setContentAreaFilled(false);
         kembali.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        kembali.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kembaliActionPerformed(evt);
+            }
+        });
         bg2.add(kembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 660, -1, -1));
 
         getContentPane().add(bg2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 710));
@@ -151,6 +155,46 @@ public class anggotaread extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void kembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kembaliActionPerformed
+        // TODO add your handling code here:
+        new anggotapage().setVisible(true);
+    }//GEN-LAST:event_kembaliActionPerformed
+                                    
+    private void homeActionPerformed(java.awt.event.ActionEvent evt) {                                     
+        // TODO add your handling code here:
+        dispose();
+        new mainpage().setVisible(true);
+    }                                    
+
+    private void anggota1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        // TODO add your handling code here:
+        dispose();
+        new anggotapage().setVisible(true);
+    }                                        
+
+    private void buku1ActionPerformed(java.awt.event.ActionEvent evt) {                                      
+        // TODO add your handling code here:
+        dispose();
+        new bukupage().setVisible(true);
+    }                                     
+
+    private void peminjaman1ActionPerformed(java.awt.event.ActionEvent evt) {                                            
+        // TODO add your handling code here:
+        dispose();
+        new pinjampage().setVisible(true);
+    }                                           
+
+    private void pengembalian1ActionPerformed(java.awt.event.ActionEvent evt) {                                              
+        // TODO add your handling code here:
+        dispose();
+        new kembalipage().setVisible(true);
+    }                                             
+
+    private void statkini1ActionPerformed(java.awt.event.ActionEvent evt) {                                          
+        // TODO add your handling code here:
+        dispose();
+        new statuspage().setVisible(true);
+    }
     /**
      * @param args the command line arguments
      */

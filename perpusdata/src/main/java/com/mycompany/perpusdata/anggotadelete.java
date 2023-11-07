@@ -62,7 +62,6 @@ public class anggotadelete extends javax.swing.JFrame {
         buttoncek = new javax.swing.JButton();
         labeldelete = new javax.swing.JLabel();
 
-        hasil.setPreferredSize(new java.awt.Dimension(800, 450));
         hasil.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         home1.setBackground(new java.awt.Color(241, 244, 246));
@@ -170,7 +169,6 @@ public class anggotadelete extends javax.swing.JFrame {
         hasil.getContentPane().add(lagi, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 240, 140, 40));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(800, 455));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         home.setBackground(new java.awt.Color(241, 244, 246));
@@ -180,6 +178,11 @@ public class anggotadelete extends javax.swing.JFrame {
         home.setBorderPainted(false);
         home.setContentAreaFilled(false);
         home.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        home.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                homeActionPerformed(evt);
+            }
+        });
         getContentPane().add(home, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 30));
 
         anggota.setBackground(new java.awt.Color(241, 244, 246));
@@ -248,6 +251,11 @@ public class anggotadelete extends javax.swing.JFrame {
         kembali.setBorderPainted(false);
         kembali.setContentAreaFilled(false);
         kembali.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        kembali.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kembaliActionPerformed(evt);
+            }
+        });
         bg2.add(kembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 380, -1, -1));
 
         getContentPane().add(bg2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 410));
@@ -281,6 +289,48 @@ public class anggotadelete extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void kembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kembaliActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        new anggotapage().setVisible(true);
+    }//GEN-LAST:event_kembaliActionPerformed
+
+    private void homeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        new mainpage().setVisible(true);
+    }//GEN-LAST:event_homeActionPerformed
+
+    private void anggota1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        // TODO add your handling code here:
+        dispose();
+        new anggotapage().setVisible(true);
+    }                                        
+
+    private void buku1ActionPerformed(java.awt.event.ActionEvent evt) {                                      
+        // TODO add your handling code here:
+        dispose();
+        new bukupage().setVisible(true);
+    }                                     
+
+    private void peminjaman1ActionPerformed(java.awt.event.ActionEvent evt) {                                            
+        // TODO add your handling code here:
+        dispose();
+        new pinjampage().setVisible(true);
+    }                                           
+
+    private void pengembalian1ActionPerformed(java.awt.event.ActionEvent evt) {                                              
+        // TODO add your handling code here:
+        dispose();
+        new kembalipage().setVisible(true);
+    }                                             
+
+    private void statkini1ActionPerformed(java.awt.event.ActionEvent evt) {                                          
+        // TODO add your handling code here:
+        dispose();
+        new statuspage().setVisible(true);
+    }
+    
     /**
      * @param args the command line arguments
      */

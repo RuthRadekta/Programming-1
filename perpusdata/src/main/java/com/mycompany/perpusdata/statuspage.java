@@ -156,6 +156,7 @@ public class statuspage extends javax.swing.JFrame {
 
     private void kembaliActionPerformed(java.awt.event.ActionEvent evt) {                                        
         // TODO add your handling code here:
+        dispose();
         new mainpage().setVisible(true);
     }
     

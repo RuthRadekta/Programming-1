@@ -194,7 +194,6 @@ public class kembalipage extends javax.swing.JFrame {
         hasil.getContentPane().add(denda, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 240, -1, 20));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(800, 450));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         labelkembali1.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
@@ -284,6 +283,11 @@ public class kembalipage extends javax.swing.JFrame {
         kembali1.setBorderPainted(false);
         kembali1.setContentAreaFilled(false);
         kembali1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        kembali1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kembali1ActionPerformed(evt);
+            }
+        });
         bg3.add(kembali1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 380, -1, -1));
 
         getContentPane().add(bg3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 430));
@@ -321,6 +325,12 @@ public class kembalipage extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void kembali1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kembali1ActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        new mainpage().setVisible(true);
+    }//GEN-LAST:event_kembali1ActionPerformed
 
     /**
      * @param args the command line arguments
