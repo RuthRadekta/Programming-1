@@ -16,6 +16,7 @@ public class bukuread extends javax.swing.JFrame {
      */
     public bukuread() {
         initComponents();
+        setDefaultCloseOperation(bukuread.DISPOSE_ON_CLOSE);
     }
 
     /**

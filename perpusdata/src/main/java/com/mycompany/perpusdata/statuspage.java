@@ -19,6 +19,7 @@ public class statuspage extends javax.swing.JFrame {
     public statuspage() {
         initComponents();
         getContentPane().setBackground(Color.decode("0xFFFFFFF"));
+        setDefaultCloseOperation(statuspage.DISPOSE_ON_CLOSE);
     }
 
     /**

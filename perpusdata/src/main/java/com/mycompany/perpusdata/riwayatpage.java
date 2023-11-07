@@ -19,6 +19,7 @@ public class riwayatpage extends javax.swing.JFrame {
     public riwayatpage() {
         initComponents();
         getContentPane().setBackground(Color.decode("0xFFFFFFF"));
+        setDefaultCloseOperation(riwayatpage.DISPOSE_ON_CLOSE);
     }
 
     /**
