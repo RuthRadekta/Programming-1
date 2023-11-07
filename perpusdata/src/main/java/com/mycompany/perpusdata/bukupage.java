@@ -18,7 +18,9 @@ public class bukupage extends javax.swing.JFrame {
      */
     public bukupage() {
         initComponents();
-        getContentPane().setBackground(Color.decode("0xFFFFFFF"));    }
+        getContentPane().setBackground(Color.decode("0xFFFFFFF"));    
+        setDefaultCloseOperation(bukupage.DISPOSE_ON_CLOSE);
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.

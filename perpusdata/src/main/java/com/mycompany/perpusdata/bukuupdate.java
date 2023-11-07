@@ -19,6 +19,7 @@ public class bukuupdate extends javax.swing.JFrame {
     public bukuupdate() {
         initComponents();
         getContentPane().setBackground(Color.decode("0xFFFFFFF"));
+        setDefaultCloseOperation(bukuupdate.DISPOSE_ON_CLOSE);
     }
 
     /**
