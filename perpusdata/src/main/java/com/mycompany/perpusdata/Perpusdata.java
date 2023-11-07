@@ -22,6 +22,8 @@ public class Perpusdata {
             String password = null;
             tesLogin.input();
             tesLogin.login(username, password);
+            HitungDenda denda = new HitungDenda();
+            denda.hitungDenda();
             
             /*
             CRUDAnggota tesCrudA = new CRUDAnggota();
@@ -37,8 +39,6 @@ public class Perpusdata {
             Pengembalian kembali = new Pengembalian();
             kembali.cekPeminjaman();
             */
-            HitungDenda denda = new HitungDenda();
-            denda.hitungDenda();
             
             tesKoneksi.tutup();
         } catch(SQLException e) {

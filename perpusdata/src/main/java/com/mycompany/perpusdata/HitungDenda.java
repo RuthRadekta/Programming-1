@@ -23,18 +23,25 @@ public class HitungDenda {
             String query = "SELECT pinjam FROM status";
             PreparedStatement preparedStatement = koneksi.prepareStatement(query);
             ResultSet resultSet = preparedStatement.executeQuery();
-            
+
             Date currentTime = new Date();
             while (resultSet.next()) {
+                int denda = 0;
                 Timestamp timestamp = resultSet.getTimestamp("pinjam");
                 Date pinjamDate = new Date(timestamp.getTime());
                 long selisihMillis = currentTime.getTime() - pinjamDate.getTime();
                 int selisihHari = (int) (selisihMillis / (1000 * 60 * 60 * 24));
-                System.out.println(selisihHari);
-                // Di sini Anda dapat menggunakan selisihHari untuk menghitung denda dan meng-update tabel "status" sesuai kebutuhan.
-                
+                int batas = 5 - selisihHari;
+                if (batas < 0) {
+                    denda = batas * -1000;
+                }
+                String updateQuery = "UPDATE status SET denda = ? WHERE pinjam = ?";
+                PreparedStatement updateStatement = koneksi.prepareStatement(updateQuery);
+                updateStatement.setInt(1, denda);
+                updateStatement.setTimestamp(2, timestamp);
+                updateStatement.executeUpdate();
             }
-            
+
             resultSet.close();
             preparedStatement.close();
         } catch (SQLException ex) {
