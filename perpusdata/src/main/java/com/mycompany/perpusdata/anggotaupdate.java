@@ -48,13 +48,13 @@ public class anggotaupdate extends javax.swing.JFrame {
         labeljenke = new javax.swing.JLabel();
         labelalamat = new javax.swing.JLabel();
         labelemail = new javax.swing.JLabel();
-        inputemail = new javax.swing.JTextField();
         inputida = new javax.swing.JTextField();
         inputnama = new javax.swing.JTextField();
         inputalamat = new javax.swing.JTextField();
         pilihanjenke = new javax.swing.JComboBox<>();
         buttonupdate = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
+        inputemail = new javax.swing.JTextField();
         home = new javax.swing.JButton();
         anggota = new javax.swing.JButton();
         buku = new javax.swing.JButton();
@@ -70,7 +70,6 @@ public class anggotaupdate extends javax.swing.JFrame {
         buttoncek = new javax.swing.JButton();
         labelupdate1 = new javax.swing.JLabel();
 
-        hasil.setPreferredSize(new java.awt.Dimension(800, 450));
         hasil.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         home1.setBackground(new java.awt.Color(241, 244, 246));
@@ -181,12 +180,6 @@ public class anggotaupdate extends javax.swing.JFrame {
         labelemail.setText("Email");
         hasil.getContentPane().add(labelemail, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 280, -1, -1));
 
-        inputemail.setBackground(new java.awt.Color(216, 219, 227));
-        inputemail.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
-        inputemail.setForeground(new java.awt.Color(155, 164, 180));
-        inputemail.setBorder(null);
-        hasil.getContentPane().add(inputemail, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 280, 300, 30));
-
         inputida.setBackground(new java.awt.Color(216, 219, 227));
         inputida.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         inputida.setForeground(new java.awt.Color(155, 164, 180));
@@ -221,8 +214,12 @@ public class anggotaupdate extends javax.swing.JFrame {
         hasil.getContentPane().add(buttonupdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 340, 110, 30));
         hasil.getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 90, 360, 10));
 
+        inputemail.setBackground(new java.awt.Color(216, 219, 227));
+        inputemail.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        inputemail.setForeground(new java.awt.Color(155, 164, 180));
+        inputemail.setBorder(null);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(800, 450));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         home.setBackground(new java.awt.Color(241, 244, 246));

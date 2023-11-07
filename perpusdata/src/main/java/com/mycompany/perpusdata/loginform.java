@@ -12,6 +12,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.sql.SQLException;
 /**
  *
  * @author ASUS
@@ -47,7 +48,6 @@ public class loginform extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
-        setPreferredSize(new java.awt.Dimension(830, 500));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         labelUsn.setFont(new java.awt.Font("Rockwell", 1, 18)); // NOI18N
@@ -79,6 +79,11 @@ public class loginform extends javax.swing.JFrame {
         buttonLogin.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         buttonLogin.setBorderPainted(false);
         buttonLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        buttonLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonLoginActionPerformed(evt);
+            }
+        });
         getContentPane().add(buttonLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(336, 318, 96, 29));
 
         inputPsw.setBackground(new java.awt.Color(227, 230, 237));
@@ -98,6 +103,24 @@ public class loginform extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void buttonLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLoginActionPerformed
+        // TODO add your handling code here:
+        try {
+            LoginClass tesLogin = new LoginClass();
+            String username = String.valueOf(inputUsn.getText());
+            String password = String.valueOf(inputPsw.getText());
+            
+            tesLogin.login(username, password);
+            if (tesLogin.login(username, password)){
+                dispose();
+            } else {
+                //tampilkan bahwa username atau password salah
+            }
+        } catch(SQLException e) {
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_buttonLoginActionPerformed
 
     /**
      * @param args the command line arguments
