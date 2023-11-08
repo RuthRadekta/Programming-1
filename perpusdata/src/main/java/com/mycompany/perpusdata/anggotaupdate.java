@@ -402,7 +402,8 @@ public class anggotaupdate extends javax.swing.JFrame {
     }//GEN-LAST:event_peminjamanActionPerformed
 
     private void pengembalianActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pengembalianActionPerformed
-        // TODO add your handling code here:dispose();
+        // TODO add your handling code here:
+        dispose();
         new kembalipage().setVisible(true);
     }//GEN-LAST:event_pengembalianActionPerformed
 

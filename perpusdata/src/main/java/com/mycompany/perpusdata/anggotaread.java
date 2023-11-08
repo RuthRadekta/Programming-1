@@ -52,6 +52,11 @@ public class anggotaread extends javax.swing.JFrame {
         home.setBorderPainted(false);
         home.setContentAreaFilled(false);
         home.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        home.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                homeActionPerformed(evt);
+            }
+        });
         getContentPane().add(home, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 30));
 
         anggota.setBackground(new java.awt.Color(241, 244, 246));
@@ -157,40 +162,41 @@ public class anggotaread extends javax.swing.JFrame {
 
     private void kembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kembaliActionPerformed
         // TODO add your handling code here:
+        dispose();
         new anggotapage().setVisible(true);
     }//GEN-LAST:event_kembaliActionPerformed
-                                    
-    private void homeActionPerformed(java.awt.event.ActionEvent evt) {                                     
+
+    private void homeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeActionPerformed
         // TODO add your handling code here:
         dispose();
         new mainpage().setVisible(true);
-    }                                    
+    }//GEN-LAST:event_homeActionPerformed
 
-    private void anggota1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+    private void anggotaActionPerformed(java.awt.event.ActionEvent evt) {                                         
         // TODO add your handling code here:
         dispose();
         new anggotapage().setVisible(true);
     }                                        
 
-    private void buku1ActionPerformed(java.awt.event.ActionEvent evt) {                                      
+    private void bukuActionPerformed(java.awt.event.ActionEvent evt) {                                      
         // TODO add your handling code here:
         dispose();
         new bukupage().setVisible(true);
     }                                     
 
-    private void peminjaman1ActionPerformed(java.awt.event.ActionEvent evt) {                                            
+    private void peminjamanActionPerformed(java.awt.event.ActionEvent evt) {                                            
         // TODO add your handling code here:
         dispose();
         new pinjampage().setVisible(true);
     }                                           
 
-    private void pengembalian1ActionPerformed(java.awt.event.ActionEvent evt) {                                              
+    private void pengembalianActionPerformed(java.awt.event.ActionEvent evt) {                                              
         // TODO add your handling code here:
         dispose();
         new kembalipage().setVisible(true);
     }                                             
 
-    private void statkini1ActionPerformed(java.awt.event.ActionEvent evt) {                                          
+    private void statkiniActionPerformed(java.awt.event.ActionEvent evt) {                                          
         // TODO add your handling code here:
         dispose();
         new statuspage().setVisible(true);
