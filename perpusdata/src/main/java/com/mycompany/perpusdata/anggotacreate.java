@@ -294,7 +294,7 @@ public class anggotacreate extends javax.swing.JFrame {
         new statuspage().setVisible(true);
     }//GEN-LAST:event_riwayat1ActionPerformed
 
-    private void kembaliActionPerformed(java.awt.event.ActionEvent evt) {                                        
+    private void kembali1ActionPerformed(java.awt.event.ActionEvent evt) {                                        
         // TODO add your handling code here:
         dispose();
         new anggotapage().setVisible(true);
