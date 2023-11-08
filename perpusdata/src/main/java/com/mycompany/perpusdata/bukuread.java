@@ -210,6 +210,8 @@ public class bukuread extends javax.swing.JFrame {
 
     private void bukuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bukuActionPerformed
         // TODO add your handling code here:
+        dispose();
+        new bukupage().setVisible(true);
     }//GEN-LAST:event_bukuActionPerformed
 
     private void peminjamanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_peminjamanActionPerformed

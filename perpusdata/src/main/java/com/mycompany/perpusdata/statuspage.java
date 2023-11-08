@@ -125,6 +125,11 @@ public class statuspage extends javax.swing.JFrame {
         statkini.setBorderPainted(false);
         statkini.setContentAreaFilled(false);
         statkini.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        statkini.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                statkiniActionPerformed(evt);
+            }
+        });
         getContentPane().add(statkini, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 160, -1));
 
         riwayat.setBackground(new java.awt.Color(241, 244, 246));
@@ -134,6 +139,11 @@ public class statuspage extends javax.swing.JFrame {
         riwayat.setBorderPainted(false);
         riwayat.setContentAreaFilled(false);
         riwayat.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        riwayat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                riwayatActionPerformed(evt);
+            }
+        });
         getContentPane().add(riwayat, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 270, 150, -1));
 
         hover.setBackground(new java.awt.Color(190, 196, 205));
@@ -207,6 +217,16 @@ public class statuspage extends javax.swing.JFrame {
         dispose();
         new kembalipage().setVisible(true);
     }//GEN-LAST:event_pengembalianActionPerformed
+
+    private void riwayatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_riwayatActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        new riwayatpage().setVisible(true);
+    }//GEN-LAST:event_riwayatActionPerformed
+
+    private void statkiniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statkiniActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_statkiniActionPerformed
 
     private void kembaliActionPerformed(java.awt.event.ActionEvent evt) {                                        
         // TODO add your handling code here:

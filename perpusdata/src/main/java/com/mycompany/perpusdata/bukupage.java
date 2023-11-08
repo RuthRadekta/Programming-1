@@ -165,6 +165,11 @@ public class bukupage extends javax.swing.JFrame {
         update.setBorderPainted(false);
         update.setContentAreaFilled(false);
         update.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        update.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updateActionPerformed(evt);
+            }
+        });
         getContentPane().add(update, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 130, 200, 70));
 
         create.setBackground(new java.awt.Color(155, 164, 180));
@@ -174,6 +179,11 @@ public class bukupage extends javax.swing.JFrame {
         create.setBorderPainted(false);
         create.setContentAreaFilled(false);
         create.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        create.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                createActionPerformed(evt);
+            }
+        });
         getContentPane().add(create, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 130, 200, 70));
 
         delete.setBackground(new java.awt.Color(155, 164, 180));
@@ -183,6 +193,11 @@ public class bukupage extends javax.swing.JFrame {
         delete.setBorderPainted(false);
         delete.setContentAreaFilled(false);
         delete.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        delete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteActionPerformed(evt);
+            }
+        });
         getContentPane().add(delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 230, 200, 70));
 
         read.setBackground(new java.awt.Color(155, 164, 180));
@@ -192,6 +207,11 @@ public class bukupage extends javax.swing.JFrame {
         read.setBorderPainted(false);
         read.setContentAreaFilled(false);
         read.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        read.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                readActionPerformed(evt);
+            }
+        });
         getContentPane().add(read, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 230, 200, 70));
 
         bg2.setBackground(new java.awt.Color(155, 164, 180));
@@ -277,30 +297,30 @@ public class bukupage extends javax.swing.JFrame {
         new anggotapage().setVisible(true);
     }//GEN-LAST:event_anggotaActionPerformed
 
-    private void updateActionPerformed(java.awt.event.ActionEvent evt) {                                       
+    private void updateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateActionPerformed
         // TODO add your handling code here:
         dispose();
         new bukuupdate().setVisible(true);
-    }                                      
+    }//GEN-LAST:event_updateActionPerformed
 
-    private void createActionPerformed(java.awt.event.ActionEvent evt) {                                       
+    private void createActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createActionPerformed
         // TODO add your handling code here:
         dispose();
         new bukucreate().setVisible(true);
-    }                                      
+    }//GEN-LAST:event_createActionPerformed
 
-    private void deleteActionPerformed(java.awt.event.ActionEvent evt) {                                       
+    private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
         // TODO add your handling code here:
         dispose();
         new bukudelete().setVisible(true);
-    }                                      
+    }//GEN-LAST:event_deleteActionPerformed
 
-    private void readActionPerformed(java.awt.event.ActionEvent evt) {                                     
+    private void readActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_readActionPerformed
         // TODO add your handling code here:
         dispose();
         new bukuread().setVisible(true);
-    }
-    
+    }//GEN-LAST:event_readActionPerformed
+
     /**
      * @param args the command line arguments
      */

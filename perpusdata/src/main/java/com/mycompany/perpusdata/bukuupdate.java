@@ -251,6 +251,11 @@ public class bukuupdate extends javax.swing.JFrame {
         anggota.setBorderPainted(false);
         anggota.setContentAreaFilled(false);
         anggota.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        anggota.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                anggotaActionPerformed(evt);
+            }
+        });
         getContentPane().add(anggota, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 110, 20));
 
         buku.setBackground(new java.awt.Color(241, 244, 246));
@@ -392,6 +397,8 @@ public class bukuupdate extends javax.swing.JFrame {
 
     private void bukuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bukuActionPerformed
         // TODO add your handling code here:
+        dispose();
+        new bukupage().setVisible(true);
     }//GEN-LAST:event_bukuActionPerformed
 
     private void pengembalianActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pengembalianActionPerformed
@@ -411,6 +418,12 @@ public class bukuupdate extends javax.swing.JFrame {
         dispose();
         new riwayatpage().setVisible(true);
     }//GEN-LAST:event_riwayatActionPerformed
+
+    private void anggotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_anggotaActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        new anggotapage().setVisible(true);
+    }//GEN-LAST:event_anggotaActionPerformed
 
     /**
      * @param args the command line arguments
