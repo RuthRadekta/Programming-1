@@ -244,6 +244,11 @@ public class bukucreate extends javax.swing.JFrame {
         buttoncreate.setBorder(null);
         buttoncreate.setBorderPainted(false);
         buttoncreate.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        buttoncreate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttoncreateActionPerformed(evt);
+            }
+        });
         getContentPane().add(buttoncreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 340, 110, 30));
         getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 90, 360, 10));
 
@@ -301,6 +306,20 @@ public class bukucreate extends javax.swing.JFrame {
         dispose();
         new riwayatpage().setVisible(true);
     }//GEN-LAST:event_riwayat1ActionPerformed
+
+    private void buttoncreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttoncreateActionPerformed
+        // TODO add your handling code here:
+        int id_buku = Integer.parseInt(inputidb.getText());
+        String judul = String.valueOf(inputjudul.getText());
+        String penulis = String.valueOf(inputpenulis.getText());
+        String penerbit = String.valueOf(inputpenerbit.getText());
+        int jumlah_halaman = Integer.parseInt(inputjumha.getText());
+        CRUDBuku tesCrudB = new CRUDBuku();
+        tesCrudB.create(id_buku, judul, penulis, penerbit, jumlah_halaman);
+        
+        dispose();
+        new bukucreate().setVisible(true);
+    }//GEN-LAST:event_buttoncreateActionPerformed
 
     /**
      * @param args the command line arguments
