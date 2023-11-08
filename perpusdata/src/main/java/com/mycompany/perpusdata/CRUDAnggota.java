@@ -14,26 +14,13 @@ import java.sql.Statement;
  *
  * @author refah
  */
-public class CRUDAnggota implements CRUD{
-    public void create(){
+public class CRUDAnggota{
+    public void create(int id_anggota, String nama, String jenis_kelamin, String alamat, String email){
         try {
             Koneksi konek = new Koneksi();
             Connection koneksi = konek.buka();
             String query = "INSERT INTO anggota (id_anggota, nama, jenis_kelamin, alamat, email, created_at) VALUES (?, ?, ?, ?, ?, CURRENT_TIMESTAMP)";
             PreparedStatement ps = koneksi.prepareStatement(query);
-            
-            Scanner scanner = new Scanner(System.in);
-            System.out.print("Masukkan id anggota: ");
-            int id_anggota = scanner.nextInt();
-            System.out.print("Masukkan nama: ");
-            scanner.nextLine();
-            String nama = scanner.nextLine();
-            System.out.print("Masukkan jenis kelamin: ");
-            String jenis_kelamin = scanner.nextLine();
-            System.out.print("Masukkan alamat: ");
-            String alamat = scanner.nextLine();
-            System.out.print("Masukkan email: ");
-            String email = scanner.nextLine();
             
             ps.setInt(1, id_anggota);
             ps.setString(2, nama);

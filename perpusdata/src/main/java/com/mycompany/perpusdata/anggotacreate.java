@@ -237,6 +237,11 @@ public class anggotacreate extends javax.swing.JFrame {
         pilihanjenke.setForeground(new java.awt.Color(155, 164, 180));
         pilihanjenke.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Laki-laki", "Perempuan" }));
         pilihanjenke.setBorder(null);
+        pilihanjenke.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pilihanjenkeActionPerformed(evt);
+            }
+        });
         getContentPane().add(pilihanjenke, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 200, 300, 30));
 
         buttoncreate.setBackground(new java.awt.Color(155, 164, 180));
@@ -246,6 +251,11 @@ public class anggotacreate extends javax.swing.JFrame {
         buttoncreate.setBorder(null);
         buttoncreate.setBorderPainted(false);
         buttoncreate.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        buttoncreate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttoncreateActionPerformed(evt);
+            }
+        });
         getContentPane().add(buttoncreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 340, 110, 30));
         getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 90, 360, 10));
 
@@ -293,6 +303,24 @@ public class anggotacreate extends javax.swing.JFrame {
         dispose();
         new statuspage().setVisible(true);
     }//GEN-LAST:event_riwayat1ActionPerformed
+
+    private void buttoncreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttoncreateActionPerformed
+        // TODO add your handling code here:
+        int id_anggota = Integer.parseInt(inputida.getText());
+        String nama = String.valueOf(inputnama.getText());
+        String jenis_kelamin = String.valueOf(pilihanjenke.getSelectedItem());
+        String alamat = String.valueOf(inputalamat.getText());
+        String email = String.valueOf(inputemail.getText());
+        CRUDAnggota tesCrudA = new CRUDAnggota();
+        tesCrudA.create(id_anggota, nama, jenis_kelamin, alamat, email);
+        
+        dispose();
+        new anggotacreate().setVisible(true);
+    }//GEN-LAST:event_buttoncreateActionPerformed
+
+    private void pilihanjenkeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pilihanjenkeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pilihanjenkeActionPerformed
 
     private void kembali1ActionPerformed(java.awt.event.ActionEvent evt) {                                        
         // TODO add your handling code here:

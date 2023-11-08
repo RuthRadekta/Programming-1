@@ -15,32 +15,19 @@ import java.util.Scanner;
  *
  * @author refah
  */
-public class CRUDBuku implements CRUD{
-    public void create(){
+public class CRUDBuku{
+    public void create(int id_buku, String judul, String penulis, String penerbit, int jumlah_halaman){
         try {
             Koneksi konek = new Koneksi();
             Connection koneksi = konek.buka();
             String query = "INSERT INTO buku (id_buku, judul, penulis, penerbit, jumlah_halaman, created_at) VALUES (?, ?, ?, ?, ?, CURRENT_TIMESTAMP)";
             PreparedStatement ps = koneksi.prepareStatement(query);
             
-            Scanner scanner = new Scanner(System.in);
-            System.out.print("Masukkan id buku: ");
-            int id_buku = scanner.nextInt();
-            System.out.print("Masukkan judul buku: ");
-            scanner.nextLine();
-            String judul = scanner.nextLine();
-            System.out.print("Masukkan penulis ");
-            String penulis = scanner.nextLine();
-            System.out.print("Masukkan penerbit: ");
-            String penerbit = scanner.nextLine();
-            System.out.print("Masukkan jumlah_halaman: ");
-            String jumlah_halaman = scanner.nextLine();
-            
             ps.setInt(1, id_buku);
             ps.setString(2, judul);
             ps.setString(3, penulis);
             ps.setString(4, penerbit);
-            ps.setString(5, jumlah_halaman);
+            ps.setInt(5, jumlah_halaman);
 
             int rowsAffected = ps.executeUpdate();
 
