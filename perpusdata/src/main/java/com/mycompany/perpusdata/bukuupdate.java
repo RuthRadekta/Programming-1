@@ -71,6 +71,9 @@ public class bukuupdate extends javax.swing.JFrame {
         buttoncek = new javax.swing.JButton();
         labelupdate1 = new javax.swing.JLabel();
 
+        hasil.setMaximumSize(new java.awt.Dimension(830, 450));
+        hasil.setMinimumSize(new java.awt.Dimension(830, 450));
+        hasil.setPreferredSize(new java.awt.Dimension(830, 450));
         hasil.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         home1.setBackground(new java.awt.Color(241, 244, 246));
@@ -228,6 +231,9 @@ public class bukuupdate extends javax.swing.JFrame {
         hasil.getContentPane().add(inputpenulis, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 200, 300, 30));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(830, 450));
+        setMinimumSize(new java.awt.Dimension(830, 450));
+        setPreferredSize(new java.awt.Dimension(830, 450));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         home.setBackground(new java.awt.Color(241, 244, 246));

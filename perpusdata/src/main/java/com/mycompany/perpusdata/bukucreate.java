@@ -73,8 +73,9 @@ public class bukucreate extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         inputpenulis = new javax.swing.JTextField();
 
-        hasil.setMinimumSize(new java.awt.Dimension(800, 450));
-        hasil.setPreferredSize(new java.awt.Dimension(800, 450));
+        hasil.setMaximumSize(new java.awt.Dimension(830, 450));
+        hasil.setMinimumSize(new java.awt.Dimension(830, 450));
+        hasil.setPreferredSize(new java.awt.Dimension(830, 450));
         hasil.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         home2.setBackground(new java.awt.Color(241, 244, 246));
@@ -192,6 +193,9 @@ public class bukucreate extends javax.swing.JFrame {
         hasil.getContentPane().add(labelberhasil1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 120, 250, -1));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(830, 450));
+        setMinimumSize(new java.awt.Dimension(830, 450));
+        setPreferredSize(new java.awt.Dimension(830, 450));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         home1.setBackground(new java.awt.Color(241, 244, 246));

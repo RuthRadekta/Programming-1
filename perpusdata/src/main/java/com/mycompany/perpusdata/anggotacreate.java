@@ -73,8 +73,9 @@ public class anggotacreate extends javax.swing.JFrame {
         buttoncreate = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
 
-        hasil.setMinimumSize(new java.awt.Dimension(800, 450));
-        hasil.setPreferredSize(new java.awt.Dimension(800, 450));
+        hasil.setMaximumSize(new java.awt.Dimension(830, 450));
+        hasil.setMinimumSize(new java.awt.Dimension(830, 450));
+        hasil.setPreferredSize(new java.awt.Dimension(830, 450));
         hasil.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         home2.setBackground(new java.awt.Color(241, 244, 246));
@@ -192,6 +193,9 @@ public class anggotacreate extends javax.swing.JFrame {
         hasil.getContentPane().add(labelberhasil1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 120, 250, -1));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(830, 450));
+        setMinimumSize(new java.awt.Dimension(830, 450));
+        setPreferredSize(new java.awt.Dimension(830, 450));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         home1.setBackground(new java.awt.Color(241, 244, 246));
@@ -304,6 +308,11 @@ public class anggotacreate extends javax.swing.JFrame {
         kembali1.setBorderPainted(false);
         kembali1.setContentAreaFilled(false);
         kembali1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        kembali1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kembali1ActionPerformed(evt);
+            }
+        });
         bg3.add(kembali1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 380, -1, -1));
 
         getContentPane().add(bg3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 410));
@@ -465,11 +474,12 @@ public class anggotacreate extends javax.swing.JFrame {
         new anggotacreate().setVisible(true);
     }//GEN-LAST:event_lagiActionPerformed
 
-    private void kembali1ActionPerformed(java.awt.event.ActionEvent evt) {                                        
+    private void kembali1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kembali1ActionPerformed
         // TODO add your handling code here:
         dispose();
         new anggotapage().setVisible(true);
-    }
+    }//GEN-LAST:event_kembali1ActionPerformed
+
     /**
      * @param args the command line arguments
      */

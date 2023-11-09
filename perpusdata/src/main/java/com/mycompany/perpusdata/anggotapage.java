@@ -53,6 +53,9 @@ public class anggotapage extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
+        setMaximumSize(new java.awt.Dimension(830, 450));
+        setMinimumSize(new java.awt.Dimension(830, 450));
+        setPreferredSize(new java.awt.Dimension(830, 450));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         home.setBackground(new java.awt.Color(241, 244, 246));

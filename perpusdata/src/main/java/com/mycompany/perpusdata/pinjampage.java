@@ -69,6 +69,9 @@ public class pinjampage extends javax.swing.JFrame {
         inputida = new javax.swing.JTextField();
         buttoncek = new javax.swing.JButton();
 
+        hasil.setMaximumSize(new java.awt.Dimension(830, 450));
+        hasil.setMinimumSize(new java.awt.Dimension(830, 450));
+        hasil.setPreferredSize(new java.awt.Dimension(830, 450));
         hasil.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         labelpinjam3.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
@@ -193,6 +196,9 @@ public class pinjampage extends javax.swing.JFrame {
         hasil.getContentPane().add(tenggat, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 240, -1, 20));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(830, 450));
+        setMinimumSize(new java.awt.Dimension(830, 450));
+        setPreferredSize(new java.awt.Dimension(830, 450));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         labelpinjam1.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N

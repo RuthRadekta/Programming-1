@@ -62,6 +62,9 @@ public class anggotadelete extends javax.swing.JFrame {
         buttoncek = new javax.swing.JButton();
         labeldelete = new javax.swing.JLabel();
 
+        hasil.setMaximumSize(new java.awt.Dimension(830, 450));
+        hasil.setMinimumSize(new java.awt.Dimension(830, 450));
+        hasil.setPreferredSize(new java.awt.Dimension(830, 450));
         hasil.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         home1.setBackground(new java.awt.Color(241, 244, 246));
@@ -169,6 +172,9 @@ public class anggotadelete extends javax.swing.JFrame {
         hasil.getContentPane().add(lagi, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 240, 140, 40));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(830, 450));
+        setMinimumSize(new java.awt.Dimension(830, 450));
+        setPreferredSize(new java.awt.Dimension(830, 450));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         home.setBackground(new java.awt.Color(241, 244, 246));
