@@ -24,6 +24,7 @@ public class mainpage extends javax.swing.JFrame {
     public mainpage() {
         initComponents();
         getContentPane().setBackground(Color.decode("0xFFFFFFF"));
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     /**
