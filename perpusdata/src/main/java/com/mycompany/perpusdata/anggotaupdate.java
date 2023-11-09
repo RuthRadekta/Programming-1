@@ -6,6 +6,8 @@ package com.mycompany.perpusdata;
  */
 
 import java.awt.Color;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -49,13 +51,14 @@ public class anggotaupdate extends javax.swing.JFrame {
         labeljenke = new javax.swing.JLabel();
         labelalamat = new javax.swing.JLabel();
         labelemail = new javax.swing.JLabel();
+        inputemail = new javax.swing.JTextField();
         inputida = new javax.swing.JTextField();
         inputnama = new javax.swing.JTextField();
         inputalamat = new javax.swing.JTextField();
         pilihanjenke = new javax.swing.JComboBox<>();
         buttonupdate = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
-        inputemail = new javax.swing.JTextField();
+        inputida1 = new javax.swing.JTextField();
         home = new javax.swing.JButton();
         anggota = new javax.swing.JButton();
         buku = new javax.swing.JButton();
@@ -184,6 +187,12 @@ public class anggotaupdate extends javax.swing.JFrame {
         labelemail.setText("Email");
         hasil.getContentPane().add(labelemail, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 280, -1, -1));
 
+        inputemail.setBackground(new java.awt.Color(216, 219, 227));
+        inputemail.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        inputemail.setForeground(new java.awt.Color(155, 164, 180));
+        inputemail.setBorder(null);
+        hasil.getContentPane().add(inputemail, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 280, 300, 30));
+
         inputida.setBackground(new java.awt.Color(216, 219, 227));
         inputida.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         inputida.setForeground(new java.awt.Color(155, 164, 180));
@@ -215,13 +224,19 @@ public class anggotaupdate extends javax.swing.JFrame {
         buttonupdate.setText("Update");
         buttonupdate.setBorder(null);
         buttonupdate.setBorderPainted(false);
+        buttonupdate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonupdateActionPerformed(evt);
+            }
+        });
         hasil.getContentPane().add(buttonupdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 340, 110, 30));
         hasil.getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 90, 360, 10));
 
-        inputemail.setBackground(new java.awt.Color(216, 219, 227));
-        inputemail.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
-        inputemail.setForeground(new java.awt.Color(155, 164, 180));
-        inputemail.setBorder(null);
+        inputida1.setBackground(new java.awt.Color(216, 219, 227));
+        inputida1.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        inputida1.setForeground(new java.awt.Color(155, 164, 180));
+        inputida1.setBorder(null);
+        hasil.getContentPane().add(inputida1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 120, 300, 30));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(830, 450));
@@ -367,6 +382,11 @@ public class anggotaupdate extends javax.swing.JFrame {
         buttoncek.setBorder(null);
         buttoncek.setBorderPainted(false);
         buttoncek.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        buttoncek.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttoncekActionPerformed(evt);
+            }
+        });
         getContentPane().add(buttoncek, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 250, 80, 30));
 
         labelupdate1.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
@@ -425,6 +445,29 @@ public class anggotaupdate extends javax.swing.JFrame {
         new riwayatpage().setVisible(true);
     }//GEN-LAST:event_riwayatActionPerformed
 
+    private void buttoncekActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttoncekActionPerformed
+        // TODO add your handling code here:
+        try {
+            update cek = new update();
+            String id_anggota = String.valueOf(cekida.getText());
+            
+            cek.ida(id_anggota);
+            if (cek.ida(id_anggota)){
+                dispose();
+                hasil.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(this, "ID Anggota tidak ditemukan!", "Kesalahan", JOptionPane.ERROR_MESSAGE);
+            }
+        } catch(SQLException e) {
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_buttoncekActionPerformed
+
+    private void buttonupdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonupdateActionPerformed
+        // TODO add your handling code here:
+        // INI BELUM DIKASIH
+    }//GEN-LAST:event_buttonupdateActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -478,6 +521,7 @@ public class anggotaupdate extends javax.swing.JFrame {
     private javax.swing.JTextField inputalamat;
     private javax.swing.JTextField inputemail;
     private javax.swing.JTextField inputida;
+    private javax.swing.JTextField inputida1;
     private javax.swing.JTextField inputnama;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JButton kembali;

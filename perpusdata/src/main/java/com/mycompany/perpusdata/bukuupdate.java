@@ -1,6 +1,8 @@
 package com.mycompany.perpusdata;
 
 import java.awt.Color;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -221,6 +223,11 @@ public class bukuupdate extends javax.swing.JFrame {
         buttonupdate.setBorder(null);
         buttonupdate.setBorderPainted(false);
         buttonupdate.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        buttonupdate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonupdateActionPerformed(evt);
+            }
+        });
         hasil.getContentPane().add(buttonupdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 340, 110, 30));
         hasil.getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 90, 360, 10));
 
@@ -374,6 +381,11 @@ public class bukuupdate extends javax.swing.JFrame {
         buttoncek.setBorder(null);
         buttoncek.setBorderPainted(false);
         buttoncek.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        buttoncek.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttoncekActionPerformed(evt);
+            }
+        });
         getContentPane().add(buttoncek, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 250, 80, 30));
 
         labelupdate1.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
@@ -430,6 +442,30 @@ public class bukuupdate extends javax.swing.JFrame {
         dispose();
         new anggotapage().setVisible(true);
     }//GEN-LAST:event_anggotaActionPerformed
+
+    private void buttoncekActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttoncekActionPerformed
+        // TODO add your handling code here:
+        try {
+            update cek = new update();
+            String id_buku = String.valueOf(cekidb.getText());
+            
+            cek.ida(id_buku);
+            if (cek.ida(id_buku)){
+                dispose();
+                hasil.getContentPane().setBackground(Color.decode("0xFFFFFF"));
+                hasil.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(this, "ID Buku tidak ditemukan!", "Kesalahan", JOptionPane.ERROR_MESSAGE);
+            }
+        } catch(SQLException e) {
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_buttoncekActionPerformed
+
+    private void buttonupdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonupdateActionPerformed
+        // TODO add your handling code here
+        // BELUM DI KASIH
+    }//GEN-LAST:event_buttonupdateActionPerformed
 
     /**
      * @param args the command line arguments
