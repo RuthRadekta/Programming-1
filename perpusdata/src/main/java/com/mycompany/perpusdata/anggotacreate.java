@@ -31,6 +31,23 @@ public class anggotacreate extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        hasil = new javax.swing.JDialog();
+        home2 = new javax.swing.JButton();
+        anggota2 = new javax.swing.JButton();
+        buku2 = new javax.swing.JButton();
+        peminjaman2 = new javax.swing.JButton();
+        pengembalian2 = new javax.swing.JButton();
+        statkini2 = new javax.swing.JButton();
+        riwayat2 = new javax.swing.JButton();
+        hover2 = new javax.swing.JPanel();
+        bg4 = new javax.swing.JPanel();
+        kembali2 = new javax.swing.JButton();
+        labelcreate3 = new javax.swing.JLabel();
+        labelberhasil = new javax.swing.JLabel();
+        jSeparator2 = new javax.swing.JSeparator();
+        labeldelete4 = new javax.swing.JLabel();
+        lagi = new javax.swing.JButton();
+        labelberhasil1 = new javax.swing.JLabel();
         home1 = new javax.swing.JButton();
         anggota1 = new javax.swing.JButton();
         buku1 = new javax.swing.JButton();
@@ -55,6 +72,124 @@ public class anggotacreate extends javax.swing.JFrame {
         pilihanjenke = new javax.swing.JComboBox<>();
         buttoncreate = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
+
+        hasil.setMinimumSize(new java.awt.Dimension(800, 450));
+        hasil.setPreferredSize(new java.awt.Dimension(800, 450));
+        hasil.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        home2.setBackground(new java.awt.Color(241, 244, 246));
+        home2.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        home2.setForeground(new java.awt.Color(255, 255, 255));
+        home2.setText("HOME");
+        home2.setBorderPainted(false);
+        home2.setContentAreaFilled(false);
+        home2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        hasil.getContentPane().add(home2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 30));
+
+        anggota2.setBackground(new java.awt.Color(241, 244, 246));
+        anggota2.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        anggota2.setForeground(new java.awt.Color(255, 255, 255));
+        anggota2.setText("ANGGOTA");
+        anggota2.setBorderPainted(false);
+        anggota2.setContentAreaFilled(false);
+        anggota2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        hasil.getContentPane().add(anggota2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 110, 20));
+
+        buku2.setBackground(new java.awt.Color(241, 244, 246));
+        buku2.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        buku2.setForeground(new java.awt.Color(255, 255, 255));
+        buku2.setText("BUKU");
+        buku2.setBorderPainted(false);
+        buku2.setContentAreaFilled(false);
+        buku2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        hasil.getContentPane().add(buku2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 120, 120, 20));
+
+        peminjaman2.setBackground(new java.awt.Color(241, 244, 246));
+        peminjaman2.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        peminjaman2.setForeground(new java.awt.Color(255, 255, 255));
+        peminjaman2.setText("PEMINJAMAN");
+        peminjaman2.setBorderPainted(false);
+        peminjaman2.setContentAreaFilled(false);
+        peminjaman2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        hasil.getContentPane().add(peminjaman2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 140, 30));
+
+        pengembalian2.setBackground(new java.awt.Color(241, 244, 246));
+        pengembalian2.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        pengembalian2.setForeground(new java.awt.Color(255, 255, 255));
+        pengembalian2.setText("PENGEMBALIAN");
+        pengembalian2.setBorderPainted(false);
+        pengembalian2.setContentAreaFilled(false);
+        pengembalian2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        hasil.getContentPane().add(pengembalian2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 160, 30));
+
+        statkini2.setBackground(new java.awt.Color(241, 244, 246));
+        statkini2.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        statkini2.setForeground(new java.awt.Color(255, 255, 255));
+        statkini2.setText("STATUS TERKINI");
+        statkini2.setBorderPainted(false);
+        statkini2.setContentAreaFilled(false);
+        statkini2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        hasil.getContentPane().add(statkini2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 160, -1));
+
+        riwayat2.setBackground(new java.awt.Color(241, 244, 246));
+        riwayat2.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        riwayat2.setForeground(new java.awt.Color(255, 255, 255));
+        riwayat2.setText("RIWAYAT");
+        riwayat2.setBorderPainted(false);
+        riwayat2.setContentAreaFilled(false);
+        riwayat2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        hasil.getContentPane().add(riwayat2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 270, 150, -1));
+
+        hover2.setBackground(new java.awt.Color(190, 196, 205));
+        hasil.getContentPane().add(hover2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 160, 40));
+
+        bg4.setBackground(new java.awt.Color(155, 164, 180));
+        bg4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        kembali2.setFont(new java.awt.Font("Segoe UI Black", 0, 10)); // NOI18N
+        kembali2.setForeground(new java.awt.Color(255, 255, 255));
+        kembali2.setText("kembali");
+        kembali2.setBorderPainted(false);
+        kembali2.setContentAreaFilled(false);
+        kembali2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bg4.add(kembali2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 380, -1, -1));
+
+        hasil.getContentPane().add(bg4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 410));
+
+        labelcreate3.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        labelcreate3.setForeground(new java.awt.Color(190, 196, 205));
+        labelcreate3.setText("MEMBUAT DATA BARU");
+        hasil.getContentPane().add(labelcreate3, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 10, -1, -1));
+
+        labelberhasil.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
+        labelberhasil.setForeground(new java.awt.Color(155, 164, 180));
+        labelberhasil.setText("DITAMBAHKAN");
+        hasil.getContentPane().add(labelberhasil, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 160, 250, -1));
+        hasil.getContentPane().add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 90, 360, 10));
+
+        labeldelete4.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        labeldelete4.setForeground(new java.awt.Color(155, 164, 180));
+        labeldelete4.setText("CREATE");
+        hasil.getContentPane().add(labeldelete4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 80, -1, -1));
+
+        lagi.setBackground(new java.awt.Color(216, 219, 227));
+        lagi.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lagi.setForeground(new java.awt.Color(155, 164, 180));
+        lagi.setText("Tambahkan Data Lain");
+        lagi.setBorder(null);
+        lagi.setBorderPainted(false);
+        lagi.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lagi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                lagiActionPerformed(evt);
+            }
+        });
+        hasil.getContentPane().add(lagi, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 240, 150, 40));
+
+        labelberhasil1.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
+        labelberhasil1.setForeground(new java.awt.Color(155, 164, 180));
+        labelberhasil1.setText("DATA BERHASIL");
+        hasil.getContentPane().add(labelberhasil1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 120, 250, -1));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -315,12 +450,20 @@ public class anggotacreate extends javax.swing.JFrame {
         tesCrudA.create(id_anggota, nama, jenis_kelamin, alamat, email);
         
         dispose();
-        new anggotacreate().setVisible(true);
+        hasil.setVisible(true);
+        hasil.getContentPane().setBackground(Color.decode("0xFFFFFF"));
+        //new anggotacreate().setVisible(true);
     }//GEN-LAST:event_buttoncreateActionPerformed
 
     private void pilihanjenkeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pilihanjenkeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_pilihanjenkeActionPerformed
+
+    private void lagiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lagiActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        new anggotacreate().setVisible(true);
+    }//GEN-LAST:event_lagiActionPerformed
 
     private void kembali1ActionPerformed(java.awt.event.ActionEvent evt) {                                        
         // TODO add your handling code here:
@@ -364,28 +507,45 @@ public class anggotacreate extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton anggota1;
+    private javax.swing.JButton anggota2;
     private javax.swing.JPanel bg3;
+    private javax.swing.JPanel bg4;
     private javax.swing.JButton buku1;
+    private javax.swing.JButton buku2;
     private javax.swing.JButton buttoncreate;
+    private javax.swing.JDialog hasil;
     private javax.swing.JButton home1;
+    private javax.swing.JButton home2;
     private javax.swing.JPanel hover1;
+    private javax.swing.JPanel hover2;
     private javax.swing.JTextField inputalamat;
     private javax.swing.JTextField inputemail;
     private javax.swing.JTextField inputida;
     private javax.swing.JTextField inputnama;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
     private javax.swing.JButton kembali1;
+    private javax.swing.JButton kembali2;
     private javax.swing.JLabel labelalamat;
+    private javax.swing.JLabel labelberhasil;
+    private javax.swing.JLabel labelberhasil1;
     private javax.swing.JLabel labelcreate;
     private javax.swing.JLabel labelcreate2;
+    private javax.swing.JLabel labelcreate3;
+    private javax.swing.JLabel labeldelete4;
     private javax.swing.JLabel labelemail;
     private javax.swing.JLabel labelida;
     private javax.swing.JLabel labeljenke;
     private javax.swing.JLabel labelnama;
+    private javax.swing.JButton lagi;
     private javax.swing.JButton peminjaman1;
+    private javax.swing.JButton peminjaman2;
     private javax.swing.JButton pengembalian1;
+    private javax.swing.JButton pengembalian2;
     private javax.swing.JComboBox<String> pilihanjenke;
     private javax.swing.JButton riwayat1;
+    private javax.swing.JButton riwayat2;
     private javax.swing.JButton statkini1;
+    private javax.swing.JButton statkini2;
     // End of variables declaration//GEN-END:variables
 }
