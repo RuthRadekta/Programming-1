@@ -117,7 +117,7 @@ public class loginform extends javax.swing.JFrame {
                 dispose();
                 new mainpage().setVisible(true);
             } else {
-                //tampilkan bahwa username atau password salah
+                JOptionPane.showMessageDialog(this, "Username atau Password salah!", "Kesalahan", JOptionPane.ERROR_MESSAGE);
             }
         } catch(SQLException e) {
             e.printStackTrace();
