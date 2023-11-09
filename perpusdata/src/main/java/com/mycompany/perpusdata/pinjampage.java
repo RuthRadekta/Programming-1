@@ -361,6 +361,11 @@ public class pinjampage extends javax.swing.JFrame {
         buttoncek.setBorder(null);
         buttoncek.setBorderPainted(false);
         buttoncek.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        buttoncek.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttoncekActionPerformed(evt);
+            }
+        });
         getContentPane().add(buttoncek, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 280, 110, 30));
 
         pack();
@@ -411,6 +416,10 @@ public class pinjampage extends javax.swing.JFrame {
         dispose();
         new statuspage().setVisible(true);
     }//GEN-LAST:event_riwayat1ActionPerformed
+
+    private void buttoncekActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttoncekActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttoncekActionPerformed
 
     /**
      * @param args the command line arguments

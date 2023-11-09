@@ -1,6 +1,8 @@
 package com.mycompany.perpusdata;
 
 import java.awt.Color;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -315,6 +317,11 @@ public class bukudelete extends javax.swing.JFrame {
         buttoncek.setBorder(null);
         buttoncek.setBorderPainted(false);
         buttoncek.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        buttoncek.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttoncekActionPerformed(evt);
+            }
+        });
         getContentPane().add(buttoncek, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 250, 80, 30));
 
         labelupdate1.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
@@ -370,6 +377,25 @@ public class bukudelete extends javax.swing.JFrame {
         dispose();
         new riwayatpage().setVisible(true);
     }//GEN-LAST:event_riwayatActionPerformed
+
+    private void buttoncekActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttoncekActionPerformed
+        // TODO add your handling code here:
+        try {
+            update cek = new update();
+            String id_buku = String.valueOf(cekidb.getText());
+            
+            cek.idb2(id_buku);
+            if (cek.ida(id_buku)){
+                dispose();
+                hasil.getContentPane().setBackground(Color.decode("0xFFFFFF"));
+                hasil.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(this, "ID Buku tidak ditemukan!", "Kesalahan", JOptionPane.ERROR_MESSAGE);
+            }
+        } catch(SQLException e) {
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_buttoncekActionPerformed
 
     /**
      * @param args the command line arguments

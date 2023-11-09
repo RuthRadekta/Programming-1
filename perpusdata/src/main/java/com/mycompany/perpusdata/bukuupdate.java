@@ -449,7 +449,7 @@ public class bukuupdate extends javax.swing.JFrame {
             update cek = new update();
             String id_buku = String.valueOf(cekidb.getText());
             
-            cek.ida(id_buku);
+            cek.idb(id_buku);
             if (cek.ida(id_buku)){
                 dispose();
                 hasil.getContentPane().setBackground(Color.decode("0xFFFFFF"));

@@ -6,6 +6,8 @@ package com.mycompany.perpusdata;
  */
 
 import java.awt.Color;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -315,6 +317,11 @@ public class anggotadelete extends javax.swing.JFrame {
         buttoncek.setBorder(null);
         buttoncek.setBorderPainted(false);
         buttoncek.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        buttoncek.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttoncekActionPerformed(evt);
+            }
+        });
         getContentPane().add(buttoncek, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 250, 80, 30));
 
         labeldelete.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
@@ -370,6 +377,25 @@ public class anggotadelete extends javax.swing.JFrame {
         dispose();
         new anggotapage().setVisible(true);
     }//GEN-LAST:event_kembaliActionPerformed
+
+    private void buttoncekActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttoncekActionPerformed
+        // TODO add your handling code here:
+        try {
+            update cek = new update();
+            String id_anggota = String.valueOf(cekida.getText());
+            
+            cek.ida(id_anggota);
+            if (cek.ida(id_anggota)){
+                dispose();
+                hasil.setVisible(true);
+                hasil.getContentPane().setBackground(Color.decode("0xFFFFFF"));
+            } else {
+                JOptionPane.showMessageDialog(this, "ID Anggota tidak ditemukan!", "Kesalahan", JOptionPane.ERROR_MESSAGE);
+            }
+        } catch(SQLException e) {
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_buttoncekActionPerformed
     
     /**
      * @param args the command line arguments

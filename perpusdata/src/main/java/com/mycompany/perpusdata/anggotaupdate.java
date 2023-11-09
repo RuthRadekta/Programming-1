@@ -451,7 +451,7 @@ public class anggotaupdate extends javax.swing.JFrame {
             update cek = new update();
             String id_anggota = String.valueOf(cekida.getText());
             
-            cek.ida(id_anggota);
+            cek.ida2(id_anggota);
             if (cek.ida(id_anggota)){
                 dispose();
                 hasil.setVisible(true);
