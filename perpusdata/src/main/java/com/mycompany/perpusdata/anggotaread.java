@@ -175,13 +175,13 @@ public class anggotaread extends javax.swing.JFrame {
         jTable1.setForeground(new java.awt.Color(155, 164, 180));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
             },
             new String [] {
-                "ID Anggota", "Nama", "Jenis Kelamin", "Alamat", "Email", "Created at"
+                "ID Anggota", "Nama", "Jenis Kelamin", "Alamat", "Email", "Created at", "Updated at"
             }
         ));
         jScrollPane1.setViewportView(jTable1);

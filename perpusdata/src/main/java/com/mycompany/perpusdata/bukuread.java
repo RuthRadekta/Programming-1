@@ -177,13 +177,13 @@ public class bukuread extends javax.swing.JFrame {
         jTable1.setForeground(new java.awt.Color(155, 164, 180));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
             },
             new String [] {
-                "ID Buku", "Judul", "Penulis", "Penerbit", "Jumlah Halaman", "Created at"
+                "ID Buku", "Judul", "Penulis", "Penerbit", "Jumlah Halaman", "Created at", "Updated at"
             }
         ));
         jScrollPane1.setViewportView(jTable1);

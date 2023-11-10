@@ -73,9 +73,7 @@ public class bukucreate extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         inputpenulis = new javax.swing.JTextField();
 
-        hasil.setMaximumSize(new java.awt.Dimension(830, 450));
         hasil.setMinimumSize(new java.awt.Dimension(830, 450));
-        hasil.setPreferredSize(new java.awt.Dimension(830, 450));
         hasil.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         home2.setBackground(new java.awt.Color(241, 244, 246));
