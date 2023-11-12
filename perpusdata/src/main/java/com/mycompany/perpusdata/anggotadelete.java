@@ -386,7 +386,7 @@ public class anggotadelete extends javax.swing.JFrame {
     private void buttoncekActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttoncekActionPerformed
         // TODO add your handling code here:
         try {
-            update cek = new update();
+            CRUDAnggota cek = new CRUDAnggota();
             String id_anggota = String.valueOf(cekida.getText());
             
             cek.ida(id_anggota);

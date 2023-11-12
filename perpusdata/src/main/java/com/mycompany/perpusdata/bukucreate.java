@@ -456,8 +456,8 @@ public class bukucreate extends javax.swing.JFrame {
         String penulis = String.valueOf(inputpenulis.getText());
         String penerbit = String.valueOf(inputpenerbit.getText());
         int jumlah_halaman = Integer.parseInt(inputjumha.getText());
-        CRUDBuku tesCrudB = new CRUDBuku();
-        tesCrudB.create(id_buku, judul, penulis, penerbit, jumlah_halaman);
+        CRUDBuku CrudB = new CRUDBuku();
+        CrudB.create(id_buku, judul, penulis, penerbit, jumlah_halaman);
         
         dispose();
         hasil.getContentPane().setBackground(Color.decode("0xFFFFFF"));

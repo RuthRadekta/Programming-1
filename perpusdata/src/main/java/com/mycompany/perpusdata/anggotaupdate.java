@@ -74,9 +74,7 @@ public class anggotaupdate extends javax.swing.JFrame {
         buttoncek = new javax.swing.JButton();
         labelupdate1 = new javax.swing.JLabel();
 
-        hasil.setMaximumSize(new java.awt.Dimension(830, 450));
         hasil.setMinimumSize(new java.awt.Dimension(830, 450));
-        hasil.setPreferredSize(new java.awt.Dimension(830, 450));
         hasil.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         home1.setBackground(new java.awt.Color(241, 244, 246));
@@ -254,9 +252,7 @@ public class anggotaupdate extends javax.swing.JFrame {
         hasil.getContentPane().add(inputida1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 120, 300, 30));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(830, 450));
         setMinimumSize(new java.awt.Dimension(830, 450));
-        setPreferredSize(new java.awt.Dimension(830, 450));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         home.setBackground(new java.awt.Color(241, 244, 246));
@@ -463,7 +459,7 @@ public class anggotaupdate extends javax.swing.JFrame {
     private void buttoncekActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttoncekActionPerformed
         // TODO add your handling code here:
         try {
-            update cek = new update();
+            CRUDAnggota cek = new CRUDAnggota();
             String id_anggota = String.valueOf(cekida.getText());
             
             cek.ida2(id_anggota);
@@ -481,7 +477,18 @@ public class anggotaupdate extends javax.swing.JFrame {
 
     private void buttonupdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonupdateActionPerformed
         // TODO add your handling code here:
+        int id_anggotaBaru = Integer.parseInt(inputida.getText());
+        String namaBaru = String.valueOf(inputnama.getText());
+        String jenis_kelaminBaru = String.valueOf(pilihanjenke.getSelectedItem());
+        String alamatBaru = String.valueOf(inputalamat.getText());
+        String emailBaru = String.valueOf(inputemail.getText());
+        CRUDAnggota CrudA = new CRUDAnggota();
+        CrudA.update(id_anggotaBaru, namaBaru, jenis_kelaminBaru, alamatBaru, emailBaru);
+        
+        dispose();
+        new anggotaupdate().setVisible(true);
         // INI BELUM DIKASIH
+        //udah sekarang
     }//GEN-LAST:event_buttonupdateActionPerformed
 
     private void kembali1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kembali1ActionPerformed

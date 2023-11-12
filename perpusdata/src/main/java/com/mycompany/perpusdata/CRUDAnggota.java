@@ -68,36 +68,36 @@ public class CRUDAnggota{
         }
     }
 
-    public void update(int id_anggota, String namaBaru, String jenis_kelaminBaru, String alamatBaru, String emailBaru) {
+    public void update(int id_anggotaBaru, String namaBaru, String jenis_kelaminBaru, String alamatBaru, String emailBaru) {
         try {
             Koneksi konek = new Koneksi();
             Connection koneksi = konek.buka();
-            Scanner scanner = new Scanner(System.in);
             
-            String checkQuery = "SELECT * FROM anggota WHERE id_anggota = ?";
+            /*String checkQuery = "SELECT * FROM anggota WHERE id_anggota = ?";
             ResultSet resultSet;
-            try (PreparedStatement checkStatement = koneksi.prepareStatement(checkQuery)) {
-                checkStatement.setInt(1, id_anggota);
-                resultSet = checkStatement.executeQuery();
-                if (!resultSet.next()) {
-                    System.out.println("id anggota tidak ditemukan.");
-                    return;
-                }
-                String updateQuery = "UPDATE anggota SET nama = ?, jenis_kelamin = ?, alamat = ?, email = ? WHERE id_anggota = ?";
-                PreparedStatement updateStatement = koneksi.prepareStatement(updateQuery);
-                updateStatement.setString(1, namaBaru);
-                updateStatement.setString(2, jenis_kelaminBaru);
-                updateStatement.setString(3, alamatBaru);
-                updateStatement.setString(4, emailBaru);
-                updateStatement.setInt(5, id_anggota);
-                int rowsAffected = updateStatement.executeUpdate();
-                if (rowsAffected > 0) {
-                    System.out.println("Data anggota berhasil diupdate.");
-                } else {
-                    System.out.println("Gagal mengupdate data anggota.");
-                }   updateStatement.close();
+            PreparedStatement checkStatement = koneksi.prepareStatement(checkQuery);
+            checkStatement.setInt(1, id_anggotaBaru);
+            resultSet = checkStatement.executeQuery();
+            if (!resultSet.next()) {
+                System.out.println("id anggota tidak ditemukan.");
+                return;
             }
-            resultSet.close();
+            */
+            String updateQuery = "UPDATE anggota SET nama = ?, jenis_kelamin = ?, alamat = ?, email = ? WHERE id_anggota = ?";
+            PreparedStatement updateStatement = koneksi.prepareStatement(updateQuery);
+            updateStatement.setString(1, namaBaru);
+            updateStatement.setString(2, jenis_kelaminBaru);
+            updateStatement.setString(3, alamatBaru);
+            updateStatement.setString(4, emailBaru);
+            updateStatement.setInt(5, id_anggotaBaru);
+            int rowsAffected = updateStatement.executeUpdate();
+            if (rowsAffected > 0) {
+                System.out.println("Data anggota berhasil diupdate.");
+            } else {
+                System.out.println("Gagal mengupdate data anggota.");
+            }   updateStatement.close();
+         
+            //resultSet.close();
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());  
         }

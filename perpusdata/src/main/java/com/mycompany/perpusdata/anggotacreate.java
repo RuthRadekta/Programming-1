@@ -73,9 +73,7 @@ public class anggotacreate extends javax.swing.JFrame {
         buttoncreate = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
 
-        hasil.setMaximumSize(new java.awt.Dimension(830, 450));
         hasil.setMinimumSize(new java.awt.Dimension(830, 450));
-        hasil.setPreferredSize(new java.awt.Dimension(830, 450));
         hasil.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         home2.setBackground(new java.awt.Color(241, 244, 246));
@@ -198,9 +196,7 @@ public class anggotacreate extends javax.swing.JFrame {
         hasil.getContentPane().add(labelberhasil1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 120, 250, -1));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(830, 450));
         setMinimumSize(new java.awt.Dimension(830, 450));
-        setPreferredSize(new java.awt.Dimension(830, 450));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         home1.setBackground(new java.awt.Color(241, 244, 246));
@@ -460,8 +456,8 @@ public class anggotacreate extends javax.swing.JFrame {
         String jenis_kelamin = String.valueOf(pilihanjenke.getSelectedItem());
         String alamat = String.valueOf(inputalamat.getText());
         String email = String.valueOf(inputemail.getText());
-        CRUDAnggota tesCrudA = new CRUDAnggota();
-        tesCrudA.create(id_anggota, nama, jenis_kelamin, alamat, email);
+        CRUDAnggota CrudA = new CRUDAnggota();
+        CrudA.create(id_anggota, nama, jenis_kelamin, alamat, email);
         
         dispose();
         hasil.setVisible(true);
