@@ -309,7 +309,7 @@ public class pinjampage extends javax.swing.JFrame {
         jDialog1.getContentPane().add(labelketentuan2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 260, -1, -1));
 
         labelketentuan3.setForeground(new java.awt.Color(155, 164, 180));
-        labelketentuan3.setText("2. Akan dikenakan denda sebesar Rp.100,-/hari");
+        labelketentuan3.setText("2. Akan dikenakan denda sebesar Rp.1000,-/hari");
         jDialog1.getContentPane().add(labelketentuan3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 280, -1, -1));
 
         labelketentuan4.setForeground(new java.awt.Color(155, 164, 180));
@@ -490,6 +490,11 @@ public class pinjampage extends javax.swing.JFrame {
         lagi.setBorder(null);
         lagi.setBorderPainted(false);
         lagi.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lagi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                lagiActionPerformed(evt);
+            }
+        });
         hasil.getContentPane().add(lagi, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 300, 140, 40));
 
         labeltenggat.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
@@ -774,6 +779,12 @@ public class pinjampage extends javax.swing.JFrame {
         hasil.setVisible(true);
         hasil.getContentPane().setBackground(Color.decode("0xFFFFFF"));
     }//GEN-LAST:event_buttonlanjutkanActionPerformed
+
+    private void lagiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lagiActionPerformed
+        // TODO add your handling code here:
+        hasil.dispose();
+        new pinjampage().setVisible(true);
+    }//GEN-LAST:event_lagiActionPerformed
 
     /**
      * @param args the command line arguments
