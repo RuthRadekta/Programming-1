@@ -32,7 +32,7 @@ public class kembalipage extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        hasil = new javax.swing.JDialog();
+        hasil2 = new javax.swing.JDialog();
         labelkembali3 = new javax.swing.JLabel();
         home2 = new javax.swing.JButton();
         anggota2 = new javax.swing.JButton();
@@ -70,15 +70,15 @@ public class kembalipage extends javax.swing.JFrame {
         inputida = new javax.swing.JTextField();
         buttoncek = new javax.swing.JButton();
 
-        hasil.setMaximumSize(new java.awt.Dimension(830, 450));
-        hasil.setMinimumSize(new java.awt.Dimension(830, 450));
-        hasil.setPreferredSize(new java.awt.Dimension(830, 450));
-        hasil.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        hasil2.setMaximumSize(new java.awt.Dimension(830, 450));
+        hasil2.setMinimumSize(new java.awt.Dimension(830, 450));
+        hasil2.setPreferredSize(new java.awt.Dimension(830, 450));
+        hasil2.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         labelkembali3.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
         labelkembali3.setForeground(new java.awt.Color(190, 196, 205));
         labelkembali3.setText("PENGEMBALIAN BUKU");
-        hasil.getContentPane().add(labelkembali3, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 10, -1, -1));
+        hasil2.getContentPane().add(labelkembali3, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 10, -1, -1));
 
         home2.setBackground(new java.awt.Color(241, 244, 246));
         home2.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
@@ -87,7 +87,7 @@ public class kembalipage extends javax.swing.JFrame {
         home2.setBorderPainted(false);
         home2.setContentAreaFilled(false);
         home2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        hasil.getContentPane().add(home2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 30));
+        hasil2.getContentPane().add(home2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 30));
 
         anggota2.setBackground(new java.awt.Color(241, 244, 246));
         anggota2.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
@@ -96,7 +96,7 @@ public class kembalipage extends javax.swing.JFrame {
         anggota2.setBorderPainted(false);
         anggota2.setContentAreaFilled(false);
         anggota2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        hasil.getContentPane().add(anggota2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 110, 20));
+        hasil2.getContentPane().add(anggota2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 110, 20));
 
         buku2.setBackground(new java.awt.Color(241, 244, 246));
         buku2.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
@@ -105,7 +105,7 @@ public class kembalipage extends javax.swing.JFrame {
         buku2.setBorderPainted(false);
         buku2.setContentAreaFilled(false);
         buku2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        hasil.getContentPane().add(buku2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 120, 120, 20));
+        hasil2.getContentPane().add(buku2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 120, 120, 20));
 
         peminjaman2.setBackground(new java.awt.Color(241, 244, 246));
         peminjaman2.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
@@ -114,7 +114,7 @@ public class kembalipage extends javax.swing.JFrame {
         peminjaman2.setBorderPainted(false);
         peminjaman2.setContentAreaFilled(false);
         peminjaman2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        hasil.getContentPane().add(peminjaman2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 140, 30));
+        hasil2.getContentPane().add(peminjaman2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 140, 30));
 
         pengembalian2.setBackground(new java.awt.Color(241, 244, 246));
         pengembalian2.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
@@ -123,7 +123,7 @@ public class kembalipage extends javax.swing.JFrame {
         pengembalian2.setBorderPainted(false);
         pengembalian2.setContentAreaFilled(false);
         pengembalian2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        hasil.getContentPane().add(pengembalian2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 160, 30));
+        hasil2.getContentPane().add(pengembalian2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 160, 30));
 
         statkini2.setBackground(new java.awt.Color(241, 244, 246));
         statkini2.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
@@ -132,7 +132,7 @@ public class kembalipage extends javax.swing.JFrame {
         statkini2.setBorderPainted(false);
         statkini2.setContentAreaFilled(false);
         statkini2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        hasil.getContentPane().add(statkini2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 160, -1));
+        hasil2.getContentPane().add(statkini2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 160, -1));
 
         riwayat2.setBackground(new java.awt.Color(241, 244, 246));
         riwayat2.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
@@ -141,11 +141,11 @@ public class kembalipage extends javax.swing.JFrame {
         riwayat2.setBorderPainted(false);
         riwayat2.setContentAreaFilled(false);
         riwayat2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        hasil.getContentPane().add(riwayat2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 270, 150, -1));
+        hasil2.getContentPane().add(riwayat2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 270, 150, -1));
 
         hover2.setBackground(new java.awt.Color(190, 196, 205));
         hover2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        hasil.getContentPane().add(hover2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 160, 30));
+        hasil2.getContentPane().add(hover2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 160, 30));
 
         bg4.setBackground(new java.awt.Color(155, 164, 180));
         bg4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -158,23 +158,23 @@ public class kembalipage extends javax.swing.JFrame {
         kembali2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         bg4.add(kembali2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 380, -1, -1));
 
-        hasil.getContentPane().add(bg4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 430));
+        hasil2.getContentPane().add(bg4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 430));
 
         labelberhasil.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         labelberhasil.setForeground(new java.awt.Color(155, 164, 180));
         labelberhasil.setText("DIKEMBALIKAN");
-        hasil.getContentPane().add(labelberhasil, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 170, 280, -1));
-        hasil.getContentPane().add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 90, 350, 10));
+        hasil2.getContentPane().add(labelberhasil, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 170, 280, -1));
+        hasil2.getContentPane().add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 90, 350, 10));
 
         labelkembali4.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         labelkembali4.setForeground(new java.awt.Color(155, 164, 180));
         labelkembali4.setText("KEMBALI");
-        hasil.getContentPane().add(labelkembali4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 80, -1, -1));
+        hasil2.getContentPane().add(labelkembali4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 80, -1, -1));
 
         labelberhasil1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         labelberhasil1.setForeground(new java.awt.Color(155, 164, 180));
         labelberhasil1.setText("BUKU BERHASIL");
-        hasil.getContentPane().add(labelberhasil1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 120, 290, -1));
+        hasil2.getContentPane().add(labelberhasil1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 120, 290, -1));
 
         lagi.setBackground(new java.awt.Color(155, 164, 180));
         lagi.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -183,18 +183,18 @@ public class kembalipage extends javax.swing.JFrame {
         lagi.setBorder(null);
         lagi.setBorderPainted(false);
         lagi.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        hasil.getContentPane().add(lagi, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 300, 160, 40));
+        hasil2.getContentPane().add(lagi, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 300, 160, 40));
 
         labeldenda.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         labeldenda.setForeground(new java.awt.Color(155, 164, 180));
         labeldenda.setText("Total Denda :");
-        hasil.getContentPane().add(labeldenda, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 240, -1, -1));
+        hasil2.getContentPane().add(labeldenda, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 240, -1, -1));
 
         denda.setBackground(new java.awt.Color(216, 219, 227));
         denda.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         denda.setForeground(new java.awt.Color(155, 164, 180));
         denda.setText("Rp.X,XXX,-");
-        hasil.getContentPane().add(denda, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 240, -1, 20));
+        hasil2.getContentPane().add(denda, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 240, -1, 20));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(830, 450));
@@ -457,7 +457,7 @@ public class kembalipage extends javax.swing.JFrame {
     private javax.swing.JButton buku2;
     private javax.swing.JButton buttoncek;
     private javax.swing.JLabel denda;
-    private javax.swing.JDialog hasil;
+    private javax.swing.JDialog hasil2;
     private javax.swing.JButton home1;
     private javax.swing.JButton home2;
     private javax.swing.JPanel hover1;
