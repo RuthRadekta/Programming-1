@@ -73,16 +73,6 @@ public class CRUDAnggota{
             Koneksi konek = new Koneksi();
             Connection koneksi = konek.buka();
             
-            /*String checkQuery = "SELECT * FROM anggota WHERE id_anggota = ?";
-            ResultSet resultSet;
-            PreparedStatement checkStatement = koneksi.prepareStatement(checkQuery);
-            checkStatement.setInt(1, id_anggotaBaru);
-            resultSet = checkStatement.executeQuery();
-            if (!resultSet.next()) {
-                System.out.println("id anggota tidak ditemukan.");
-                return;
-            }
-            */
             String updateQuery = "UPDATE anggota SET nama = ?, jenis_kelamin = ?, alamat = ?, email = ? WHERE id_anggota = ?";
             PreparedStatement updateStatement = koneksi.prepareStatement(updateQuery);
             updateStatement.setString(1, namaBaru);
@@ -97,7 +87,6 @@ public class CRUDAnggota{
                 System.out.println("Gagal mengupdate data anggota.");
             }   updateStatement.close();
          
-            //resultSet.close();
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());  
         }

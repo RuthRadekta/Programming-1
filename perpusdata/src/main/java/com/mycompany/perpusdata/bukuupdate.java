@@ -73,9 +73,7 @@ public class bukuupdate extends javax.swing.JFrame {
         buttoncek = new javax.swing.JButton();
         labelupdate1 = new javax.swing.JLabel();
 
-        hasil.setMaximumSize(new java.awt.Dimension(830, 450));
         hasil.setMinimumSize(new java.awt.Dimension(830, 450));
-        hasil.setPreferredSize(new java.awt.Dimension(830, 450));
         hasil.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         home1.setBackground(new java.awt.Color(241, 244, 246));
@@ -243,9 +241,7 @@ public class bukuupdate extends javax.swing.JFrame {
         hasil.getContentPane().add(inputpenulis, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 200, 300, 30));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(830, 450));
         setMinimumSize(new java.awt.Dimension(830, 450));
-        setPreferredSize(new java.awt.Dimension(830, 450));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         home.setBackground(new java.awt.Color(241, 244, 246));
@@ -470,6 +466,16 @@ public class bukuupdate extends javax.swing.JFrame {
 
     private void buttonupdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonupdateActionPerformed
         // TODO add your handling code here
+        int id_bukuBaru = Integer.parseInt(inputidb.getText());
+        String judulBaru = String.valueOf(inputjudul.getText());
+        String penulisBaru = String.valueOf(inputpenulis.getText());
+        String penerbitBaru = String.valueOf(inputpenerbit.getText());
+        String jumlah_halamanBaru = String.valueOf(inputjumha.getText());
+        CRUDBuku CrudB = new CRUDBuku();
+        CrudB.update(id_bukuBaru, judulBaru, penulisBaru, penerbitBaru, jumlah_halamanBaru);
+        
+        dispose();
+        new bukuupdate().setVisible(true);
         // BELUM DI KASIH
     }//GEN-LAST:event_buttonupdateActionPerformed
 

@@ -69,42 +69,18 @@ public class CRUDBuku{
         }
     }
 
-    public void update() {
+    public void update(int id_bukuBaru, String judulBaru, String penulisBaru, String penerbitBaru, String jumlah_halamanBaru) {
         try {
             Koneksi konek = new Koneksi();
             Connection koneksi = konek.buka();
-            Scanner scanner = new Scanner(System.in);
-
-            System.out.print("Masukkan id buku yang akan diupdate: ");
-            int id_buku = scanner.nextInt();
-            scanner.nextLine();
             
-            String checkQuery = "SELECT * FROM buku WHERE id_buku = ?";
-            PreparedStatement checkStatement = koneksi.prepareStatement(checkQuery);
-            checkStatement.setInt(1, id_buku);
-            ResultSet resultSet = checkStatement.executeQuery();
-
-            if (!resultSet.next()) {
-                System.out.println("id buku tidak ditemukan.");
-                return;
-            }
-
-            System.out.print("Masukkan judul buku baru: ");
-            String judulBaru = scanner.nextLine();
-            System.out.print("Masukkan penulis baru: ");
-            String penulisBaru = scanner.nextLine();
-            System.out.print("Masukkan penerbit baru: ");
-            String penerbitBaru = scanner.nextLine();
-            System.out.print("Masukkan jumlah_halaman baru: ");
-            String jumlahHalamanBaru = scanner.nextLine();
-
             String updateQuery = "UPDATE buku SET judul = ?, penulis = ?, penerbit = ?, jumlah_halaman = ? WHERE id_buku = ?";
             PreparedStatement updateStatement = koneksi.prepareStatement(updateQuery);
             updateStatement.setString(1, judulBaru);
             updateStatement.setString(2, penulisBaru);
             updateStatement.setString(3, penerbitBaru);
-            updateStatement.setString(4, jumlahHalamanBaru);
-            updateStatement.setInt(5, id_buku);
+            updateStatement.setString(4, jumlah_halamanBaru);
+            updateStatement.setInt(5, id_bukuBaru);
 
             int rowsAffected = updateStatement.executeUpdate();
 
@@ -115,8 +91,6 @@ public class CRUDBuku{
             }
 
             updateStatement.close();
-            checkStatement.close();
-            resultSet.close();
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());  
         }
