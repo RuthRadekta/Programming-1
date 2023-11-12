@@ -160,4 +160,49 @@ public class CRUDBuku{
             System.out.println(ex.getMessage());  
         }
     }
+    
+    //buat update buku
+    public boolean idb(String id_buku) throws SQLException {
+        Koneksi konek = new Koneksi();
+        Connection koneksi = konek.buka();
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+
+        try {
+            String query = "SELECT * FROM buku WHERE id_buku = ?";
+            preparedStatement = koneksi.prepareStatement(query);
+            preparedStatement.setString(1, id_buku);
+
+            resultSet = preparedStatement.executeQuery();
+
+            return resultSet.next();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+    
+    //buat delete buku
+    public boolean idb2(String id_buku) throws SQLException {
+        Koneksi konek = new Koneksi();
+        Connection koneksi = konek.buka();
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+
+        try {
+            String query = "SELECT * FROM buku WHERE id_buku = ?";
+            preparedStatement = koneksi.prepareStatement(query);
+            preparedStatement.setString(1, id_buku);
+
+            resultSet = preparedStatement.executeQuery();
+
+            return resultSet.next();
+            
+            //belum disuruh delete
+            
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
 }

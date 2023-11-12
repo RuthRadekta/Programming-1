@@ -452,11 +452,11 @@ public class bukuupdate extends javax.swing.JFrame {
     private void buttoncekActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttoncekActionPerformed
         // TODO add your handling code here:
         try {
-            update cek = new update();
+            CRUDBuku cek = new CRUDBuku();
             String id_buku = String.valueOf(cekidb.getText());
             
             cek.idb(id_buku);
-            if (cek.ida(id_buku)){
+            if (cek.idb(id_buku)){
                 dispose();
                 hasil.getContentPane().setBackground(Color.decode("0xFFFFFF"));
                 hasil.setVisible(true);

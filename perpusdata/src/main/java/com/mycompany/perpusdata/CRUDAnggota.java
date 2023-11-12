@@ -68,53 +68,35 @@ public class CRUDAnggota{
         }
     }
 
-    public void update() {
+    public void update(int id_anggota, String namaBaru, String jenis_kelaminBaru, String alamatBaru, String emailBaru) {
         try {
             Koneksi konek = new Koneksi();
             Connection koneksi = konek.buka();
             Scanner scanner = new Scanner(System.in);
-
-            System.out.print("Masukkan id anggota yang akan diupdate: ");
-            int id_anggota = scanner.nextInt();
-            scanner.nextLine();
             
             String checkQuery = "SELECT * FROM anggota WHERE id_anggota = ?";
-            PreparedStatement checkStatement = koneksi.prepareStatement(checkQuery);
-            checkStatement.setInt(1, id_anggota);
-            ResultSet resultSet = checkStatement.executeQuery();
-
-            if (!resultSet.next()) {
-                System.out.println("id anggota tidak ditemukan.");
-                return;
+            ResultSet resultSet;
+            try (PreparedStatement checkStatement = koneksi.prepareStatement(checkQuery)) {
+                checkStatement.setInt(1, id_anggota);
+                resultSet = checkStatement.executeQuery();
+                if (!resultSet.next()) {
+                    System.out.println("id anggota tidak ditemukan.");
+                    return;
+                }
+                String updateQuery = "UPDATE anggota SET nama = ?, jenis_kelamin = ?, alamat = ?, email = ? WHERE id_anggota = ?";
+                PreparedStatement updateStatement = koneksi.prepareStatement(updateQuery);
+                updateStatement.setString(1, namaBaru);
+                updateStatement.setString(2, jenis_kelaminBaru);
+                updateStatement.setString(3, alamatBaru);
+                updateStatement.setString(4, emailBaru);
+                updateStatement.setInt(5, id_anggota);
+                int rowsAffected = updateStatement.executeUpdate();
+                if (rowsAffected > 0) {
+                    System.out.println("Data anggota berhasil diupdate.");
+                } else {
+                    System.out.println("Gagal mengupdate data anggota.");
+                }   updateStatement.close();
             }
-
-            System.out.print("Masukkan nama baru: ");
-            String namaBaru = scanner.nextLine();
-            System.out.print("Masukkan jenis kelamin baru: ");
-            String jenisKelaminBaru = scanner.nextLine();
-            System.out.print("Masukkan alamat baru: ");
-            String alamatBaru = scanner.nextLine();
-            System.out.print("Masukkan email baru: ");
-            String emailBaru = scanner.nextLine();
-
-            String updateQuery = "UPDATE anggota SET nama = ?, jenis_kelamin = ?, alamat = ?, email = ? WHERE id_anggota = ?";
-            PreparedStatement updateStatement = koneksi.prepareStatement(updateQuery);
-            updateStatement.setString(1, namaBaru);
-            updateStatement.setString(2, jenisKelaminBaru);
-            updateStatement.setString(3, alamatBaru);
-            updateStatement.setString(4, emailBaru);
-            updateStatement.setInt(5, id_anggota);
-
-            int rowsAffected = updateStatement.executeUpdate();
-
-            if (rowsAffected > 0) {
-                System.out.println("Data anggota berhasil diupdate.");
-            } else {
-                System.out.println("Gagal mengupdate data anggota.");
-            }
-
-            updateStatement.close();
-            checkStatement.close();
             resultSet.close();
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());  
@@ -157,6 +139,49 @@ public class CRUDAnggota{
             resultSet.close();
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());  
+        }
+    }
+    
+    public boolean ida(String id_anggota) throws SQLException {
+        Koneksi konek = new Koneksi();
+        Connection koneksi = konek.buka();
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+
+        try {
+            String query = "SELECT * FROM anggota WHERE id_anggota = ?";
+            preparedStatement = koneksi.prepareStatement(query);
+            preparedStatement.setString(1, id_anggota);
+
+            resultSet = preparedStatement.executeQuery();
+
+            return resultSet.next();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+    
+    public boolean ida2(String id_anggota) throws SQLException {
+        Koneksi konek = new Koneksi();
+        Connection koneksi = konek.buka();
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+
+        try {
+            String query = "SELECT * FROM anggota WHERE id_anggota = ?";
+            preparedStatement = koneksi.prepareStatement(query);
+            preparedStatement.setString(1, id_anggota);
+
+            resultSet = preparedStatement.executeQuery();
+
+            return resultSet.next();
+            
+            //belum disuruh delete
+            
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
         }
     }
 }
