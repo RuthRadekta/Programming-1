@@ -144,10 +144,15 @@ public class anggotaupdate extends javax.swing.JFrame {
 
         kembali1.setFont(new java.awt.Font("Segoe UI Black", 0, 10)); // NOI18N
         kembali1.setForeground(new java.awt.Color(255, 255, 255));
-        kembali1.setText("kembali");
+        kembali1.setText("logout");
         kembali1.setBorderPainted(false);
         kembali1.setContentAreaFilled(false);
         kembali1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        kembali1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kembali1ActionPerformed(evt);
+            }
+        });
         bg3.add(kembali1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 380, -1, -1));
 
         hasil.getContentPane().add(bg3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 410));
@@ -350,7 +355,7 @@ public class anggotaupdate extends javax.swing.JFrame {
 
         kembali.setFont(new java.awt.Font("Segoe UI Black", 0, 10)); // NOI18N
         kembali.setForeground(new java.awt.Color(255, 255, 255));
-        kembali.setText("kembali");
+        kembali.setText("logout");
         kembali.setBorderPainted(false);
         kembali.setContentAreaFilled(false);
         kembali.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -400,7 +405,7 @@ public class anggotaupdate extends javax.swing.JFrame {
     private void kembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kembaliActionPerformed
         // TODO add your handling code here:
         dispose();
-        new anggotapage().setVisible(true);
+        new loginform().setVisible(true);
     }//GEN-LAST:event_kembaliActionPerformed
 
     private void anggotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_anggotaActionPerformed
@@ -467,6 +472,12 @@ public class anggotaupdate extends javax.swing.JFrame {
         // TODO add your handling code here:
         // INI BELUM DIKASIH
     }//GEN-LAST:event_buttonupdateActionPerformed
+
+    private void kembali1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kembali1ActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        new loginform().setVisible(true);
+    }//GEN-LAST:event_kembali1ActionPerformed
 
     /**
      * @param args the command line arguments

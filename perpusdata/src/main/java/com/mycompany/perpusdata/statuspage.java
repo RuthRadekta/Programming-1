@@ -157,10 +157,15 @@ public class statuspage extends javax.swing.JFrame {
 
         kembali.setFont(new java.awt.Font("Segoe UI Black", 0, 10)); // NOI18N
         kembali.setForeground(new java.awt.Color(255, 255, 255));
-        kembali.setText("kembali");
+        kembali.setText("logout");
         kembali.setBorderPainted(false);
         kembali.setContentAreaFilled(false);
         kembali.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        kembali.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kembaliActionPerformed(evt);
+            }
+        });
         bg2.add(kembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 660, -1, -1));
 
         getContentPane().add(bg2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 710));
@@ -231,12 +236,12 @@ public class statuspage extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_statkiniActionPerformed
 
-    private void kembaliActionPerformed(java.awt.event.ActionEvent evt) {                                        
+    private void kembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kembaliActionPerformed
         // TODO add your handling code here:
         dispose();
-        new mainpage().setVisible(true);
-    }
-    
+        new loginform().setVisible(true);
+    }//GEN-LAST:event_kembaliActionPerformed
+
     /**
      * @param args the command line arguments
      */

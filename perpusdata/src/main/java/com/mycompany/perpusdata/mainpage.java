@@ -159,10 +159,15 @@ public class mainpage extends javax.swing.JFrame {
 
         kembali.setFont(new java.awt.Font("Segoe UI Black", 0, 10)); // NOI18N
         kembali.setForeground(new java.awt.Color(255, 255, 255));
-        kembali.setText("kembali");
+        kembali.setText("logout");
         kembali.setBorderPainted(false);
         kembali.setContentAreaFilled(false);
         kembali.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        kembali.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kembaliActionPerformed(evt);
+            }
+        });
         bg2.add(kembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 380, -1, -1));
 
         bg1.add(bg2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 410));
@@ -185,6 +190,7 @@ public class mainpage extends javax.swing.JFrame {
 
     private void anggotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_anggotaActionPerformed
         // TODO add your handling code here:
+        dispose();
         new anggotapage().setVisible(true);
     }//GEN-LAST:event_anggotaActionPerformed
 
@@ -212,6 +218,12 @@ public class mainpage extends javax.swing.JFrame {
         // TODO add your handling code here:
         new riwayatpage().setVisible(true);
     }//GEN-LAST:event_riwayatActionPerformed
+
+    private void kembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kembaliActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        new loginform().setVisible(true);
+    }//GEN-LAST:event_kembaliActionPerformed
 
     /**
      * @param args the command line arguments

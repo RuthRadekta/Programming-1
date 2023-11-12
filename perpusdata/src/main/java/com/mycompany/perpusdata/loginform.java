@@ -78,8 +78,8 @@ public class loginform extends javax.swing.JFrame {
 
         buttonLogin.setBackground(new java.awt.Color(169, 180, 200));
         buttonLogin.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
-        buttonLogin.setForeground(new java.awt.Color(169, 180, 200));
-        buttonLogin.setText("login");
+        buttonLogin.setForeground(new java.awt.Color(255, 255, 255));
+        buttonLogin.setText("Login");
         buttonLogin.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         buttonLogin.setBorderPainted(false);
         buttonLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));

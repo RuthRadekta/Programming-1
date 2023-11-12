@@ -152,7 +152,7 @@ public class anggotaread extends javax.swing.JFrame {
 
         kembali.setFont(new java.awt.Font("Segoe UI Black", 0, 10)); // NOI18N
         kembali.setForeground(new java.awt.Color(255, 255, 255));
-        kembali.setText("kembali");
+        kembali.setText("logout");
         kembali.setBorderPainted(false);
         kembali.setContentAreaFilled(false);
         kembali.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -194,7 +194,7 @@ public class anggotaread extends javax.swing.JFrame {
     private void kembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kembaliActionPerformed
         // TODO add your handling code here:
         dispose();
-        new anggotapage().setVisible(true);
+        new loginform().setVisible(true);
     }//GEN-LAST:event_kembaliActionPerformed
 
     private void homeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeActionPerformed

@@ -144,10 +144,15 @@ public class bukucreate extends javax.swing.JFrame {
 
         kembali2.setFont(new java.awt.Font("Segoe UI Black", 0, 10)); // NOI18N
         kembali2.setForeground(new java.awt.Color(255, 255, 255));
-        kembali2.setText("kembali");
+        kembali2.setText("logout");
         kembali2.setBorderPainted(false);
         kembali2.setContentAreaFilled(false);
         kembali2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        kembali2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kembali2ActionPerformed(evt);
+            }
+        });
         bg4.add(kembali2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 380, -1, -1));
 
         hover2.setBackground(new java.awt.Color(190, 196, 205));
@@ -299,7 +304,7 @@ public class bukucreate extends javax.swing.JFrame {
 
         kembali1.setFont(new java.awt.Font("Segoe UI Black", 0, 10)); // NOI18N
         kembali1.setForeground(new java.awt.Color(255, 255, 255));
-        kembali1.setText("kembali");
+        kembali1.setText("logout");
         kembali1.setBorderPainted(false);
         kembali1.setContentAreaFilled(false);
         kembali1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -401,7 +406,7 @@ public class bukucreate extends javax.swing.JFrame {
     private void kembali1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kembali1ActionPerformed
         // TODO add your handling code here:
         dispose();
-        new bukupage().setVisible(true);
+        new loginform().setVisible(true);
     }//GEN-LAST:event_kembali1ActionPerformed
 
     private void home1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_home1ActionPerformed
@@ -464,6 +469,12 @@ public class bukucreate extends javax.swing.JFrame {
         dispose();
         new bukucreate().setVisible(true);
     }//GEN-LAST:event_lagiActionPerformed
+
+    private void kembali2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kembali2ActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        new loginform().setVisible(true);
+    }//GEN-LAST:event_kembali2ActionPerformed
 
     /**
      * @param args the command line arguments
