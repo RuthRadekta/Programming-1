@@ -94,6 +94,11 @@ public class anggotaupdate extends javax.swing.JFrame {
         anggota1.setText("ANGGOTA");
         anggota1.setBorderPainted(false);
         anggota1.setContentAreaFilled(false);
+        anggota1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                anggota1ActionPerformed(evt);
+            }
+        });
         hasil.getContentPane().add(anggota1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 110, 20));
 
         buku1.setBackground(new java.awt.Color(241, 244, 246));
@@ -102,6 +107,11 @@ public class anggotaupdate extends javax.swing.JFrame {
         buku1.setText("BUKU");
         buku1.setBorderPainted(false);
         buku1.setContentAreaFilled(false);
+        buku1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buku1ActionPerformed(evt);
+            }
+        });
         hasil.getContentPane().add(buku1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 120, 120, 20));
 
         peminjaman1.setBackground(new java.awt.Color(241, 244, 246));
@@ -460,6 +470,7 @@ public class anggotaupdate extends javax.swing.JFrame {
             if (cek.ida(id_anggota)){
                 dispose();
                 hasil.setVisible(true);
+                hasil.getContentPane().setBackground(Color.decode("0xFFFFFFF"));
             } else {
                 JOptionPane.showMessageDialog(this, "ID Anggota tidak ditemukan!", "Kesalahan", JOptionPane.ERROR_MESSAGE);
             }
@@ -478,6 +489,18 @@ public class anggotaupdate extends javax.swing.JFrame {
         dispose();
         new loginform().setVisible(true);
     }//GEN-LAST:event_kembali1ActionPerformed
+
+    private void anggota1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_anggota1ActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        new anggotapage().setVisible(true);
+    }//GEN-LAST:event_anggota1ActionPerformed
+
+    private void buku1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buku1ActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        new bukupage().setVisible(true);
+    }//GEN-LAST:event_buku1ActionPerformed
 
     /**
      * @param args the command line arguments

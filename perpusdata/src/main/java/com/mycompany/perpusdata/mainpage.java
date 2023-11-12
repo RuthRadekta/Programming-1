@@ -196,26 +196,31 @@ public class mainpage extends javax.swing.JFrame {
 
     private void bukuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bukuActionPerformed
         // TODO add your handling code here:
+        dispose();
         new bukupage().setVisible(true);
     }//GEN-LAST:event_bukuActionPerformed
 
     private void peminjamanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_peminjamanActionPerformed
         // TODO add your handling code here:
+        dispose();
         new pinjampage().setVisible(true);
     }//GEN-LAST:event_peminjamanActionPerformed
 
     private void pengembalianActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pengembalianActionPerformed
         // TODO add your handling code here:
+        dispose();
         new kembalipage().setVisible(true);
     }//GEN-LAST:event_pengembalianActionPerformed
 
     private void statkiniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statkiniActionPerformed
         // TODO add your handling code here:
+        dispose();
         new statuspage().setVisible(true);
     }//GEN-LAST:event_statkiniActionPerformed
 
     private void riwayatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_riwayatActionPerformed
         // TODO add your handling code here:
+        dispose();
         new riwayatpage().setVisible(true);
     }//GEN-LAST:event_riwayatActionPerformed
 
