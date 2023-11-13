@@ -97,4 +97,14 @@ public class Peminjaman {
             System.out.println("id buku tidak ditemukan.");
         }
     }
+    
+    public void cekTenggat(){
+        try {
+            Koneksi konek = new Koneksi();
+            Connection koneksi = konek.buka();
+            
+        } catch(SQLException ex) {
+            System.out.println(ex.getMessage());  
+        }
+    }
 }

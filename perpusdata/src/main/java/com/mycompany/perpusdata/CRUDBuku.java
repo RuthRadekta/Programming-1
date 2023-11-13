@@ -15,7 +15,7 @@ import java.util.Scanner;
  *
  * @author refah
  */
-public class CRUDBuku implements BukuInterface{
+public class CRUDBuku{
     public void create(int id_buku, String judul, String penulis, String penerbit, int jumlah_halaman){
         try {
             Koneksi konek = new Koneksi();
