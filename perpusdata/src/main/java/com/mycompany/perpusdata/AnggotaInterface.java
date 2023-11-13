@@ -8,7 +8,7 @@ package com.mycompany.perpusdata;
  *
  * @author refah
  */
-public interface InterfaceAnggota {
+public interface AnggotaInterface {
     public void create(int id_anggota, String nama, String jenis_kelamin, String alamat, String email);
     public void read();
     public void update(int id_anggotaBaru, String namaBaru, String jenis_kelaminBaru, String alamatBaru, String emailBaru);

@@ -14,7 +14,7 @@ import java.sql.Statement;
  *
  * @author refah
  */
-public class CRUDAnggota implements InterfaceAnggota{
+public class CRUDAnggota implements AnggotaInterface{
     public void create(int id_anggota, String nama, String jenis_kelamin, String alamat, String email){
         try {
             Koneksi konek = new Koneksi();

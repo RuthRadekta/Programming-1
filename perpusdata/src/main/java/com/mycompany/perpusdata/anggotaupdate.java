@@ -58,7 +58,6 @@ public class anggotaupdate extends javax.swing.JFrame {
         pilihanjenke = new javax.swing.JComboBox<>();
         buttonupdate = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
-        inputida1 = new javax.swing.JTextField();
         home = new javax.swing.JButton();
         anggota = new javax.swing.JButton();
         buku = new javax.swing.JButton();
@@ -244,12 +243,6 @@ public class anggotaupdate extends javax.swing.JFrame {
         });
         hasil.getContentPane().add(buttonupdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 340, 110, 30));
         hasil.getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 90, 360, 10));
-
-        inputida1.setBackground(new java.awt.Color(216, 219, 227));
-        inputida1.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
-        inputida1.setForeground(new java.awt.Color(155, 164, 180));
-        inputida1.setBorder(null);
-        hasil.getContentPane().add(inputida1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 120, 300, 30));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(830, 450));
@@ -562,7 +555,6 @@ public class anggotaupdate extends javax.swing.JFrame {
     private javax.swing.JTextField inputalamat;
     private javax.swing.JTextField inputemail;
     private javax.swing.JTextField inputida;
-    private javax.swing.JTextField inputida1;
     private javax.swing.JTextField inputnama;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JButton kembali;
