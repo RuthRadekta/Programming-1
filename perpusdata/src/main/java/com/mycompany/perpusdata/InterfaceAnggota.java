@@ -8,9 +8,9 @@ package com.mycompany.perpusdata;
  *
  * @author refah
  */
-public interface CRUD {
-    public void create();
+public interface InterfaceAnggota {
+    public void create(int id_anggota, String nama, String jenis_kelamin, String alamat, String email);
     public void read();
-    public void update();
+    public void update(int id_anggotaBaru, String namaBaru, String jenis_kelaminBaru, String alamatBaru, String emailBaru);
     public void delete();
 }
