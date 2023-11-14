@@ -668,8 +668,8 @@ public class anggotadelete extends javax.swing.JFrame {
             CrudA.ida(id_anggota);
             if (CrudA.ida(id_anggota)){
                 dispose();
-                hasil.setVisible(true);
-                hasil.getContentPane().setBackground(Color.decode("0xFFFFFF"));
+                konfirmasi.setVisible(true);
+                konfirmasi.getContentPane().setBackground(Color.decode("0xFFFFFF"));
                 CrudA.delete(id_anggota);
             } else {
                 JOptionPane.showMessageDialog(this, "ID Anggota tidak ditemukan!", "Kesalahan", JOptionPane.ERROR_MESSAGE);
