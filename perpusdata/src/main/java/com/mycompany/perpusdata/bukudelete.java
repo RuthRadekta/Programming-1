@@ -22,6 +22,8 @@ public class bukudelete extends javax.swing.JFrame {
         initComponents();
         getContentPane().setBackground(Color.decode("0xFFFFFFF"));
         setDefaultCloseOperation(bukudelete.DISPOSE_ON_CLOSE);
+        hasil.setDefaultCloseOperation(hasil.DISPOSE_ON_CLOSE);
+        konfirmasi.setDefaultCloseOperation(konfirmasi.DISPOSE_ON_CLOSE);
     }
 
     /**
@@ -641,13 +643,13 @@ public class bukudelete extends javax.swing.JFrame {
 
     private void kembali1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kembali1ActionPerformed
         // TODO add your handling code here:
-        dispose();
+        hasil.dispose();
         new loginform().setVisible(true);
     }//GEN-LAST:event_kembali1ActionPerformed
 
     private void kembali2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kembali2ActionPerformed
         // TODO add your handling code here:
-        dispose();
+        konfirmasi.dispose();
         new loginform().setVisible(true);
     }//GEN-LAST:event_kembali2ActionPerformed
 
@@ -660,7 +662,8 @@ public class bukudelete extends javax.swing.JFrame {
     private void buttonlanjutkanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonlanjutkanActionPerformed
         // TODO add your handling code here:
         CRUDBuku CrudB = new CRUDBuku();
-        CrudB.delete(WIDTH);
+        int id_buku = Integer.parseInt(cekidb.getText());
+        CrudB.delete(id_buku);
         konfirmasi.dispose();
         hasil.setVisible(true);
         hasil.getContentPane().setBackground(Color.decode("0xFFFFFF"));
