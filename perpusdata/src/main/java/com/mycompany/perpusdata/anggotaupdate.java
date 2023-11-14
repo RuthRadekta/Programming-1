@@ -670,7 +670,9 @@ public class anggotaupdate extends javax.swing.JFrame {
             }
         } catch(SQLException e) {
             e.printStackTrace();
-        }
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Masukkan angka atau integer saja", "Kesalahan", JOptionPane.ERROR_MESSAGE);
+        } 
     }//GEN-LAST:event_buttoncekActionPerformed
 
     private void buttonupdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonupdateActionPerformed

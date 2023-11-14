@@ -396,7 +396,7 @@ public class anggotadelete extends javax.swing.JFrame {
         });
         jPanel1.add(buttonlanjutkan, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 80, 100, 30));
 
-        konfirmasi.getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 260, 270, 120));
+        konfirmasi.getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 280, 270, 120));
 
         labelketentuan2.setForeground(new java.awt.Color(155, 164, 180));
         labelketentuan2.setText("dari buku yang telah dipilih");
@@ -670,12 +670,13 @@ public class anggotadelete extends javax.swing.JFrame {
                 dispose();
                 konfirmasi.setVisible(true);
                 konfirmasi.getContentPane().setBackground(Color.decode("0xFFFFFF"));
-                CrudA.delete(id_anggota);
             } else {
                 JOptionPane.showMessageDialog(this, "ID Anggota tidak ditemukan!", "Kesalahan", JOptionPane.ERROR_MESSAGE);
             }
         } catch(SQLException e) {
             e.printStackTrace();
+        } catch(NumberFormatException ex){
+            JOptionPane.showMessageDialog(this, "Masukkan angka atau integer saja", "Kesalahan", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_buttoncekActionPerformed
 
@@ -747,9 +748,12 @@ public class anggotadelete extends javax.swing.JFrame {
 
     private void buttonlanjutkanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonlanjutkanActionPerformed
         // TODO add your handling code here:
-        konfirmasi.dispose();
-        hasil.setVisible(true);
-        hasil.getContentPane().setBackground(Color.decode("0xFFFFFF"));
+            CRUDAnggota CrudA = new CRUDAnggota();
+            int id_anggota = Integer.parseInt(cekida.getText());
+            CrudA.delete(id_anggota);
+            konfirmasi.dispose();
+            hasil.setVisible(true);
+            hasil.getContentPane().setBackground(Color.decode("0xFFFFFF"));
     }//GEN-LAST:event_buttonlanjutkanActionPerformed
     
     /**

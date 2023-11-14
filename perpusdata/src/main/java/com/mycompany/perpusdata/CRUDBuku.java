@@ -109,16 +109,12 @@ public class CRUDBuku{
         }
     }
 
-    public void delete() {
+    public void delete(int id_buku) {
         try {
             Koneksi konek = new Koneksi();
             Connection koneksi = konek.buka();
             
-            Scanner scanner = new Scanner(System.in);
-            System.out.print("Masukkan id buku yang akan dihapus: ");
-            int id_buku = scanner.nextInt();
-            
-            String checkQuery = "SELECT * FROM buku WHERE id_buku = ?";
+            /*String checkQuery = "SELECT * FROM buku WHERE id_buku = ?";
             PreparedStatement checkStatement = koneksi.prepareStatement(checkQuery);
             checkStatement.setInt(1, id_buku);
             ResultSet resultSet = checkStatement.executeQuery();
@@ -126,7 +122,7 @@ public class CRUDBuku{
             if (!resultSet.next()) {
                 System.out.println("id buku tidak ditemukan.");
                 return;
-            }
+            }*/
             
             String deleteQuery = "DELETE FROM buku WHERE id_buku = ?";
             PreparedStatement deleteStatement = koneksi.prepareStatement(deleteQuery);
@@ -141,15 +137,15 @@ public class CRUDBuku{
             }
 
             deleteStatement.close();
-            checkStatement.close();
-            resultSet.close();
+            /*checkStatement.close();
+            resultSet.close();*/
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());  
         }
     }
     
     //buat update buku
-    public boolean idb(String id_buku) throws SQLException {
+    public boolean idb(int id_buku) throws SQLException {
         Koneksi konek = new Koneksi();
         Connection koneksi = konek.buka();
         PreparedStatement preparedStatement = null;
@@ -158,7 +154,7 @@ public class CRUDBuku{
         try {
             String query = "SELECT * FROM buku WHERE id_buku = ?";
             preparedStatement = koneksi.prepareStatement(query);
-            preparedStatement.setString(1, id_buku);
+            preparedStatement.setInt(1, id_buku);
 
             resultSet = preparedStatement.executeQuery();
 
@@ -170,7 +166,7 @@ public class CRUDBuku{
     }
     
     //buat delete buku
-    public boolean idb2(String id_buku) throws SQLException {
+    public boolean idb2(int id_buku) throws SQLException {
         Koneksi konek = new Koneksi();
         Connection koneksi = konek.buka();
         PreparedStatement preparedStatement = null;
@@ -179,7 +175,7 @@ public class CRUDBuku{
         try {
             String query = "SELECT * FROM buku WHERE id_buku = ?";
             preparedStatement = koneksi.prepareStatement(query);
-            preparedStatement.setString(1, id_buku);
+            preparedStatement.setInt(1, id_buku);
 
             resultSet = preparedStatement.executeQuery();
 

@@ -600,7 +600,7 @@ public class bukuupdate extends javax.swing.JFrame {
         // TODO add your handling code here:
         try {
             CRUDBuku cek = new CRUDBuku();
-            String id_buku = String.valueOf(cekidb.getText());
+            int id_buku = Integer.parseInt(cekidb.getText());
             
             cek.idb(id_buku);
             if (cek.idb(id_buku)){
@@ -612,7 +612,9 @@ public class bukuupdate extends javax.swing.JFrame {
             }
         } catch(SQLException e) {
             e.printStackTrace();
-        }
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Masukkan angka atau integer saja", "Kesalahan", JOptionPane.ERROR_MESSAGE);
+        } 
     }//GEN-LAST:event_buttoncekActionPerformed
 
     private void buttonupdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonupdateActionPerformed
@@ -633,8 +635,8 @@ public class bukuupdate extends javax.swing.JFrame {
           //  e.printStackTrace();
           //  JOptionPane.showMessageDialog(this, "Gagal mengupdate data: " + e.getMessage(), "Kesalahan", JOptionPane.ERROR_MESSAGE);
         }catch (NumberFormatException e) {
-            JOptionPane.showMessageDialog(this, "Format ID Buku tidak valid", "Kesalahan", JOptionPane.ERROR_MESSAGE);
-        }
+            JOptionPane.showMessageDialog(this, "Masukkan angka atau integer saja", "Kesalahan", JOptionPane.ERROR_MESSAGE);
+        } 
     }//GEN-LAST:event_buttonupdateActionPerformed
 
     private void kembali1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kembali1ActionPerformed

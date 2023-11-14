@@ -622,7 +622,7 @@ public class bukudelete extends javax.swing.JFrame {
         // TODO add your handling code here:
         try {
             CRUDBuku cek = new CRUDBuku();
-            String id_buku = String.valueOf(cekidb.getText());
+            int id_buku = Integer.parseInt(cekidb.getText());
             
             cek.idb2(id_buku);
             if (cek.idb(id_buku)){
@@ -634,6 +634,8 @@ public class bukudelete extends javax.swing.JFrame {
             }
         } catch(SQLException e) {
             e.printStackTrace();
+        } catch(NumberFormatException ex){
+            JOptionPane.showMessageDialog(this, "Masukkan angka atau integer saja", "Kesalahan", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_buttoncekActionPerformed
 
@@ -657,6 +659,8 @@ public class bukudelete extends javax.swing.JFrame {
 
     private void buttonlanjutkanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonlanjutkanActionPerformed
         // TODO add your handling code here:
+        CRUDBuku CrudB = new CRUDBuku();
+        CrudB.delete(WIDTH);
         konfirmasi.dispose();
         hasil.setVisible(true);
         hasil.getContentPane().setBackground(Color.decode("0xFFFFFF"));
