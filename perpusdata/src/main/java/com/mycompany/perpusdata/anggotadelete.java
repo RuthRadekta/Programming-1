@@ -23,6 +23,7 @@ public class anggotadelete extends javax.swing.JFrame {
         getContentPane().setBackground(Color.decode("0xFFFFFFF"));
         setDefaultCloseOperation(anggotadelete.DISPOSE_ON_CLOSE);
         hasil.setDefaultCloseOperation(hasil.DISPOSE_ON_CLOSE);
+        konfirmasi.setDefaultCloseOperation(konfirmasi.DISPOSE_ON_CLOSE);
     }
 
     /**
