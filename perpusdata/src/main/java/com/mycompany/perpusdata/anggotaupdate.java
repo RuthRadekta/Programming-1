@@ -22,6 +22,8 @@ public class anggotaupdate extends javax.swing.JFrame {
         initComponents();
         getContentPane().setBackground(Color.decode("0xFFFFFFF"));
         setDefaultCloseOperation(anggotaupdate.DISPOSE_ON_CLOSE);
+        hasil.setDefaultCloseOperation(hasil.DISPOSE_ON_CLOSE);
+        hasil2.setDefaultCloseOperation(hasil2.DISPOSE_ON_CLOSE);
     }
 
     /**
@@ -682,7 +684,7 @@ public class anggotaupdate extends javax.swing.JFrame {
             CRUDAnggota CrudA = new CRUDAnggota();
             CrudA.update(id_anggotaBaru, namaBaru, jenis_kelaminBaru, alamatBaru, emailBaru);
 
-            dispose();
+            hasil.dispose();
             hasil2.setVisible(true);
             hasil2.getContentPane().setBackground(Color.decode("0xFFFFFFF"));
         }catch (NumberFormatException e) {

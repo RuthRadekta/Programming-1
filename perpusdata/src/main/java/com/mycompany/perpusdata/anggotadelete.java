@@ -22,6 +22,7 @@ public class anggotadelete extends javax.swing.JFrame {
         initComponents();
         getContentPane().setBackground(Color.decode("0xFFFFFFF"));
         setDefaultCloseOperation(anggotadelete.DISPOSE_ON_CLOSE);
+        hasil.setDefaultCloseOperation(hasil.DISPOSE_ON_CLOSE);
     }
 
     /**
@@ -422,7 +423,7 @@ public class anggotadelete extends javax.swing.JFrame {
     private void buttoncekActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttoncekActionPerformed
         // TODO add your handling code here:
         try {
-            CRUDAnggota CrudA = new CRUDAnggota();
+           CRUDAnggota CrudA = new CRUDAnggota();
            int id_anggota = Integer.parseInt(cekida.getText());
             
             CrudA.ida(id_anggota);

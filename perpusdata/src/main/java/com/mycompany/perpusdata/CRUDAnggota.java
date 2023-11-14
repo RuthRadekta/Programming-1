@@ -9,6 +9,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -41,24 +42,32 @@ public class CRUDAnggota{
         }
     }
     
-    public void read(){
+    public DefaultTableModel read(){
+        DefaultTableModel tableModel = new DefaultTableModel();
+        tableModel.addColumn("ID Anggota");
+        tableModel.addColumn("Nama");
+        tableModel.addColumn("Jenis Kelamin");
+        tableModel.addColumn("Alamat");
+        tableModel.addColumn("Email");
+
         try {
             Koneksi konek = new Koneksi();
             Connection koneksi = konek.buka();
-            
+
             String query = "SELECT * FROM anggota";
-            
+
             Statement statement = koneksi.createStatement();
             ResultSet resultSet = statement.executeQuery(query);
 
             while (resultSet.next()) {
-                int id_anggota = resultSet.getInt("id_anggota");
-                String nama = resultSet.getString("nama");
-                String jenis_kelamin = resultSet.getString("jenis_kelamin");
-                String alamat = resultSet.getString("alamat");
-                String email = resultSet.getString("email");
-                
-                System.out.println("ID: " + id_anggota + "\nNama: " + nama + "\nJenis Kelamin: " + jenis_kelamin + "\nAlamat: " + alamat + "\nEmail: " + email);
+                Object[] rowData = {
+                        resultSet.getInt("id_anggota"),
+                        resultSet.getString("nama"),
+                        resultSet.getString("jenis_kelamin"),
+                        resultSet.getString("alamat"),
+                        resultSet.getString("email")
+                };
+                tableModel.addRow(rowData);
             }
 
             resultSet.close();
@@ -66,6 +75,8 @@ public class CRUDAnggota{
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
         }
+
+        return tableModel;
     }
 
     public void update(int id_anggotaBaru, String namaBaru, String jenis_kelaminBaru, String alamatBaru, String emailBaru) {
