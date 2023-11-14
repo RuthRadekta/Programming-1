@@ -114,16 +114,6 @@ public class CRUDBuku{
             Koneksi konek = new Koneksi();
             Connection koneksi = konek.buka();
             
-            /*String checkQuery = "SELECT * FROM buku WHERE id_buku = ?";
-            PreparedStatement checkStatement = koneksi.prepareStatement(checkQuery);
-            checkStatement.setInt(1, id_buku);
-            ResultSet resultSet = checkStatement.executeQuery();
-
-            if (!resultSet.next()) {
-                System.out.println("id buku tidak ditemukan.");
-                return;
-            }*/
-            
             String deleteQuery = "DELETE FROM buku WHERE id_buku = ?";
             PreparedStatement deleteStatement = koneksi.prepareStatement(deleteQuery);
             deleteStatement.setInt(1, id_buku);
@@ -137,8 +127,6 @@ public class CRUDBuku{
             }
 
             deleteStatement.close();
-            /*checkStatement.close();
-            resultSet.close();*/
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());  
         }

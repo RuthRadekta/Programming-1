@@ -109,17 +109,7 @@ public class CRUDAnggota{
         try {
             Koneksi konek = new Koneksi();
             Connection koneksi = konek.buka();
-            /*
-            String checkQuery = "SELECT * FROM anggota WHERE id_anggota = ?";
-            PreparedStatement checkStatement = koneksi.prepareStatement(checkQuery);
-            checkStatement.setInt(1, id_anggota);
-            ResultSet resultSet = checkStatement.executeQuery();
-
-            if (!resultSet.next()) {
-                System.out.println("id anggota tidak ditemukan.");
-                return;
-            }
-            */
+            
             String deleteQuery = "DELETE FROM anggota WHERE id_anggota = ?";
             PreparedStatement deleteStatement = koneksi.prepareStatement(deleteQuery);
             deleteStatement.setInt(1, id_anggota);
@@ -133,8 +123,6 @@ public class CRUDAnggota{
             }
 
             deleteStatement.close();
-            //checkStatement.close();
-            //resultSet.close();
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());  
         }
