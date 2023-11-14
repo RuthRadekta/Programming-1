@@ -20,6 +20,7 @@ public class anggotacreate extends javax.swing.JFrame {
         initComponents();
         getContentPane().setBackground(Color.decode("0xFFFFFFF"));
         setDefaultCloseOperation(anggotacreate.DISPOSE_ON_CLOSE);
+        hasil.setDefaultCloseOperation(hasil.DISPOSE_ON_CLOSE);
     }
 
     /**
@@ -483,7 +484,7 @@ public class anggotacreate extends javax.swing.JFrame {
 
     private void kembali2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kembali2ActionPerformed
         // TODO add your handling code here:
-        dispose();
+        hasil.dispose();
         new loginform().setVisible(true);
     }//GEN-LAST:event_kembali2ActionPerformed
 
