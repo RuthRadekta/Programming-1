@@ -70,6 +70,16 @@ public class pinjampage extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         buttonlihattabel = new javax.swing.JButton();
         buttonlanjutkan = new javax.swing.JButton();
+        hasiljumha = new javax.swing.JLabel();
+        hasilida = new javax.swing.JLabel();
+        hasilnama = new javax.swing.JLabel();
+        hasiljenke = new javax.swing.JLabel();
+        hasilalamat = new javax.swing.JLabel();
+        hasilemail = new javax.swing.JLabel();
+        hasilidb = new javax.swing.JLabel();
+        hasiljudul = new javax.swing.JLabel();
+        hasilpenulis = new javax.swing.JLabel();
+        hasilpenerbit = new javax.swing.JLabel();
         hasil = new javax.swing.JDialog();
         labelpinjam3 = new javax.swing.JLabel();
         home2 = new javax.swing.JButton();
@@ -377,9 +387,57 @@ public class pinjampage extends javax.swing.JFrame {
 
         jDialog1.getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 240, 270, 140));
 
-        hasil.setMaximumSize(new java.awt.Dimension(830, 450));
+        hasiljumha.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        hasiljumha.setForeground(new java.awt.Color(155, 164, 180));
+        hasiljumha.setText("ID Anggota");
+        jDialog1.getContentPane().add(hasiljumha, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 190, 170, 20));
+
+        hasilida.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        hasilida.setForeground(new java.awt.Color(155, 164, 180));
+        hasilida.setText("ID Anggota");
+        jDialog1.getContentPane().add(hasilida, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 70, 170, 20));
+
+        hasilnama.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        hasilnama.setForeground(new java.awt.Color(155, 164, 180));
+        hasilnama.setText("ID Anggota");
+        jDialog1.getContentPane().add(hasilnama, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 100, 170, 20));
+
+        hasiljenke.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        hasiljenke.setForeground(new java.awt.Color(155, 164, 180));
+        hasiljenke.setText("ID Anggota");
+        jDialog1.getContentPane().add(hasiljenke, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 130, 170, 20));
+
+        hasilalamat.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        hasilalamat.setForeground(new java.awt.Color(155, 164, 180));
+        hasilalamat.setText("ID Anggota");
+        jDialog1.getContentPane().add(hasilalamat, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 160, 170, 20));
+
+        hasilemail.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        hasilemail.setForeground(new java.awt.Color(155, 164, 180));
+        hasilemail.setText("ID Anggota");
+        jDialog1.getContentPane().add(hasilemail, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 190, 170, 20));
+
+        hasilidb.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        hasilidb.setForeground(new java.awt.Color(155, 164, 180));
+        hasilidb.setText("ID Anggota");
+        jDialog1.getContentPane().add(hasilidb, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 70, 170, 20));
+
+        hasiljudul.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        hasiljudul.setForeground(new java.awt.Color(155, 164, 180));
+        hasiljudul.setText("ID Anggota");
+        jDialog1.getContentPane().add(hasiljudul, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 100, 170, 20));
+
+        hasilpenulis.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        hasilpenulis.setForeground(new java.awt.Color(155, 164, 180));
+        hasilpenulis.setText("ID Anggota");
+        jDialog1.getContentPane().add(hasilpenulis, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 130, 170, 20));
+
+        hasilpenerbit.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        hasilpenerbit.setForeground(new java.awt.Color(155, 164, 180));
+        hasilpenerbit.setText("ID Anggota");
+        jDialog1.getContentPane().add(hasilpenerbit, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 160, 170, 20));
+
         hasil.setMinimumSize(new java.awt.Dimension(830, 450));
-        hasil.setPreferredSize(new java.awt.Dimension(830, 450));
         hasil.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         labelpinjam3.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
@@ -849,6 +907,16 @@ public class pinjampage extends javax.swing.JFrame {
     private javax.swing.JButton buttonlanjutkan;
     private javax.swing.JButton buttonlihattabel;
     private javax.swing.JDialog hasil;
+    private javax.swing.JLabel hasilalamat;
+    private javax.swing.JLabel hasilemail;
+    private javax.swing.JLabel hasilida;
+    private javax.swing.JLabel hasilidb;
+    private javax.swing.JLabel hasiljenke;
+    private javax.swing.JLabel hasiljudul;
+    private javax.swing.JLabel hasiljumha;
+    private javax.swing.JLabel hasilnama;
+    private javax.swing.JLabel hasilpenerbit;
+    private javax.swing.JLabel hasilpenulis;
     private javax.swing.JButton home1;
     private javax.swing.JButton home2;
     private javax.swing.JButton home3;
