@@ -20,6 +20,7 @@ public class pinjampage extends javax.swing.JFrame {
         initComponents();
         getContentPane().setBackground(Color.decode("0xFFFFFFF"));
         setDefaultCloseOperation(pinjampage.DISPOSE_ON_CLOSE);
+        hasil.setDefaultCloseOperation(hasil.DISPOSE_ON_CLOSE);
     }
 
     /**
