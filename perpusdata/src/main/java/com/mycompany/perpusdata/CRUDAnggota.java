@@ -49,6 +49,8 @@ public class CRUDAnggota{
         tableModel.addColumn("Jenis Kelamin");
         tableModel.addColumn("Alamat");
         tableModel.addColumn("Email");
+        tableModel.addColumn("Created at");
+        tableModel.addColumn("Updated at");
 
         try {
             Koneksi konek = new Koneksi();
@@ -65,17 +67,17 @@ public class CRUDAnggota{
                         resultSet.getString("nama"),
                         resultSet.getString("jenis_kelamin"),
                         resultSet.getString("alamat"),
-                        resultSet.getString("email")
+                        resultSet.getString("email"),
+                        resultSet.getString("created_at"),
+                        resultSet.getString("updated_at")
                 };
                 tableModel.addRow(rowData);
             }
-
             resultSet.close();
             statement.close();
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
         }
-
         return tableModel;
     }
 

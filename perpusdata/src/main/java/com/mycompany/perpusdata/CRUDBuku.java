@@ -10,6 +10,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Scanner;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -42,7 +43,16 @@ public class CRUDBuku{
         }
     }
     
-    public void read(){
+    public DefaultTableModel read(){
+        DefaultTableModel tableModel = new DefaultTableModel();
+        tableModel.addColumn("ID Buku");
+        tableModel.addColumn("Judul");
+        tableModel.addColumn("Penulis");
+        tableModel.addColumn("Penerbit");
+        tableModel.addColumn("Jumlah Halaman");
+        tableModel.addColumn("Created at");
+        tableModel.addColumn("Updated at");
+        
         try {
             Koneksi konek = new Koneksi();
             Connection koneksi = konek.buka();
@@ -53,20 +63,23 @@ public class CRUDBuku{
             ResultSet resultSet = statement.executeQuery(query);
 
             while (resultSet.next()) {
-                int id_buku = resultSet.getInt("id_buku");
-                String judul = resultSet.getString("judul");
-                String penulis = resultSet.getString("penulis");
-                String penerbit = resultSet.getString("penerbit");
-                String jumlah_halaman = resultSet.getString("jumlah_halaman");
-                
-                System.out.println("ID: " + id_buku + "\nJudul Buku: " + judul + "\nPenulis: " + penulis + "\nPenerbit: " + penerbit + "\nJumlah Halaman: " + jumlah_halaman);
+                Object[] rowData = {
+                        resultSet.getInt("id_buku"),
+                        resultSet.getString("judul"),
+                        resultSet.getString("penulis"),
+                        resultSet.getString("penerbit"),
+                        resultSet.getString("jumlah_halaman"),
+                        resultSet.getString("created_at"),
+                        resultSet.getString("updated_at")
+                };
+                tableModel.addRow(rowData);
             }
-
             resultSet.close();
             statement.close();
         } catch (SQLException ex) {
-            System.out.println(ex.getMessage());  
+            System.out.println(ex.getMessage());
         }
+        return tableModel;
     }
 
     public void update(int id_bukuBaru, String judulBaru, String penulisBaru, String penerbitBaru, String jumlah_halamanBaru) {

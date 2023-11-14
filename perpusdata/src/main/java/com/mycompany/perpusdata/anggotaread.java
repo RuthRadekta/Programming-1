@@ -20,17 +20,11 @@ public class anggotaread extends javax.swing.JFrame {
         initComponents();
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
                 new Object[][]{},
-                new String[]{
-                        "ID Anggota", "Nama", "Jenis Kelamin", "Alamat", "Email"
-                }
+                new String[]{"ID Anggota", "Nama", "Jenis Kelamin", "Alamat", "Email", "Created at", "Updated at"}
         ));
-
         CRUDAnggota CrudA = new CRUDAnggota();
         DefaultTableModel model = CrudA.read();
-
-        // Mengupdate model tabel dengan hasil dari method read()
         jTable1.setModel(model);
-
         setDefaultCloseOperation(anggotaread.DISPOSE_ON_CLOSE);
     }
 

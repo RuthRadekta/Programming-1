@@ -1,5 +1,7 @@
 package com.mycompany.perpusdata;
 
+import javax.swing.table.DefaultTableModel;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -16,6 +18,13 @@ public class bukuread extends javax.swing.JFrame {
      */
     public bukuread() {
         initComponents();
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+                new Object[][]{},
+                new String[]{"ID Buku", "Judul", "Penulis", "Penerbit", "Jumlah Halaman", "Created at", "Updated at"}
+        ));
+        CRUDBuku CrudB = new CRUDBuku();
+        DefaultTableModel model = CrudB.read();
+        jTable1.setModel(model);
         setDefaultCloseOperation(bukuread.DISPOSE_ON_CLOSE);
     }
 
