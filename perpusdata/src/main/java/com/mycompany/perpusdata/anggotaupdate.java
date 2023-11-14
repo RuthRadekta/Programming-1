@@ -601,7 +601,7 @@ public class anggotaupdate extends javax.swing.JFrame {
         // TODO add your handling code here:
         try {
             CRUDAnggota cek = new CRUDAnggota();
-            String id_anggota = String.valueOf(cekida.getText());
+            int id_anggota = Integer.parseInt(cekida.getText());
             
             cek.ida2(id_anggota);
             if (cek.ida(id_anggota)){

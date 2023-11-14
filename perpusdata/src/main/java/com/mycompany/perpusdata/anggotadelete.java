@@ -64,9 +64,7 @@ public class anggotadelete extends javax.swing.JFrame {
         buttoncek = new javax.swing.JButton();
         labeldelete = new javax.swing.JLabel();
 
-        hasil.setMaximumSize(new java.awt.Dimension(830, 450));
         hasil.setMinimumSize(new java.awt.Dimension(830, 450));
-        hasil.setPreferredSize(new java.awt.Dimension(830, 450));
         hasil.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         home1.setBackground(new java.awt.Color(241, 244, 246));
@@ -76,6 +74,11 @@ public class anggotadelete extends javax.swing.JFrame {
         home1.setBorderPainted(false);
         home1.setContentAreaFilled(false);
         home1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        home1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                home1ActionPerformed(evt);
+            }
+        });
         hasil.getContentPane().add(home1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 30));
 
         anggota1.setBackground(new java.awt.Color(241, 244, 246));
@@ -85,6 +88,11 @@ public class anggotadelete extends javax.swing.JFrame {
         anggota1.setBorderPainted(false);
         anggota1.setContentAreaFilled(false);
         anggota1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        anggota1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                anggota1ActionPerformed(evt);
+            }
+        });
         hasil.getContentPane().add(anggota1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 110, 20));
 
         buku1.setBackground(new java.awt.Color(241, 244, 246));
@@ -94,6 +102,11 @@ public class anggotadelete extends javax.swing.JFrame {
         buku1.setBorderPainted(false);
         buku1.setContentAreaFilled(false);
         buku1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        buku1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buku1ActionPerformed(evt);
+            }
+        });
         hasil.getContentPane().add(buku1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 120, 120, 20));
 
         peminjaman1.setBackground(new java.awt.Color(241, 244, 246));
@@ -103,6 +116,11 @@ public class anggotadelete extends javax.swing.JFrame {
         peminjaman1.setBorderPainted(false);
         peminjaman1.setContentAreaFilled(false);
         peminjaman1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        peminjaman1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                peminjaman1ActionPerformed(evt);
+            }
+        });
         hasil.getContentPane().add(peminjaman1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 140, 30));
 
         pengembalian1.setBackground(new java.awt.Color(241, 244, 246));
@@ -112,6 +130,11 @@ public class anggotadelete extends javax.swing.JFrame {
         pengembalian1.setBorderPainted(false);
         pengembalian1.setContentAreaFilled(false);
         pengembalian1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        pengembalian1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pengembalian1ActionPerformed(evt);
+            }
+        });
         hasil.getContentPane().add(pengembalian1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 160, 30));
 
         statkini1.setBackground(new java.awt.Color(241, 244, 246));
@@ -121,6 +144,11 @@ public class anggotadelete extends javax.swing.JFrame {
         statkini1.setBorderPainted(false);
         statkini1.setContentAreaFilled(false);
         statkini1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        statkini1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                statkini1ActionPerformed(evt);
+            }
+        });
         hasil.getContentPane().add(statkini1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 160, -1));
 
         riwayat1.setBackground(new java.awt.Color(241, 244, 246));
@@ -130,6 +158,11 @@ public class anggotadelete extends javax.swing.JFrame {
         riwayat1.setBorderPainted(false);
         riwayat1.setContentAreaFilled(false);
         riwayat1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        riwayat1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                riwayat1ActionPerformed(evt);
+            }
+        });
         hasil.getContentPane().add(riwayat1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 270, 150, -1));
 
         hover1.setBackground(new java.awt.Color(190, 196, 205));
@@ -176,12 +209,15 @@ public class anggotadelete extends javax.swing.JFrame {
         lagi.setBorder(null);
         lagi.setBorderPainted(false);
         lagi.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lagi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                lagiActionPerformed(evt);
+            }
+        });
         hasil.getContentPane().add(lagi, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 240, 140, 40));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(830, 450));
         setMinimumSize(new java.awt.Dimension(830, 450));
-        setPreferredSize(new java.awt.Dimension(830, 450));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         home.setBackground(new java.awt.Color(241, 244, 246));
@@ -386,14 +422,15 @@ public class anggotadelete extends javax.swing.JFrame {
     private void buttoncekActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttoncekActionPerformed
         // TODO add your handling code here:
         try {
-            CRUDAnggota cek = new CRUDAnggota();
-            String id_anggota = String.valueOf(cekida.getText());
+            CRUDAnggota CrudA = new CRUDAnggota();
+           int id_anggota = Integer.parseInt(cekida.getText());
             
-            cek.ida(id_anggota);
-            if (cek.ida(id_anggota)){
+            CrudA.ida(id_anggota);
+            if (CrudA.ida(id_anggota)){
                 dispose();
                 hasil.setVisible(true);
                 hasil.getContentPane().setBackground(Color.decode("0xFFFFFF"));
+                CrudA.delete(id_anggota);
             } else {
                 JOptionPane.showMessageDialog(this, "ID Anggota tidak ditemukan!", "Kesalahan", JOptionPane.ERROR_MESSAGE);
             }
@@ -404,9 +441,57 @@ public class anggotadelete extends javax.swing.JFrame {
 
     private void kembali1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kembali1ActionPerformed
         // TODO add your handling code here:
-        dispose();
+        hasil.dispose();
         new loginform().setVisible(true);
     }//GEN-LAST:event_kembali1ActionPerformed
+
+    private void anggota1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_anggota1ActionPerformed
+        // TODO add your handling code here:
+        hasil.dispose();
+        new anggotapage().setVisible(true);
+    }//GEN-LAST:event_anggota1ActionPerformed
+
+    private void home1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_home1ActionPerformed
+        // TODO add your handling code here:
+        hasil.dispose();
+        new mainpage().setVisible(true);
+    }//GEN-LAST:event_home1ActionPerformed
+
+    private void buku1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buku1ActionPerformed
+        // TODO add your handling code here:
+        hasil.dispose();
+        new bukupage().setVisible(true);
+    }//GEN-LAST:event_buku1ActionPerformed
+
+    private void peminjaman1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_peminjaman1ActionPerformed
+        // TODO add your handling code here:
+        hasil.dispose();
+        new pinjampage().setVisible(true);
+    }//GEN-LAST:event_peminjaman1ActionPerformed
+
+    private void pengembalian1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pengembalian1ActionPerformed
+        // TODO add your handling code here:
+        hasil.dispose();
+        new kembalipage().setVisible(true);
+    }//GEN-LAST:event_pengembalian1ActionPerformed
+
+    private void statkini1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statkini1ActionPerformed
+        // TODO add your handling code here:
+        hasil.dispose();
+        new statuspage().setVisible(true);
+    }//GEN-LAST:event_statkini1ActionPerformed
+
+    private void riwayat1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_riwayat1ActionPerformed
+        // TODO add your handling code here:
+        hasil.dispose();
+        new riwayatpage().setVisible(true);
+    }//GEN-LAST:event_riwayat1ActionPerformed
+
+    private void lagiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lagiActionPerformed
+        // TODO add your handling code here:
+        hasil.dispose();
+        new anggotadelete().setVisible(true);
+    }//GEN-LAST:event_lagiActionPerformed
     
     /**
      * @param args the command line arguments

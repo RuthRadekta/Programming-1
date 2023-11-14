@@ -92,15 +92,11 @@ public class CRUDAnggota{
         }
     }
 
-    public void delete() {
+    public void delete(int id_anggota) {
         try {
             Koneksi konek = new Koneksi();
             Connection koneksi = konek.buka();
-            
-            Scanner scanner = new Scanner(System.in);
-            System.out.print("Masukkan id anggota yang akan dihapus: ");
-            int id_anggota = scanner.nextInt();
-            
+            /*
             String checkQuery = "SELECT * FROM anggota WHERE id_anggota = ?";
             PreparedStatement checkStatement = koneksi.prepareStatement(checkQuery);
             checkStatement.setInt(1, id_anggota);
@@ -110,7 +106,7 @@ public class CRUDAnggota{
                 System.out.println("id anggota tidak ditemukan.");
                 return;
             }
-            
+            */
             String deleteQuery = "DELETE FROM anggota WHERE id_anggota = ?";
             PreparedStatement deleteStatement = koneksi.prepareStatement(deleteQuery);
             deleteStatement.setInt(1, id_anggota);
@@ -124,14 +120,14 @@ public class CRUDAnggota{
             }
 
             deleteStatement.close();
-            checkStatement.close();
-            resultSet.close();
+            //checkStatement.close();
+            //resultSet.close();
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());  
         }
     }
     
-    public boolean ida(String id_anggota) throws SQLException {
+    public boolean ida(int id_anggota) throws SQLException {
         Koneksi konek = new Koneksi();
         Connection koneksi = konek.buka();
         PreparedStatement preparedStatement = null;
@@ -140,7 +136,7 @@ public class CRUDAnggota{
         try {
             String query = "SELECT * FROM anggota WHERE id_anggota = ?";
             preparedStatement = koneksi.prepareStatement(query);
-            preparedStatement.setString(1, id_anggota);
+            preparedStatement.setInt(1, id_anggota);
 
             resultSet = preparedStatement.executeQuery();
 
@@ -151,7 +147,7 @@ public class CRUDAnggota{
         }
     }
     
-    public boolean ida2(String id_anggota) throws SQLException {
+    public boolean ida2(int id_anggota) throws SQLException {
         Koneksi konek = new Koneksi();
         Connection koneksi = konek.buka();
         PreparedStatement preparedStatement = null;
@@ -160,7 +156,7 @@ public class CRUDAnggota{
         try {
             String query = "SELECT * FROM anggota WHERE id_anggota = ?";
             preparedStatement = koneksi.prepareStatement(query);
-            preparedStatement.setString(1, id_anggota);
+            preparedStatement.setInt(1, id_anggota);
 
             resultSet = preparedStatement.executeQuery();
 

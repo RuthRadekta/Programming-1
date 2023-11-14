@@ -84,6 +84,11 @@ public class anggotacreate extends javax.swing.JFrame {
         home2.setBorderPainted(false);
         home2.setContentAreaFilled(false);
         home2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        home2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                home2ActionPerformed(evt);
+            }
+        });
         hasil.getContentPane().add(home2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 30));
 
         anggota2.setBackground(new java.awt.Color(241, 244, 246));
@@ -553,6 +558,12 @@ public class anggotacreate extends javax.swing.JFrame {
         hasil.dispose();
         new riwayatpage().setVisible(true);
     }//GEN-LAST:event_riwayat2ActionPerformed
+
+    private void home2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_home2ActionPerformed
+        // TODO add your handling code here:
+        hasil.dispose();
+        new mainpage().setVisible(true);
+    }//GEN-LAST:event_home2ActionPerformed
 
     /**
      * @param args the command line arguments
