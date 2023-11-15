@@ -1,6 +1,11 @@
 package com.mycompany.perpusdata;
 
 import java.awt.Color;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import javax.swing.table.DefaultTableModel;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -20,6 +25,46 @@ public class statuspage extends javax.swing.JFrame {
         initComponents();
         getContentPane().setBackground(Color.decode("0xFFFFFFF"));
         setDefaultCloseOperation(statuspage.DISPOSE_ON_CLOSE);
+        
+        DefaultTableModel tableModel = new DefaultTableModel();
+        tableModel.addColumn("ID Transaksi");
+        tableModel.addColumn("ID Anggota");
+        tableModel.addColumn("ID Buku");
+        tableModel.addColumn("Pinjam");
+        tableModel.addColumn("Kembali");
+        tableModel.addColumn("Denda");
+
+        try {
+            Koneksi konek = new Koneksi();
+            Connection koneksi = konek.buka();
+
+            String query = "SELECT * FROM status";
+
+            Statement statement = koneksi.createStatement();
+            ResultSet resultSet = statement.executeQuery(query);
+
+            while (resultSet.next()) {
+                Object[] rowData = {
+                        resultSet.getInt("id_transaksi"),
+                        resultSet.getString("id_anggota"),
+                        resultSet.getString("id_buku"),
+                        resultSet.getString("pinjam"),
+                        resultSet.getString("kembali"),
+                        resultSet.getString("denda")
+                };
+                tableModel.addRow(rowData);
+            }
+            resultSet.close();
+            statement.close();
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+        
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+                new Object[][]{},
+                new String[]{"ID Transaksi", "ID Anggota", "ID Buku", "Pinjam", "Kembali", "Denda"}
+        ));
+        jTable1.setModel(tableModel);
     }
 
     /**
