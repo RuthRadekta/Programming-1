@@ -2,6 +2,10 @@ package com.mycompany.perpusdata;
 
 
 import java.awt.Color;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
 /*
@@ -116,7 +120,7 @@ public class kembalipage extends javax.swing.JFrame {
         bg3 = new javax.swing.JPanel();
         kembali1 = new javax.swing.JButton();
         labelidb = new javax.swing.JLabel();
-        inputidb = new javax.swing.JTextField();
+        inputidt = new javax.swing.JTextField();
         buttoncek = new javax.swing.JButton();
 
         hasil2.setMinimumSize(new java.awt.Dimension(830, 450));
@@ -706,11 +710,11 @@ public class kembalipage extends javax.swing.JFrame {
         labelidb.setText("ID Transaksi");
         getContentPane().add(labelidb, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 160, -1, -1));
 
-        inputidb.setBackground(new java.awt.Color(216, 219, 227));
-        inputidb.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
-        inputidb.setForeground(new java.awt.Color(155, 164, 180));
-        inputidb.setBorder(null);
-        getContentPane().add(inputidb, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 160, 300, 30));
+        inputidt.setBackground(new java.awt.Color(216, 219, 227));
+        inputidt.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        inputidt.setForeground(new java.awt.Color(155, 164, 180));
+        inputidt.setBorder(null);
+        getContentPane().add(inputidt, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 160, 300, 30));
 
         buttoncek.setBackground(new java.awt.Color(155, 164, 180));
         buttoncek.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
@@ -822,15 +826,86 @@ public class kembalipage extends javax.swing.JFrame {
         hasil2.getContentPane().setBackground(Color.decode("0xFFFFFF"));
     }//GEN-LAST:event_buttonlanjutkanActionPerformed
 
+    public void tampilDataAnggota(int id_anggota){
+        String query = "SELECT id_anggota, nama, jenis_kelamin, alamat, email FROM anggota WHERE id_anggota = ?";
+        try{
+            Koneksi konek = new Koneksi();
+            Connection koneksi = konek.buka();
+            PreparedStatement preparedStatement = koneksi.prepareStatement(query);
+            preparedStatement.setInt(1, id_anggota);
+            
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                if (resultSet.next()) {
+                    // Ambil data dari ResultSet dan set pada JLabels
+                    hasilida.setText("" + resultSet.getInt("id_anggota"));
+                    hasilnama.setText(resultSet.getString("nama"));
+                    hasiljenke.setText(resultSet.getString("jenis_kelamin"));
+                    hasilalamat.setText(resultSet.getString("alamat"));
+                    hasilemail.setText(resultSet.getString("email"));
+                } else {
+                    System.out.println("Data tidak ditemukan.");
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public void tampilDataBuku(int id_buku){
+        String query = "SELECT id_buku, judul, penulis, penerbit, jumlah_halaman FROM buku WHERE id_buku= ?";
+        try{
+            Koneksi konek = new Koneksi();
+            Connection koneksi = konek.buka();
+            PreparedStatement preparedStatement = koneksi.prepareStatement(query);
+            preparedStatement.setInt(1, id_buku);
+            
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                if (resultSet.next()) {
+                    // Ambil data dari ResultSet dan set pada JLabels
+                    hasilidb.setText("" + resultSet.getInt("id_buku"));
+                    hasiljudul.setText(resultSet.getString("judul"));
+                    hasilpenulis.setText(resultSet.getString("penulis"));
+                    hasilpenerbit.setText(resultSet.getString("penerbit"));
+                    hasiljumha.setText(resultSet.getString("jumlah_halaman"));
+                } else {
+                    System.out.println("Data tidak ditemukan.");
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+    
     private void buttoncekActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttoncekActionPerformed
         // TODO add your handling code here:
-        try{
+        /*try{
         dispose();
         hasil1.setVisible(true);
         hasil1.getContentPane().setBackground(Color.decode("0xFFFFFF"));
         } catch (NumberFormatException ex){
             JOptionPane.showMessageDialog(this, "Masukkan angka atau integer saja", "Kesalahan", JOptionPane.ERROR_MESSAGE);
-        }
+        }*/
+        try{
+            int id_trans = Integer.parseInt(inputidt.getText());
+            Peminjaman pinjam = new Peminjaman();
+            Pengembalian kembali = new Pengembalian();
+                if (kembali.cekTransaksi(id_trans)) {
+                    dispose();
+                    hasil1.setVisible(true);
+                    hasil1.getContentPane().setBackground(Color.decode("0xFFFFFF"));
+                    this.tampilDataAnggota(id_anggota);
+                    this.tampilDataBuku(id_buku);
+                } else {
+                    JOptionPane.showMessageDialog(this, "Data tidak ditemukan!", "Kesalahan", JOptionPane.ERROR_MESSAGE);
+                }
+        } catch (NumberFormatException ex){
+            JOptionPane.showMessageDialog(this, "Masukkan angka atau integer saja", "Kesalahan", JOptionPane.ERROR_MESSAGE);
+        } /*catch(SQLException e) {
+            e.printStackTrace(); } */
     }//GEN-LAST:event_buttoncekActionPerformed
 
     private void lagiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lagiActionPerformed
@@ -913,7 +988,7 @@ public class kembalipage extends javax.swing.JFrame {
     private javax.swing.JPanel hover1;
     private javax.swing.JPanel hover2;
     private javax.swing.JPanel hover3;
-    private javax.swing.JTextField inputidb;
+    private javax.swing.JTextField inputidt;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
