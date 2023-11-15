@@ -84,6 +84,11 @@ public class bukucreate extends javax.swing.JFrame {
         home2.setBorderPainted(false);
         home2.setContentAreaFilled(false);
         home2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        home2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                home2ActionPerformed(evt);
+            }
+        });
         hasil.getContentPane().add(home2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 30));
 
         anggota2.setBackground(new java.awt.Color(241, 244, 246));
@@ -93,6 +98,11 @@ public class bukucreate extends javax.swing.JFrame {
         anggota2.setBorderPainted(false);
         anggota2.setContentAreaFilled(false);
         anggota2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        anggota2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                anggota2ActionPerformed(evt);
+            }
+        });
         hasil.getContentPane().add(anggota2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 110, 20));
 
         buku2.setBackground(new java.awt.Color(241, 244, 246));
@@ -102,6 +112,11 @@ public class bukucreate extends javax.swing.JFrame {
         buku2.setBorderPainted(false);
         buku2.setContentAreaFilled(false);
         buku2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        buku2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buku2ActionPerformed(evt);
+            }
+        });
         hasil.getContentPane().add(buku2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 120, 120, 20));
 
         peminjaman2.setBackground(new java.awt.Color(241, 244, 246));
@@ -111,6 +126,11 @@ public class bukucreate extends javax.swing.JFrame {
         peminjaman2.setBorderPainted(false);
         peminjaman2.setContentAreaFilled(false);
         peminjaman2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        peminjaman2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                peminjaman2ActionPerformed(evt);
+            }
+        });
         hasil.getContentPane().add(peminjaman2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 140, 30));
 
         pengembalian2.setBackground(new java.awt.Color(241, 244, 246));
@@ -120,6 +140,11 @@ public class bukucreate extends javax.swing.JFrame {
         pengembalian2.setBorderPainted(false);
         pengembalian2.setContentAreaFilled(false);
         pengembalian2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        pengembalian2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pengembalian2ActionPerformed(evt);
+            }
+        });
         hasil.getContentPane().add(pengembalian2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 160, 30));
 
         statkini2.setBackground(new java.awt.Color(241, 244, 246));
@@ -129,6 +154,11 @@ public class bukucreate extends javax.swing.JFrame {
         statkini2.setBorderPainted(false);
         statkini2.setContentAreaFilled(false);
         statkini2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        statkini2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                statkini2ActionPerformed(evt);
+            }
+        });
         hasil.getContentPane().add(statkini2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 160, -1));
 
         riwayat2.setBackground(new java.awt.Color(241, 244, 246));
@@ -138,6 +168,11 @@ public class bukucreate extends javax.swing.JFrame {
         riwayat2.setBorderPainted(false);
         riwayat2.setContentAreaFilled(false);
         riwayat2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        riwayat2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                riwayat2ActionPerformed(evt);
+            }
+        });
         hasil.getContentPane().add(riwayat2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 270, 150, -1));
 
         bg4.setBackground(new java.awt.Color(155, 164, 180));
@@ -197,9 +232,7 @@ public class bukucreate extends javax.swing.JFrame {
         hasil.getContentPane().add(labelberhasil1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 120, 250, -1));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(830, 450));
         setMinimumSize(new java.awt.Dimension(830, 450));
-        setPreferredSize(new java.awt.Dimension(830, 450));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         home1.setBackground(new java.awt.Color(241, 244, 246));
@@ -476,6 +509,48 @@ public class bukucreate extends javax.swing.JFrame {
         dispose();
         new loginform().setVisible(true);
     }//GEN-LAST:event_kembali2ActionPerformed
+
+    private void home2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_home2ActionPerformed
+        // TODO add your handling code here:
+        hasil.dispose();
+        new mainpage().setVisible(true);
+    }//GEN-LAST:event_home2ActionPerformed
+
+    private void anggota2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_anggota2ActionPerformed
+        // TODO add your handling code here:
+        hasil.dispose();
+        new anggotapage().setVisible(true);
+    }//GEN-LAST:event_anggota2ActionPerformed
+
+    private void buku2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buku2ActionPerformed
+        // TODO add your handling code here:
+        hasil.dispose();
+        new bukupage().setVisible(true);
+    }//GEN-LAST:event_buku2ActionPerformed
+
+    private void peminjaman2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_peminjaman2ActionPerformed
+        // TODO add your handling code here:
+        hasil.dispose();
+        new pinjampage().setVisible(true);
+    }//GEN-LAST:event_peminjaman2ActionPerformed
+
+    private void pengembalian2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pengembalian2ActionPerformed
+        // TODO add your handling code here:
+        hasil.dispose();
+        new kembalipage().setVisible(true);
+    }//GEN-LAST:event_pengembalian2ActionPerformed
+
+    private void statkini2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statkini2ActionPerformed
+        // TODO add your handling code here:
+        hasil.dispose();
+        new statuspage().setVisible(true);
+    }//GEN-LAST:event_statkini2ActionPerformed
+
+    private void riwayat2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_riwayat2ActionPerformed
+        // TODO add your handling code here:
+        hasil.dispose();
+        new riwayatpage().setVisible(true);
+    }//GEN-LAST:event_riwayat2ActionPerformed
 
     /**
      * @param args the command line arguments

@@ -829,9 +829,14 @@ public class pinjampage extends javax.swing.JFrame {
         // TODO add your handling code here:
         int id_anggota = Integer.parseInt(inputida.getText());
         int id_buku = Integer.parseInt(inputidb.getText());
-        dispose();
-        jDialog1.setVisible(true);
-        jDialog1.getContentPane().setBackground(Color.decode("0xFFFFFF"));
+        Peminjaman pinjam = new Peminjaman();
+        if (pinjam.cekAnggota(id_anggota) && pinjam.cekBuku(id_buku)) {
+            dispose();
+            jDialog1.setVisible(true);
+            jDialog1.getContentPane().setBackground(Color.decode("0xFFFFFF"));
+        } else {
+            
+        }
     }//GEN-LAST:event_buttoncekActionPerformed
 
     private void home3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_home3ActionPerformed
@@ -889,6 +894,12 @@ public class pinjampage extends javax.swing.JFrame {
 
     private void buttonlanjutkanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonlanjutkanActionPerformed
         // TODO add your handling code here:
+        int id_anggota = Integer.parseInt(inputida.getText());
+        int id_buku = Integer.parseInt(inputidb.getText());
+        Peminjaman pinjam = new Peminjaman();
+        IDGenerator id = new IDGenerator();
+        int id_transaksi = id.idGenerator();
+        pinjam.catatPeminjaman(id_transaksi, id_anggota, id_buku);
         jDialog1.dispose();
         hasil.setVisible(true);
         hasil.getContentPane().setBackground(Color.decode("0xFFFFFF"));
