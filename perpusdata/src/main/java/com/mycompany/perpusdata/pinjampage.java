@@ -892,7 +892,7 @@ public class pinjampage extends javax.swing.JFrame {
             int id_buku = Integer.parseInt(inputidb.getText());
             Peminjaman pinjam = new Peminjaman();
                 if (pinjam.cekAnggota(id_anggota) && pinjam.cekBuku(id_buku)) {
-                    hasil.dispose();
+                    dispose();
                     jDialog1.setVisible(true);
                     jDialog1.getContentPane().setBackground(Color.decode("0xFFFFFF"));
                     this.tampilDataAnggota(id_anggota);
