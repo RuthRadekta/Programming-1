@@ -1,6 +1,7 @@
 package com.mycompany.perpusdata;
 
 import java.awt.Color;
+import javax.swing.JOptionPane;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -485,17 +486,21 @@ public class bukucreate extends javax.swing.JFrame {
 
     private void buttoncreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttoncreateActionPerformed
         // TODO add your handling code here:
-        int id_buku = Integer.parseInt(inputidb.getText());
-        String judul = String.valueOf(inputjudul.getText());
-        String penulis = String.valueOf(inputpenulis.getText());
-        String penerbit = String.valueOf(inputpenerbit.getText());
-        int jumlah_halaman = Integer.parseInt(inputjumha.getText());
-        CRUDBuku CrudB = new CRUDBuku();
-        CrudB.create(id_buku, judul, penulis, penerbit, jumlah_halaman);
-        
-        dispose();
-        hasil.getContentPane().setBackground(Color.decode("0xFFFFFF"));
-        hasil.setVisible(true);
+        try{
+            int id_buku = Integer.parseInt(inputidb.getText());
+            String judul = String.valueOf(inputjudul.getText());
+            String penulis = String.valueOf(inputpenulis.getText());
+            String penerbit = String.valueOf(inputpenerbit.getText());
+            int jumlah_halaman = Integer.parseInt(inputjumha.getText());
+            CRUDBuku CrudB = new CRUDBuku();
+            CrudB.create(id_buku, judul, penulis, penerbit, jumlah_halaman);
+
+            dispose();
+            hasil.getContentPane().setBackground(Color.decode("0xFFFFFF"));
+            hasil.setVisible(true);
+        } catch (NumberFormatException ex){
+            JOptionPane.showMessageDialog(this, "Masukkan angka atau integer saja", "Kesalahan", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_buttoncreateActionPerformed
 
     private void lagiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lagiActionPerformed

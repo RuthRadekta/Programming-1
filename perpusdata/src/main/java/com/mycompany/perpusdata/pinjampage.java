@@ -1,6 +1,8 @@
 package com.mycompany.perpusdata;
 
 import java.awt.Color;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -827,8 +829,10 @@ public class pinjampage extends javax.swing.JFrame {
 
     private void buttoncekActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttoncekActionPerformed
         // TODO add your handling code here:
+        try{
         int id_anggota = Integer.parseInt(inputida.getText());
         int id_buku = Integer.parseInt(inputidb.getText());
+<<<<<<< Updated upstream
         Peminjaman pinjam = new Peminjaman();
         if (pinjam.cekAnggota(id_anggota) && pinjam.cekBuku(id_buku)) {
             dispose();
@@ -837,6 +841,15 @@ public class pinjampage extends javax.swing.JFrame {
         } else {
             
         }
+=======
+        dispose();
+        jDialog1.setVisible(true);
+        jDialog1.getContentPane().setBackground(Color.decode("0xFFFFFF"));
+        } catch (NumberFormatException ex){
+            JOptionPane.showMessageDialog(this, "Masukkan angka atau integer saja", "Kesalahan", JOptionPane.ERROR_MESSAGE);
+        } /*catch(SQLException e) {
+            e.printStackTrace(); } */
+>>>>>>> Stashed changes
     }//GEN-LAST:event_buttoncekActionPerformed
 
     private void home3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_home3ActionPerformed

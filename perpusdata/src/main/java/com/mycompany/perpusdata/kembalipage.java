@@ -2,6 +2,7 @@ package com.mycompany.perpusdata;
 
 
 import java.awt.Color;
+import javax.swing.JOptionPane;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -836,9 +837,13 @@ public class kembalipage extends javax.swing.JFrame {
 
     private void buttoncekActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttoncekActionPerformed
         // TODO add your handling code here:
+        try{
         dispose();
         hasil1.setVisible(true);
         hasil1.getContentPane().setBackground(Color.decode("0xFFFFFF"));
+        } catch (NumberFormatException ex){
+            JOptionPane.showMessageDialog(this, "Masukkan angka atau integer saja", "Kesalahan", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_buttoncekActionPerformed
 
     private void lagiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lagiActionPerformed

@@ -6,6 +6,7 @@ package com.mycompany.perpusdata;
  */
 
 import java.awt.Color;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -487,18 +488,22 @@ public class anggotacreate extends javax.swing.JFrame {
 
     private void buttoncreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttoncreateActionPerformed
         // TODO add your handling code here:
-        int id_anggota = Integer.parseInt(inputida.getText());
-        String nama = String.valueOf(inputnama.getText());
-        String jenis_kelamin = String.valueOf(pilihanjenke.getSelectedItem());
-        String alamat = String.valueOf(inputalamat.getText());
-        String email = String.valueOf(inputemail.getText());
-        CRUDAnggota CrudA = new CRUDAnggota();
-        CrudA.create(id_anggota, nama, jenis_kelamin, alamat, email);
-        
-        dispose();
-        hasil.setVisible(true);
-        hasil.getContentPane().setBackground(Color.decode("0xFFFFFF"));
+        try{
+            int id_anggota = Integer.parseInt(inputida.getText());
+            String nama = String.valueOf(inputnama.getText());
+            String jenis_kelamin = String.valueOf(pilihanjenke.getSelectedItem());
+            String alamat = String.valueOf(inputalamat.getText());
+            String email = String.valueOf(inputemail.getText());
+            CRUDAnggota CrudA = new CRUDAnggota();
+            CrudA.create(id_anggota, nama, jenis_kelamin, alamat, email);
+
+            dispose();
+            hasil.setVisible(true);
+            hasil.getContentPane().setBackground(Color.decode("0xFFFFFF"));
         //new anggotacreate().setVisible(true);
+        } catch (NumberFormatException ex){
+            JOptionPane.showMessageDialog(this, "Masukkan angka atau integer saja", "Kesalahan", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_buttoncreateActionPerformed
 
     private void pilihanjenkeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pilihanjenkeActionPerformed
