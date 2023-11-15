@@ -690,7 +690,7 @@ public class anggotaupdate extends javax.swing.JFrame {
             hasil2.setVisible(true);
             hasil2.getContentPane().setBackground(Color.decode("0xFFFFFFF"));
         }catch (NumberFormatException e) {
-            JOptionPane.showMessageDialog(this, "Format ID Buku tidak valid", "Kesalahan", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Format ID Anggota tidak valid", "Kesalahan", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_buttonupdateActionPerformed
 

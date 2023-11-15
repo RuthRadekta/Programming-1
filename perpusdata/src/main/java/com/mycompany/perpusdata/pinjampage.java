@@ -830,16 +830,20 @@ public class pinjampage extends javax.swing.JFrame {
     private void buttoncekActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttoncekActionPerformed
         // TODO add your handling code here:
         try{
-        int id_anggota = Integer.parseInt(inputida.getText());
-        int id_buku = Integer.parseInt(inputidb.getText());
-        Peminjaman pinjam = new Peminjaman();
-        if (pinjam.cekAnggota(id_anggota) && pinjam.cekBuku(id_buku)) {
+            int id_anggota = Integer.parseInt(inputida.getText());
+            int id_buku = Integer.parseInt(inputidb.getText());
+            Peminjaman pinjam = new Peminjaman();
+                if (pinjam.cekAnggota(id_anggota) && pinjam.cekBuku(id_buku)) {
+                    dispose();
+                    jDialog1.setVisible(true);
+                    jDialog1.getContentPane().setBackground(Color.decode("0xFFFFFF"));
+                } else {
+                    
+                    JOptionPane.showMessageDialog(this, "Data tidak ditemukan!", "Kesalahan", JOptionPane.ERROR_MESSAGE);
+                }
             dispose();
             jDialog1.setVisible(true);
             jDialog1.getContentPane().setBackground(Color.decode("0xFFFFFF"));
-        } else {
-            
-        }
         } catch (NumberFormatException ex){
             JOptionPane.showMessageDialog(this, "Masukkan angka atau integer saja", "Kesalahan", JOptionPane.ERROR_MESSAGE);
         } /*catch(SQLException e) {
