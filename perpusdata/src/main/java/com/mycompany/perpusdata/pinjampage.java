@@ -832,7 +832,6 @@ public class pinjampage extends javax.swing.JFrame {
         try{
         int id_anggota = Integer.parseInt(inputida.getText());
         int id_buku = Integer.parseInt(inputidb.getText());
-<<<<<<< Updated upstream
         Peminjaman pinjam = new Peminjaman();
         if (pinjam.cekAnggota(id_anggota) && pinjam.cekBuku(id_buku)) {
             dispose();
@@ -841,7 +840,6 @@ public class pinjampage extends javax.swing.JFrame {
         } else {
             
         }
-=======
         dispose();
         jDialog1.setVisible(true);
         jDialog1.getContentPane().setBackground(Color.decode("0xFFFFFF"));
@@ -849,7 +847,6 @@ public class pinjampage extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Masukkan angka atau integer saja", "Kesalahan", JOptionPane.ERROR_MESSAGE);
         } /*catch(SQLException e) {
             e.printStackTrace(); } */
->>>>>>> Stashed changes
     }//GEN-LAST:event_buttoncekActionPerformed
 
     private void home3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_home3ActionPerformed
