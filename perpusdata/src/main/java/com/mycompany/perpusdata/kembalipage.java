@@ -116,9 +116,7 @@ public class kembalipage extends javax.swing.JFrame {
         bg3 = new javax.swing.JPanel();
         kembali1 = new javax.swing.JButton();
         labelidb = new javax.swing.JLabel();
-        labelidba = new javax.swing.JLabel();
         inputidb = new javax.swing.JTextField();
-        inputida = new javax.swing.JTextField();
         buttoncek = new javax.swing.JButton();
 
         hasil2.setMinimumSize(new java.awt.Dimension(830, 450));
@@ -705,25 +703,14 @@ public class kembalipage extends javax.swing.JFrame {
 
         labelidb.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         labelidb.setForeground(new java.awt.Color(155, 164, 180));
-        labelidb.setText("ID Buku");
+        labelidb.setText("ID Transaksi");
         getContentPane().add(labelidb, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 160, -1, -1));
-
-        labelidba.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
-        labelidba.setForeground(new java.awt.Color(155, 164, 180));
-        labelidba.setText("ID Anggota");
-        getContentPane().add(labelidba, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 200, -1, -1));
 
         inputidb.setBackground(new java.awt.Color(216, 219, 227));
         inputidb.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         inputidb.setForeground(new java.awt.Color(155, 164, 180));
         inputidb.setBorder(null);
         getContentPane().add(inputidb, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 160, 300, 30));
-
-        inputida.setBackground(new java.awt.Color(216, 219, 227));
-        inputida.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
-        inputida.setForeground(new java.awt.Color(155, 164, 180));
-        inputida.setBorder(null);
-        getContentPane().add(inputida, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 200, 300, 30));
 
         buttoncek.setBackground(new java.awt.Color(155, 164, 180));
         buttoncek.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
@@ -737,7 +724,7 @@ public class kembalipage extends javax.swing.JFrame {
                 buttoncekActionPerformed(evt);
             }
         });
-        getContentPane().add(buttoncek, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 280, 110, 30));
+        getContentPane().add(buttoncek, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 300, 110, 30));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -926,7 +913,6 @@ public class kembalipage extends javax.swing.JFrame {
     private javax.swing.JPanel hover1;
     private javax.swing.JPanel hover2;
     private javax.swing.JPanel hover3;
-    private javax.swing.JTextField inputida;
     private javax.swing.JTextField inputidb;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -948,7 +934,6 @@ public class kembalipage extends javax.swing.JFrame {
     private javax.swing.JLabel labelida;
     private javax.swing.JLabel labelidb;
     private javax.swing.JLabel labelidb2;
-    private javax.swing.JLabel labelidba;
     private javax.swing.JLabel labeljenke;
     private javax.swing.JLabel labeljmlhalaman;
     private javax.swing.JLabel labeljudul;
