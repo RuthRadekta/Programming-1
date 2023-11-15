@@ -1,6 +1,9 @@
 package com.mycompany.perpusdata;
 
 import java.awt.Color;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
@@ -23,6 +26,7 @@ public class pinjampage extends javax.swing.JFrame {
         getContentPane().setBackground(Color.decode("0xFFFFFFF"));
         setDefaultCloseOperation(pinjampage.DISPOSE_ON_CLOSE);
         hasil.setDefaultCloseOperation(hasil.DISPOSE_ON_CLOSE);
+        jDialog1.setDefaultCloseOperation(hasil.DISPOSE_ON_CLOSE);
     }
 
     /**
@@ -827,6 +831,60 @@ public class pinjampage extends javax.swing.JFrame {
         new statuspage().setVisible(true);
     }//GEN-LAST:event_riwayat1ActionPerformed
 
+    public void tampilDataAnggota(int id_anggota){
+        String query = "SELECT id_anggota, nama, jenis_kelamin, alamat, email FROM anggota WHERE id_anggota = ?";
+        try{
+            Koneksi konek = new Koneksi();
+            Connection koneksi = konek.buka();
+            PreparedStatement preparedStatement = koneksi.prepareStatement(query);
+            preparedStatement.setInt(1, id_anggota);
+            
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                if (resultSet.next()) {
+                    // Ambil data dari ResultSet dan set pada JLabels
+                    hasilida.setText("" + resultSet.getInt("id_anggota"));
+                    hasilnama.setText(resultSet.getString("nama"));
+                    hasiljenke.setText(resultSet.getString("jenis_kelamin"));
+                    hasilalamat.setText(resultSet.getString("alamat"));
+                    hasilemail.setText(resultSet.getString("email"));
+                } else {
+                    System.out.println("Data tidak ditemukan.");
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public void tampilDataBuku(int id_buku){
+        String query = "SELECT id_buku, judul, penulis, penerbit, jumlah_halaman FROM buku WHERE id_buku= ?";
+        try{
+            Koneksi konek = new Koneksi();
+            Connection koneksi = konek.buka();
+            PreparedStatement preparedStatement = koneksi.prepareStatement(query);
+            preparedStatement.setInt(1, id_buku);
+            
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                if (resultSet.next()) {
+                    // Ambil data dari ResultSet dan set pada JLabels
+                    hasilidb.setText("" + resultSet.getInt("id_buku"));
+                    hasiljudul.setText(resultSet.getString("judul"));
+                    hasilpenulis.setText(resultSet.getString("penulis"));
+                    hasilpenerbit.setText(resultSet.getString("penerbit"));
+                    hasiljumha.setText(resultSet.getString("jumlah_halaman"));
+                } else {
+                    System.out.println("Data tidak ditemukan.");
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+    
     private void buttoncekActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttoncekActionPerformed
         // TODO add your handling code here:
         try{
@@ -834,12 +892,11 @@ public class pinjampage extends javax.swing.JFrame {
             int id_buku = Integer.parseInt(inputidb.getText());
             Peminjaman pinjam = new Peminjaman();
                 if (pinjam.cekAnggota(id_anggota) && pinjam.cekBuku(id_buku)) {
-                    dispose();
+                    hasil.dispose();
                     jDialog1.setVisible(true);
                     jDialog1.getContentPane().setBackground(Color.decode("0xFFFFFF"));
-                    dispose();
-                    jDialog1.setVisible(true);
-                    jDialog1.getContentPane().setBackground(Color.decode("0xFFFFFF"));
+                    this.tampilDataAnggota(id_anggota);
+                    this.tampilDataBuku(id_buku);
                 } else {
                     JOptionPane.showMessageDialog(this, "Data tidak ditemukan!", "Kesalahan", JOptionPane.ERROR_MESSAGE);
                 }
