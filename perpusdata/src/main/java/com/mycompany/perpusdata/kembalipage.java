@@ -79,7 +79,7 @@ public class kembalipage extends javax.swing.JFrame {
         labellanjutkan = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        buttonlihattabel = new javax.swing.JButton();
+        buttonkembali = new javax.swing.JButton();
         buttonlanjutkan = new javax.swing.JButton();
         labelida = new javax.swing.JLabel();
         labelnama = new javax.swing.JLabel();
@@ -254,9 +254,7 @@ public class kembalipage extends javax.swing.JFrame {
         denda.setText("Rp.X,XXX,-");
         hasil2.getContentPane().add(denda, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 240, -1, 20));
 
-        hasil1.setMaximumSize(new java.awt.Dimension(830, 450));
         hasil1.setMinimumSize(new java.awt.Dimension(830, 450));
-        hasil1.setPreferredSize(new java.awt.Dimension(830, 450));
         hasil1.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         home3.setBackground(new java.awt.Color(241, 244, 246));
@@ -439,19 +437,19 @@ public class kembalipage extends javax.swing.JFrame {
         jLabel2.setText("Periksa lagi data tujuan anda dan");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, -1, -1));
 
-        buttonlihattabel.setBackground(new java.awt.Color(190, 196, 205));
-        buttonlihattabel.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        buttonlihattabel.setForeground(new java.awt.Color(255, 255, 255));
-        buttonlihattabel.setText("Lihat Tabel");
-        buttonlihattabel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        buttonlihattabel.setContentAreaFilled(false);
-        buttonlihattabel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        buttonlihattabel.addActionListener(new java.awt.event.ActionListener() {
+        buttonkembali.setBackground(new java.awt.Color(190, 196, 205));
+        buttonkembali.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        buttonkembali.setForeground(new java.awt.Color(255, 255, 255));
+        buttonkembali.setText("Kembali");
+        buttonkembali.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        buttonkembali.setContentAreaFilled(false);
+        buttonkembali.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        buttonkembali.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonlihattabelActionPerformed(evt);
+                buttonkembaliActionPerformed(evt);
             }
         });
-        jPanel1.add(buttonlihattabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 100, 30));
+        jPanel1.add(buttonkembali, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 100, 30));
 
         buttonlanjutkan.setBackground(new java.awt.Color(190, 196, 205));
         buttonlanjutkan.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
@@ -570,9 +568,7 @@ public class kembalipage extends javax.swing.JFrame {
         hasil1.getContentPane().add(hasilpenerbit, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 160, 170, 20));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(830, 450));
         setMinimumSize(new java.awt.Dimension(830, 450));
-        setPreferredSize(new java.awt.Dimension(830, 450));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         labelkembali1.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
@@ -825,9 +821,11 @@ public class kembalipage extends javax.swing.JFrame {
         new loginform().setVisible(true);
     }//GEN-LAST:event_kembali3ActionPerformed
 
-    private void buttonlihattabelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonlihattabelActionPerformed
+    private void buttonkembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonkembaliActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_buttonlihattabelActionPerformed
+        hasil1.dispose();
+        new kembalipage().setVisible(true);
+    }//GEN-LAST:event_buttonkembaliActionPerformed
 
     private void buttonlanjutkanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonlanjutkanActionPerformed
         // TODO add your handling code here:
@@ -902,8 +900,8 @@ public class kembalipage extends javax.swing.JFrame {
     private javax.swing.JButton buku2;
     private javax.swing.JButton buku3;
     private javax.swing.JButton buttoncek;
+    private javax.swing.JButton buttonkembali;
     private javax.swing.JButton buttonlanjutkan;
-    private javax.swing.JButton buttonlihattabel;
     private javax.swing.JLabel denda;
     private javax.swing.JDialog hasil1;
     private javax.swing.JDialog hasil2;
