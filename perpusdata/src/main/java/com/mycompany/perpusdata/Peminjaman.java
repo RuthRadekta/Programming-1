@@ -9,6 +9,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Scanner;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 /**
  *
  * @author refah
@@ -98,13 +100,18 @@ public class Peminjaman {
         }
     }
     
-    public void cekTenggat(){
+    public String cekTenggat(){
+        String tenggat = "";
         try {
             Koneksi konek = new Koneksi();
             Connection koneksi = konek.buka();
-            
+            Calendar calendar = Calendar.getInstance();
+            calendar.add(Calendar.DAY_OF_MONTH, 5);
+            SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+            tenggat = dateFormat.format(calendar.getTime());
         } catch(SQLException ex) {
             System.out.println(ex.getMessage());  
         }
+        return tenggat;
     }
 }

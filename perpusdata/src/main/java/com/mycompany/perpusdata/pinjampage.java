@@ -968,6 +968,7 @@ public class pinjampage extends javax.swing.JFrame {
         IDGenerator id = new IDGenerator();
         int id_transaksi = id.idGenerator();
         pinjam.catatPeminjaman(id_transaksi, id_anggota, id_buku);
+        tenggat.setText(pinjam.cekTenggat());
         jDialog1.dispose();
         hasil.setVisible(true);
         hasil.getContentPane().setBackground(Color.decode("0xFFFFFF"));
