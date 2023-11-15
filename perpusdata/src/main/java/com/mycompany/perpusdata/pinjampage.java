@@ -840,9 +840,6 @@ public class pinjampage extends javax.swing.JFrame {
         } else {
             
         }
-        dispose();
-        jDialog1.setVisible(true);
-        jDialog1.getContentPane().setBackground(Color.decode("0xFFFFFF"));
         } catch (NumberFormatException ex){
             JOptionPane.showMessageDialog(this, "Masukkan angka atau integer saja", "Kesalahan", JOptionPane.ERROR_MESSAGE);
         } /*catch(SQLException e) {
