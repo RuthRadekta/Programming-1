@@ -86,10 +86,7 @@ public class Pengembalian {
         }
     }
     
-    public void prosedurPengembalian(){
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Masukkan id transaksi: ");
-        int id_transaksi = scanner.nextInt();
+    public void prosedurPengembalian(int id_transaksi){
         if (cekTransaksi(id_transaksi)) {
             catatPengembalian(id_transaksi);
         } else if (!cekTransaksi(id_transaksi)) {

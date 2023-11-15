@@ -6,6 +6,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /*
@@ -821,7 +823,29 @@ public class kembalipage extends javax.swing.JFrame {
 
     private void buttonlanjutkanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonlanjutkanActionPerformed
         // TODO add your handling code here:
+        int id_transaksi = Integer.parseInt(inputidt.getText());
+        Pengembalian kembali = new Pengembalian();
+        kembali.prosedurPengembalian(id_transaksi);
         hasil1.dispose();
+        int id_trans = Integer.parseInt(inputidt.getText());
+        try {
+            Koneksi konek = new Koneksi();
+            Connection koneksi = konek.buka();
+            String query = "SELECT denda FROM status WHERE id_transaksi= ?";
+            PreparedStatement preparedStatement = koneksi.prepareStatement(query);
+            preparedStatement.setInt(1, id_trans);
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                if (resultSet.next()) {
+                    denda.setText("Rp" + String.valueOf(resultSet.getInt("denda")));
+                } else {
+                    System.out.println("Data tidak ditemukan.");
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         hasil2.setVisible(true);
         hasil2.getContentPane().setBackground(Color.decode("0xFFFFFF"));
     }//GEN-LAST:event_buttonlanjutkanActionPerformed
@@ -882,17 +906,26 @@ public class kembalipage extends javax.swing.JFrame {
     
     private void buttoncekActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttoncekActionPerformed
         // TODO add your handling code here:
-        /*try{
-        dispose();
-        hasil1.setVisible(true);
-        hasil1.getContentPane().setBackground(Color.decode("0xFFFFFF"));
-        } catch (NumberFormatException ex){
-            JOptionPane.showMessageDialog(this, "Masukkan angka atau integer saja", "Kesalahan", JOptionPane.ERROR_MESSAGE);
-        }*/
         try{
             int id_trans = Integer.parseInt(inputidt.getText());
-            Peminjaman pinjam = new Peminjaman();
+            int id_anggota = 0;
+            int id_buku = 0;
             Pengembalian kembali = new Pengembalian();
+            Koneksi konek = new Koneksi();
+            Connection koneksi = konek.buka();
+            String query = "SELECT id_anggota, id_buku FROM status WHERE id_transaksi= ?";
+            PreparedStatement preparedStatement = koneksi.prepareStatement(query);
+            preparedStatement.setInt(1, id_trans);
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                if (resultSet.next()) {
+                    id_anggota = resultSet.getInt("id_anggota");
+                    id_buku = resultSet.getInt("id_buku");
+                } else {
+                    System.out.println("Data tidak ditemukan.");
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
                 if (kembali.cekTransaksi(id_trans)) {
                     dispose();
                     hasil1.setVisible(true);
@@ -904,6 +937,8 @@ public class kembalipage extends javax.swing.JFrame {
                 }
         } catch (NumberFormatException ex){
             JOptionPane.showMessageDialog(this, "Masukkan angka atau integer saja", "Kesalahan", JOptionPane.ERROR_MESSAGE);
+        } catch (SQLException ex) {
+            ex.printStackTrace();
         } /*catch(SQLException e) {
             e.printStackTrace(); } */
     }//GEN-LAST:event_buttoncekActionPerformed
