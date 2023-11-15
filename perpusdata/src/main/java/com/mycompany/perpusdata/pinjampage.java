@@ -837,13 +837,12 @@ public class pinjampage extends javax.swing.JFrame {
                     dispose();
                     jDialog1.setVisible(true);
                     jDialog1.getContentPane().setBackground(Color.decode("0xFFFFFF"));
+                    dispose();
+                    jDialog1.setVisible(true);
+                    jDialog1.getContentPane().setBackground(Color.decode("0xFFFFFF"));
                 } else {
-                    
                     JOptionPane.showMessageDialog(this, "Data tidak ditemukan!", "Kesalahan", JOptionPane.ERROR_MESSAGE);
                 }
-            dispose();
-            jDialog1.setVisible(true);
-            jDialog1.getContentPane().setBackground(Color.decode("0xFFFFFF"));
         } catch (NumberFormatException ex){
             JOptionPane.showMessageDialog(this, "Masukkan angka atau integer saja", "Kesalahan", JOptionPane.ERROR_MESSAGE);
         } /*catch(SQLException e) {
