@@ -783,35 +783,49 @@ public class kembalipage extends javax.swing.JFrame {
 
     private void home3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_home3ActionPerformed
         // TODO add your handling code here:
+        hasil1.dispose();
+        new mainpage().setVisible(true);
     }//GEN-LAST:event_home3ActionPerformed
 
     private void anggota3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_anggota3ActionPerformed
         // TODO add your handling code here:
+        hasil1.dispose();
+        new anggotapage().setVisible(true);
     }//GEN-LAST:event_anggota3ActionPerformed
 
     private void buku3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buku3ActionPerformed
         // TODO add your handling code here:
+        hasil1.dispose();
+        new bukupage().setVisible(true);
     }//GEN-LAST:event_buku3ActionPerformed
 
     private void peminjaman3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_peminjaman3ActionPerformed
         // TODO add your handling code here:
+        hasil1.dispose();
+        new pinjampage().setVisible(true);
     }//GEN-LAST:event_peminjaman3ActionPerformed
 
     private void pengembalian3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pengembalian3ActionPerformed
         // TODO add your handling code here:
+        hasil1.dispose();
+        new kembalipage().setVisible(true);
     }//GEN-LAST:event_pengembalian3ActionPerformed
 
     private void statkini3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statkini3ActionPerformed
         // TODO add your handling code here:
+        hasil1.dispose();
+        new statuspage().setVisible(true);
     }//GEN-LAST:event_statkini3ActionPerformed
 
     private void riwayat3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_riwayat3ActionPerformed
         // TODO add your handling code here:
+        hasil1.dispose();
+        new riwayatpage().setVisible(true);
     }//GEN-LAST:event_riwayat3ActionPerformed
 
     private void kembali3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kembali3ActionPerformed
         // TODO add your handling code here:
-        dispose();
+        hasil1.dispose();
         new loginform().setVisible(true);
     }//GEN-LAST:event_kembali3ActionPerformed
 
@@ -951,7 +965,7 @@ public class kembalipage extends javax.swing.JFrame {
 
     private void kembali2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kembali2ActionPerformed
         // TODO add your handling code here:
-        dispose();
+        hasil2.dispose();
         new loginform().setVisible(true);
     }//GEN-LAST:event_kembali2ActionPerformed
 
