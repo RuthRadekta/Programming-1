@@ -214,6 +214,8 @@ public class anggotaread extends javax.swing.JFrame {
 
     private void anggotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_anggotaActionPerformed
         // TODO add your handling code here:
+        dispose();
+        new anggotapage().setVisible(true);
     }//GEN-LAST:event_anggotaActionPerformed
 
     private void bukuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bukuActionPerformed

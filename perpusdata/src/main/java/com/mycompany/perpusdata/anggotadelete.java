@@ -251,9 +251,7 @@ public class anggotadelete extends javax.swing.JFrame {
         hasil.getContentPane().add(lagi, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 240, 140, 40));
 
         konfirmasi.setBackground(new java.awt.Color(255, 255, 255));
-        konfirmasi.setMaximumSize(new java.awt.Dimension(830, 450));
         konfirmasi.setMinimumSize(new java.awt.Dimension(830, 450));
-        konfirmasi.setPreferredSize(new java.awt.Dimension(830, 450));
         konfirmasi.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         home2.setBackground(new java.awt.Color(241, 244, 246));
@@ -482,6 +480,11 @@ public class anggotadelete extends javax.swing.JFrame {
         anggota.setBorderPainted(false);
         anggota.setContentAreaFilled(false);
         anggota.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        anggota.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                anggotaActionPerformed(evt);
+            }
+        });
         getContentPane().add(anggota, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 110, 20));
 
         buku.setBackground(new java.awt.Color(241, 244, 246));
@@ -756,6 +759,12 @@ public class anggotadelete extends javax.swing.JFrame {
             hasil.setVisible(true);
             hasil.getContentPane().setBackground(Color.decode("0xFFFFFF"));
     }//GEN-LAST:event_buttonlanjutkanActionPerformed
+
+    private void anggotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_anggotaActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        new anggotapage().setVisible(true);
+    }//GEN-LAST:event_anggotaActionPerformed
     
     /**
      * @param args the command line arguments

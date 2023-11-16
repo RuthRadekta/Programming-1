@@ -464,6 +464,8 @@ public class bukucreate extends javax.swing.JFrame {
 
     private void buku1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buku1ActionPerformed
         // TODO add your handling code here:
+        dispose();
+        new bukupage().setVisible(true);
     }//GEN-LAST:event_buku1ActionPerformed
 
     private void pengembalian1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pengembalian1ActionPerformed
