@@ -37,7 +37,6 @@ public class anggotapage extends javax.swing.JFrame {
         peminjaman = new javax.swing.JButton();
         pengembalian = new javax.swing.JButton();
         statkini = new javax.swing.JButton();
-        riwayat = new javax.swing.JButton();
         labelpilihopsi = new javax.swing.JLabel();
         update = new javax.swing.JButton();
         create = new javax.swing.JButton();
@@ -53,9 +52,7 @@ public class anggotapage extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
-        setMaximumSize(new java.awt.Dimension(830, 450));
         setMinimumSize(new java.awt.Dimension(830, 450));
-        setPreferredSize(new java.awt.Dimension(830, 450));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         home.setBackground(new java.awt.Color(241, 244, 246));
@@ -141,20 +138,6 @@ public class anggotapage extends javax.swing.JFrame {
             }
         });
         getContentPane().add(statkini, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 160, -1));
-
-        riwayat.setBackground(new java.awt.Color(241, 244, 246));
-        riwayat.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        riwayat.setForeground(new java.awt.Color(255, 255, 255));
-        riwayat.setText("RIWAYAT");
-        riwayat.setBorderPainted(false);
-        riwayat.setContentAreaFilled(false);
-        riwayat.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        riwayat.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                riwayatActionPerformed(evt);
-            }
-        });
-        getContentPane().add(riwayat, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 270, 150, -1));
 
         labelpilihopsi.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
         labelpilihopsi.setForeground(new java.awt.Color(190, 196, 205));
@@ -319,12 +302,6 @@ public class anggotapage extends javax.swing.JFrame {
         new statuspage().setVisible(true);
     }//GEN-LAST:event_statkiniActionPerformed
 
-    private void riwayatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_riwayatActionPerformed
-        // TODO add your handling code here:
-        dispose();
-        new riwayatpage().setVisible(true);
-    }//GEN-LAST:event_riwayatActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -377,7 +354,6 @@ public class anggotapage extends javax.swing.JFrame {
     private javax.swing.JButton peminjaman;
     private javax.swing.JButton pengembalian;
     private javax.swing.JButton read;
-    private javax.swing.JButton riwayat;
     private javax.swing.JButton statkini;
     private javax.swing.JButton update;
     // End of variables declaration//GEN-END:variables

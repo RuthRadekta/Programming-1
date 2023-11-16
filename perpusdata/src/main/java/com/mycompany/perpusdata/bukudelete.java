@@ -47,7 +47,6 @@ public class bukudelete extends javax.swing.JFrame {
         peminjaman1 = new javax.swing.JButton();
         pengembalian1 = new javax.swing.JButton();
         statkini1 = new javax.swing.JButton();
-        riwayat1 = new javax.swing.JButton();
         bg3 = new javax.swing.JPanel();
         kembali1 = new javax.swing.JButton();
         hover1 = new javax.swing.JPanel();
@@ -58,7 +57,6 @@ public class bukudelete extends javax.swing.JFrame {
         peminjaman2 = new javax.swing.JButton();
         pengembalian2 = new javax.swing.JButton();
         statkini2 = new javax.swing.JButton();
-        riwayat2 = new javax.swing.JButton();
         bg4 = new javax.swing.JPanel();
         kembali2 = new javax.swing.JButton();
         hover2 = new javax.swing.JPanel();
@@ -89,7 +87,6 @@ public class bukudelete extends javax.swing.JFrame {
         peminjaman = new javax.swing.JButton();
         pengembalian = new javax.swing.JButton();
         statkini = new javax.swing.JButton();
-        riwayat = new javax.swing.JButton();
         bg2 = new javax.swing.JPanel();
         kembali = new javax.swing.JButton();
         hover = new javax.swing.JPanel();
@@ -210,20 +207,6 @@ public class bukudelete extends javax.swing.JFrame {
         });
         hasil.getContentPane().add(statkini1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 160, -1));
 
-        riwayat1.setBackground(new java.awt.Color(241, 244, 246));
-        riwayat1.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        riwayat1.setForeground(new java.awt.Color(255, 255, 255));
-        riwayat1.setText("RIWAYAT");
-        riwayat1.setBorderPainted(false);
-        riwayat1.setContentAreaFilled(false);
-        riwayat1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        riwayat1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                riwayat1ActionPerformed(evt);
-            }
-        });
-        hasil.getContentPane().add(riwayat1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 270, 150, -1));
-
         bg3.setBackground(new java.awt.Color(155, 164, 180));
         bg3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -332,20 +315,6 @@ public class bukudelete extends javax.swing.JFrame {
             }
         });
         konfirmasi.getContentPane().add(statkini2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 160, -1));
-
-        riwayat2.setBackground(new java.awt.Color(241, 244, 246));
-        riwayat2.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        riwayat2.setForeground(new java.awt.Color(255, 255, 255));
-        riwayat2.setText("RIWAYAT");
-        riwayat2.setBorderPainted(false);
-        riwayat2.setContentAreaFilled(false);
-        riwayat2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        riwayat2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                riwayat2ActionPerformed(evt);
-            }
-        });
-        konfirmasi.getContentPane().add(riwayat2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 270, 150, -1));
 
         bg4.setBackground(new java.awt.Color(155, 164, 180));
         bg4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -573,20 +542,6 @@ public class bukudelete extends javax.swing.JFrame {
         });
         getContentPane().add(statkini, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 160, -1));
 
-        riwayat.setBackground(new java.awt.Color(241, 244, 246));
-        riwayat.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        riwayat.setForeground(new java.awt.Color(255, 255, 255));
-        riwayat.setText("RIWAYAT");
-        riwayat.setBorderPainted(false);
-        riwayat.setContentAreaFilled(false);
-        riwayat.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        riwayat.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                riwayatActionPerformed(evt);
-            }
-        });
-        getContentPane().add(riwayat, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 270, 150, -1));
-
         bg2.setBackground(new java.awt.Color(155, 164, 180));
         bg2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -684,12 +639,6 @@ public class bukudelete extends javax.swing.JFrame {
         new statuspage().setVisible(true);
     }//GEN-LAST:event_statkiniActionPerformed
 
-    private void riwayatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_riwayatActionPerformed
-        // TODO add your handling code here:
-        dispose();
-        new riwayatpage().setVisible(true);
-    }//GEN-LAST:event_riwayatActionPerformed
-
     private void buttoncekActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttoncekActionPerformed
         // TODO add your handling code here:
         try {
@@ -769,12 +718,6 @@ public class bukudelete extends javax.swing.JFrame {
         new statuspage().setVisible(true);
     }//GEN-LAST:event_statkini2ActionPerformed
 
-    private void riwayat2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_riwayat2ActionPerformed
-        // TODO add your handling code here:
-        konfirmasi.dispose();
-        new riwayatpage().setVisible(true);
-    }//GEN-LAST:event_riwayat2ActionPerformed
-
     private void home1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_home1ActionPerformed
         // TODO add your handling code here:
         hasil.dispose();
@@ -816,12 +759,6 @@ public class bukudelete extends javax.swing.JFrame {
         hasil.dispose();
         new statuspage().setVisible(true);
     }//GEN-LAST:event_statkini1ActionPerformed
-
-    private void riwayat1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_riwayat1ActionPerformed
-        // TODO add your handling code here:
-        hasil.dispose();
-        new riwayatpage().setVisible(true);
-    }//GEN-LAST:event_riwayat1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -915,9 +852,6 @@ public class bukudelete extends javax.swing.JFrame {
     private javax.swing.JButton pengembalian;
     private javax.swing.JButton pengembalian1;
     private javax.swing.JButton pengembalian2;
-    private javax.swing.JButton riwayat;
-    private javax.swing.JButton riwayat1;
-    private javax.swing.JButton riwayat2;
     private javax.swing.JButton statkini;
     private javax.swing.JButton statkini1;
     private javax.swing.JButton statkini2;

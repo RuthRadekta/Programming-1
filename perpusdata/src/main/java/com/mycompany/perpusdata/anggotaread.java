@@ -43,7 +43,6 @@ public class anggotaread extends javax.swing.JFrame {
         peminjaman = new javax.swing.JButton();
         pengembalian = new javax.swing.JButton();
         statkini = new javax.swing.JButton();
-        riwayat = new javax.swing.JButton();
         hover = new javax.swing.JPanel();
         bg2 = new javax.swing.JPanel();
         kembali = new javax.swing.JButton();
@@ -139,20 +138,6 @@ public class anggotaread extends javax.swing.JFrame {
         });
         getContentPane().add(statkini, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 160, -1));
 
-        riwayat.setBackground(new java.awt.Color(241, 244, 246));
-        riwayat.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        riwayat.setForeground(new java.awt.Color(255, 255, 255));
-        riwayat.setText("RIWAYAT");
-        riwayat.setBorderPainted(false);
-        riwayat.setContentAreaFilled(false);
-        riwayat.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        riwayat.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                riwayatActionPerformed(evt);
-            }
-        });
-        getContentPane().add(riwayat, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 270, 150, -1));
-
         hover.setBackground(new java.awt.Color(190, 196, 205));
         getContentPane().add(hover, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 160, 40));
 
@@ -242,12 +227,6 @@ public class anggotaread extends javax.swing.JFrame {
         new statuspage().setVisible(true);
     }//GEN-LAST:event_statkiniActionPerformed
 
-    private void riwayatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_riwayatActionPerformed
-        // TODO add your handling code here:
-        dispose();
-        new riwayatpage().setVisible(true);
-    }//GEN-LAST:event_riwayatActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -295,7 +274,6 @@ public class anggotaread extends javax.swing.JFrame {
     private javax.swing.JLabel labelread;
     private javax.swing.JButton peminjaman;
     private javax.swing.JButton pengembalian;
-    private javax.swing.JButton riwayat;
     private javax.swing.JButton statkini;
     // End of variables declaration//GEN-END:variables
 }

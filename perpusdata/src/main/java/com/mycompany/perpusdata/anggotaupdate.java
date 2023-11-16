@@ -42,7 +42,6 @@ public class anggotaupdate extends javax.swing.JFrame {
         peminjaman1 = new javax.swing.JButton();
         pengembalian1 = new javax.swing.JButton();
         statkini1 = new javax.swing.JButton();
-        riwayat1 = new javax.swing.JButton();
         hover1 = new javax.swing.JPanel();
         bg3 = new javax.swing.JPanel();
         kembali1 = new javax.swing.JButton();
@@ -67,7 +66,6 @@ public class anggotaupdate extends javax.swing.JFrame {
         peminjaman2 = new javax.swing.JButton();
         pengembalian2 = new javax.swing.JButton();
         statkini2 = new javax.swing.JButton();
-        riwayat2 = new javax.swing.JButton();
         hover2 = new javax.swing.JPanel();
         bg4 = new javax.swing.JPanel();
         kembali2 = new javax.swing.JButton();
@@ -83,7 +81,6 @@ public class anggotaupdate extends javax.swing.JFrame {
         peminjaman = new javax.swing.JButton();
         pengembalian = new javax.swing.JButton();
         statkini = new javax.swing.JButton();
-        riwayat = new javax.swing.JButton();
         hover = new javax.swing.JPanel();
         bg2 = new javax.swing.JPanel();
         kembali = new javax.swing.JButton();
@@ -92,9 +89,7 @@ public class anggotaupdate extends javax.swing.JFrame {
         buttoncek = new javax.swing.JButton();
         labelupdate1 = new javax.swing.JLabel();
 
-        hasil.setMaximumSize(new java.awt.Dimension(830, 450));
         hasil.setMinimumSize(new java.awt.Dimension(830, 450));
-        hasil.setPreferredSize(new java.awt.Dimension(830, 450));
         hasil.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         home1.setBackground(new java.awt.Color(241, 244, 246));
@@ -175,19 +170,6 @@ public class anggotaupdate extends javax.swing.JFrame {
             }
         });
         hasil.getContentPane().add(statkini1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 160, -1));
-
-        riwayat1.setBackground(new java.awt.Color(241, 244, 246));
-        riwayat1.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        riwayat1.setForeground(new java.awt.Color(255, 255, 255));
-        riwayat1.setText("RIWAYAT");
-        riwayat1.setBorderPainted(false);
-        riwayat1.setContentAreaFilled(false);
-        riwayat1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                riwayat1ActionPerformed(evt);
-            }
-        });
-        hasil.getContentPane().add(riwayat1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 270, 150, -1));
 
         hover1.setBackground(new java.awt.Color(190, 196, 205));
         hasil.getContentPane().add(hover1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 160, 40));
@@ -290,9 +272,7 @@ public class anggotaupdate extends javax.swing.JFrame {
         hasil.getContentPane().add(buttonupdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 340, 110, 30));
         hasil.getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 90, 360, 10));
 
-        hasil2.setMaximumSize(new java.awt.Dimension(830, 450));
         hasil2.setMinimumSize(new java.awt.Dimension(830, 450));
-        hasil2.setPreferredSize(new java.awt.Dimension(830, 450));
         hasil2.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         home2.setBackground(new java.awt.Color(241, 244, 246));
@@ -378,20 +358,6 @@ public class anggotaupdate extends javax.swing.JFrame {
             }
         });
         hasil2.getContentPane().add(statkini2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 160, -1));
-
-        riwayat2.setBackground(new java.awt.Color(241, 244, 246));
-        riwayat2.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        riwayat2.setForeground(new java.awt.Color(255, 255, 255));
-        riwayat2.setText("RIWAYAT");
-        riwayat2.setBorderPainted(false);
-        riwayat2.setContentAreaFilled(false);
-        riwayat2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        riwayat2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                riwayat2ActionPerformed(evt);
-            }
-        });
-        hasil2.getContentPane().add(riwayat2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 270, 150, -1));
 
         hover2.setBackground(new java.awt.Color(190, 196, 205));
         hasil2.getContentPane().add(hover2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 160, 40));
@@ -537,20 +503,6 @@ public class anggotaupdate extends javax.swing.JFrame {
         });
         getContentPane().add(statkini, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 160, -1));
 
-        riwayat.setBackground(new java.awt.Color(241, 244, 246));
-        riwayat.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        riwayat.setForeground(new java.awt.Color(255, 255, 255));
-        riwayat.setText("RIWAYAT");
-        riwayat.setBorderPainted(false);
-        riwayat.setContentAreaFilled(false);
-        riwayat.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        riwayat.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                riwayatActionPerformed(evt);
-            }
-        });
-        getContentPane().add(riwayat, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 270, 150, -1));
-
         hover.setBackground(new java.awt.Color(190, 196, 205));
         getContentPane().add(hover, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 160, 40));
 
@@ -647,12 +599,6 @@ public class anggotaupdate extends javax.swing.JFrame {
         dispose();
         new statuspage().setVisible(true);
     }//GEN-LAST:event_statkiniActionPerformed
-
-    private void riwayatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_riwayatActionPerformed
-        // TODO add your handling code here:
-        dispose();
-        new riwayatpage().setVisible(true);
-    }//GEN-LAST:event_riwayatActionPerformed
 
     private void buttoncekActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttoncekActionPerformed
         // TODO add your handling code here:
@@ -760,12 +706,6 @@ public class anggotaupdate extends javax.swing.JFrame {
         new statuspage().setVisible(true);
     }//GEN-LAST:event_statkini1ActionPerformed
 
-    private void riwayat1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_riwayat1ActionPerformed
-        // TODO add your handling code here:
-        hasil.dispose();
-        new riwayatpage().setVisible(true);
-    }//GEN-LAST:event_riwayat1ActionPerformed
-
     private void home2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_home2ActionPerformed
         // TODO add your handling code here:
         hasil2.dispose();
@@ -789,12 +729,6 @@ public class anggotaupdate extends javax.swing.JFrame {
         hasil2.dispose();
         new kembalipage().setVisible(true);
     }//GEN-LAST:event_pengembalian2ActionPerformed
-
-    private void riwayat2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_riwayat2ActionPerformed
-        // TODO add your handling code here:
-        hasil2.dispose();
-        new riwayatpage().setVisible(true);
-    }//GEN-LAST:event_riwayat2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -882,9 +816,6 @@ public class anggotaupdate extends javax.swing.JFrame {
     private javax.swing.JButton pengembalian1;
     private javax.swing.JButton pengembalian2;
     private javax.swing.JComboBox<String> pilihanjenke;
-    private javax.swing.JButton riwayat;
-    private javax.swing.JButton riwayat1;
-    private javax.swing.JButton riwayat2;
     private javax.swing.JButton statkini;
     private javax.swing.JButton statkini1;
     private javax.swing.JButton statkini2;
