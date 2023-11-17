@@ -39,7 +39,6 @@ public class HitungDenda {
                         denda = batas * -1000;
                     }
 
-                    // Update denda
                     String updateQuery = "UPDATE status SET denda = ? WHERE pinjam = ?";
                     PreparedStatement updateStatement = koneksi.prepareStatement(updateQuery);
                     updateStatement.setInt(1, denda);
