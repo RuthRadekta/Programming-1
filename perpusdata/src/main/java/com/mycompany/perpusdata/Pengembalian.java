@@ -51,7 +51,7 @@ public class Pengembalian {
         try {
             Koneksi konek = new Koneksi();
             Connection koneksi = konek.buka();
-            String checkQuery = "SELECT * FROM status WHERE id_transaksi = ?";
+            String checkQuery = "SELECT * FROM status WHERE kembali IS NULL, id_transaksi = ?";
             PreparedStatement checkStatement = koneksi.prepareStatement(checkQuery);
             checkStatement.setInt(1, id_transaksi);
             ResultSet resultSet = checkStatement.executeQuery();
