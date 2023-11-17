@@ -16,30 +16,38 @@ import java.sql.SQLException;
  * @author refah
  */
 public class HitungDenda {
-    public void hitungDenda(){
+    public void hitungDenda() {
         try {
             Koneksi konek = new Koneksi();
             Connection koneksi = konek.buka();
-            String query = "SELECT pinjam FROM status";
+            String query = "SELECT pinjam, pengembalian FROM status";
             PreparedStatement preparedStatement = koneksi.prepareStatement(query);
             ResultSet resultSet = preparedStatement.executeQuery();
 
             Date currentTime = new Date();
             while (resultSet.next()) {
-                int denda = 0;
-                Timestamp timestamp = resultSet.getTimestamp("pinjam");
-                Date pinjamDate = new Date(timestamp.getTime());
-                long selisihMillis = currentTime.getTime() - pinjamDate.getTime();
-                int selisihHari = (int) (selisihMillis / (1000 * 60 * 60 * 24));
-                int batas = 5 - selisihHari;
-                if (batas < 0) {
-                    denda = batas * -1000;
+                Timestamp timestampPinjam = resultSet.getTimestamp("pinjam");
+                Timestamp timestampKembali = resultSet.getTimestamp("kembali");
+
+                // Periksa apakah buku sudah dikembalikan
+                if (timestampKembali == null) {
+                    // Jika belum dikembalikan, hitung denda
+                    int denda = 0;
+                    Date pinjamDate = new Date(timestampPinjam.getTime());
+                    long selisihMillis = currentTime.getTime() - pinjamDate.getTime();
+                    int selisihHari = (int) (selisihMillis / (1000 * 60 * 60 * 24));
+                    int batas = 5 - selisihHari;
+                    if (batas < 0) {
+                        denda = batas * -1000;
+                    }
+
+                    // Update denda
+                    String updateQuery = "UPDATE status SET denda = ? WHERE pinjam = ?";
+                    PreparedStatement updateStatement = koneksi.prepareStatement(updateQuery);
+                    updateStatement.setInt(1, denda);
+                    updateStatement.setTimestamp(2, timestampPinjam);
+                    updateStatement.executeUpdate();
                 }
-                String updateQuery = "UPDATE status SET denda = ? WHERE pinjam = ?";
-                PreparedStatement updateStatement = koneksi.prepareStatement(updateQuery);
-                updateStatement.setInt(1, denda);
-                updateStatement.setTimestamp(2, timestamp);
-                updateStatement.executeUpdate();
             }
 
             resultSet.close();
@@ -47,6 +55,6 @@ public class HitungDenda {
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());  
         }
-        
     }
+
 }
