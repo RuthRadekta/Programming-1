@@ -29,9 +29,7 @@ public class HitungDenda {
                 Timestamp timestampPinjam = resultSet.getTimestamp("pinjam");
                 Timestamp timestampKembali = resultSet.getTimestamp("kembali");
 
-                // Periksa apakah buku sudah dikembalikan
                 if (timestampKembali == null) {
-                    // Jika belum dikembalikan, hitung denda
                     int denda = 0;
                     Date pinjamDate = new Date(timestampPinjam.getTime());
                     long selisihMillis = currentTime.getTime() - pinjamDate.getTime();
