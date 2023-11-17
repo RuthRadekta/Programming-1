@@ -182,6 +182,11 @@ public class kembalipage extends javax.swing.JFrame {
         statkini2.setBorderPainted(false);
         statkini2.setContentAreaFilled(false);
         statkini2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        statkini2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                statkini2ActionPerformed(evt);
+            }
+        });
         hasil2.getContentPane().add(statkini2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 160, -1));
 
         hover2.setBackground(new java.awt.Color(190, 196, 205));
@@ -916,6 +921,13 @@ public class kembalipage extends javax.swing.JFrame {
         hasil2.dispose();
         new loginform().setVisible(true);
     }//GEN-LAST:event_kembali2ActionPerformed
+
+    private void statkini2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statkini2ActionPerformed
+        // TODO add your handling code here:
+        hasil2.dispose();
+        dispose();
+        new statuspage().setVisible(true);
+    }//GEN-LAST:event_statkini2ActionPerformed
 
     /**
      * @param args the command line arguments
