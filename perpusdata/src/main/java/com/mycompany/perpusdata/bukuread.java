@@ -1,5 +1,6 @@
 package com.mycompany.perpusdata;
 
+import java.awt.Color;
 import javax.swing.table.DefaultTableModel;
 
 /*
@@ -18,6 +19,7 @@ public class bukuread extends javax.swing.JFrame {
      */
     public bukuread() {
         initComponents();
+        getContentPane().setBackground(Color.decode("0xFFFFFFF"));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
                 new Object[][]{},
                 new String[]{"ID Buku", "Judul", "Penulis", "Penerbit", "Jumlah Halaman", "Created at", "Updated at"}
