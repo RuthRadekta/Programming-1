@@ -1,6 +1,9 @@
 package com.mycompany.perpusdata;
 
 import java.awt.Color;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
@@ -648,6 +651,7 @@ public class bukudelete extends javax.swing.JFrame {
             cek.idb2(id_buku);
             if (cek.idb(id_buku)){
                 dispose();
+                this.tampilDataBuku(id_buku);
                 konfirmasi.getContentPane().setBackground(Color.decode("0xFFFFFF"));
                 konfirmasi.setVisible(true);
             } else {
@@ -760,6 +764,33 @@ public class bukudelete extends javax.swing.JFrame {
         new statuspage().setVisible(true);
     }//GEN-LAST:event_statkini1ActionPerformed
 
+    public void tampilDataBuku(int id_buku){
+        String query = "SELECT id_buku, judul, penulis, penerbit, jumlah_halaman FROM buku WHERE id_buku= ?";
+        try{
+            Koneksi konek = new Koneksi();
+            Connection koneksi = konek.buka();
+            PreparedStatement preparedStatement = koneksi.prepareStatement(query);
+            preparedStatement.setInt(1, id_buku);
+            
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                if (resultSet.next()) {
+                    // Ambil data dari ResultSet dan set pada JLabels
+                    hasilidb.setText("" + resultSet.getInt("id_buku"));
+                    hasiljudul.setText(resultSet.getString("judul"));
+                    hasilpenulis.setText(resultSet.getString("penulis"));
+                    hasilpenerbit.setText(resultSet.getString("penerbit"));
+                    hasiljumha.setText(resultSet.getString("jumlah_halaman"));
+                } else {
+                    System.out.println("Data tidak ditemukan.");
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+    
     /**
      * @param args the command line arguments
      */
