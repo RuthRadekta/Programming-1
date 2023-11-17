@@ -20,7 +20,7 @@ public class HitungDenda {
         try {
             Koneksi konek = new Koneksi();
             Connection koneksi = konek.buka();
-            String query = "SELECT pinjam, pengembalian FROM status";
+            String query = "SELECT pinjam, kembali FROM status";
             PreparedStatement preparedStatement = koneksi.prepareStatement(query);
             ResultSet resultSet = preparedStatement.executeQuery();
 
