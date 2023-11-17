@@ -16,34 +16,6 @@ import java.util.Scanner;
  * @author ACER
  */
 public class Pengembalian {
-    public boolean cekPeminjaman() {
-        boolean value = false;
-        try {
-            Koneksi konek = new Koneksi();
-            Connection koneksi = konek.buka();
-            String checkQuery = "SELECT * FROM status WHERE kembali IS NULL";
-            PreparedStatement checkStatement = koneksi.prepareStatement(checkQuery);
-
-            ResultSet resultSet = checkStatement.executeQuery(checkQuery);
-            
-            while (resultSet.next()) {
-                     int id_transaksi = resultSet.getInt("id_transaksi");
-                     int id_anggota = resultSet.getInt("id_anggota");
-                     int id_buku = resultSet.getInt("id_buku");
-                     String pinjam = resultSet.getString("pinjam");
-                     System.out.println("id transaksi: " + id_transaksi + "\nid anggota: " + id_anggota + "\nid buku: " + id_buku + "\ntanggal pinjam: " + pinjam + "\ntanggal kembali: ");
-                }
-            
-            if (resultSet.next()) {
-                value = true;
-            } else {
-                System.out.println("Tidak ada transaksi peminjaman yang belum dikembalikan.");
-            }
-        } catch (SQLException ex) {
-            System.out.println(ex.getMessage());
-        }
-        return value;
-    }
     
     public boolean cekTransaksi(int id_transaksi) {
         boolean value = false;
